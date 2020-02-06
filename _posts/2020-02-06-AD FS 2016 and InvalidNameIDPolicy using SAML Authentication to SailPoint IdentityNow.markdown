@@ -10,11 +10,11 @@ toc_sticky: "true"
 categories: 
 - "Consulting"
 tags: 
-- ADFS
-- SAML
-- Claims
-- SailPoint IdentityNow
-- InvalidSPNameQualifier
+- "ADFS"
+- "SAML"
+- "Claims"
+- "SailPoint IdentityNow"
+- "InvalidSPNameQualifier"
 ---
 I recently had a seemingly simple task for a customer to setup a AD FS 2016 relying party trust for their SailPoint IdentityNow deployment. Sounds easy right?
 
