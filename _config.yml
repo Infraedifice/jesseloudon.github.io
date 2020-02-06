@@ -108,14 +108,14 @@ analytics:
 # Site Author
 author:
   name             : "Jesse Loudon"
-  avatar           : "/assets/images/LinkedIn_1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/LinkedIn_1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Just Another Azure Guy"
   location         : "Sydney, Aus"
   email            :
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin"
-      url: https://linkedin.com/jesseloudon
+      icon: "fab fa-fw fa-linkedin"
+      url: https://www.linkedin.com/in/jesseloudon/
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://jesseloudon.github.io"
@@ -130,8 +130,8 @@ author:
 footer:
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin"
-      url: https://linkedin.com/jesseloudon
+      icon: "fab fa-fw fa-linkedin"
+      url: https://www.linkedin.com/in/jesseloudon/
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jesseloudon"
