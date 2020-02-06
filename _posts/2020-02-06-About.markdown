@@ -1,5 +1,5 @@
 ---
-title:  "About Jesse"
+title:  "About me..."
 permalink: /posts/about
 header:
   image: "/assets/Keep-Going.jpg"
