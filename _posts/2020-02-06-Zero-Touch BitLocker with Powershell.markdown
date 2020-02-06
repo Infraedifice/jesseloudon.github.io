@@ -4,9 +4,12 @@ header:
   image: "/assets/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-06"
+toc: "true"
 tags: 
 - BitLocker
+- Windows
 - PowerShell
+- Automation
 ---
 The majority of IT engineers and architects traverse various forms of security on a daily basis ranging from our complex alphanumeric corporate logon passwords to the increasingly common MFA prompts on our mobiles. You could say that we have become experts in navigating modern security measures required to stay protected. But perhaps you're not familiar in planning and rolling out that same security, at scale, to your organisation's Windows laptops in the form of disk encryption.
 
