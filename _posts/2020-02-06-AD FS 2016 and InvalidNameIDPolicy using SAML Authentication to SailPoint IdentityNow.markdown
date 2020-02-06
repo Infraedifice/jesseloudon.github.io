@@ -5,6 +5,10 @@ header:
   caption: ""
 date:   "2020-02-06"
 toc: "true"
+toc_sticky: "true"
+toc_sticky: "true"
+categories: 
+- "Consulting"
 tags: 
 - ADFS
 - SAML
