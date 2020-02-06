@@ -22,7 +22,7 @@ So the main subject matter of this post is BitLocker because a while back (>12 m
 
 In reality I needed to automate the activation of BitLocker disk encryption on the system drives of these laptops with as little user intervention as possible.
 
-<h1><b>A Zero-Touch BitLocker Deployment</b></h1>
+## A Zero-Touch BitLocker Deployment
 
 This is such a catchy heading I had to reuse it. If this is new to you I recommend Adam Eyob and his deep-dive post on zero-touch BitLocker which really helped me get a handle on the difficulties involved with enterprise deployments. There's a lack of quality community guidance out there on this particular subject so I appreciate the effort Adam undertook to document his solution and share it with the world.
 
@@ -66,7 +66,7 @@ I recommend creating and testing your own script by taking elements that you req
 Assuming you may want to reverse engineer and improve upon this imperfect script I've included descriptions below of the logic to smooth the journey.
 
 
-<h1><b>Overall Approach</b></h1>
+## Overall Approach
 
 To make this easier, and depending on the scale of your environment, my recommendation is to split your BitLocker project into the following phases below and iterate on each phase where necessary.
 
@@ -87,7 +87,7 @@ select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddre
 
 select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddresses, SMS_R_System.DistinguishedName, SMS_R_System.LastLogonUserName, SMS_R_System.operatingSystem, SMS_G_System_COMPUTER_SYSTEM.Domain, SMS_G_System_COMPUTER_SYSTEM.Manufacturer, SMS_G_System_COMPUTER_SYSTEM.Model, SMS_G_System_TPM.IsEnabled_InitialValue, SMS_G_System_TPM.SpecVersion, SMS_G_System_ENCRYPTABLE_VOLUME.ProtectionStatus, SMS_G_System_PROCESSOR.Is64Bit from SMS_R_System inner join SMS_G_System_COMPUTER_SYSTEM on SMS_G_System_COMPUTER_SYSTEM.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_PROCESSOR on SMS_G_System_PROCESSOR.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_ENCRYPTABLE_VOLUME on SMS_G_System_ENCRYPTABLE_VOLUME.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId order by SMS_G_System_COMPUTER_SYSTEM.Model
 
-<h1><b>Today's Challenges Are Tomorrow's Opportunities</b></h1>
+## Today's Challenges Are Tomorrow's Opportunities
 
 I also faced several familiar challenges throughout this project such as below. If you're just beginning the planning journey the below points are an indication of what to expect.
 
