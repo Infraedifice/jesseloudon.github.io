@@ -5,8 +5,6 @@ header:
   image: "/assets/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-06"
-toc: "true"
-toc_sticky: "true"
 categories: 
 - "Personal"
 tags: 
@@ -37,17 +35,13 @@ gallery:
     alt: "Citrix Certified Administrator XenApp"
     title: "Citrix Certified Administrator XenApp"
 ---
-### Executive Summary
-Jesse Loudon is an IT Consultant with over 10 years in the Australian industry and adds value from experience in past roles such as PreSales Solution Architect, Senior Systems Engineer, and Technical Account Manager. 
+> Hi :wave: I'm Jesse Loudon, an IT Consultant at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry with a passion :heart: for working on Microsoft Azure :cloud:
 
-Jesse has a passion for envisioning, designing, and implementing solutions which solve key business problems and transform underlying manual processes with technology automation.
+> I help to envision, design, and implement solutions which solve key business problems and transform underlying manual processes with technology automation
 
-You can expect Jesse to have hands-on technical experience with architecting and deploying complex multi-vendor/multi-cloud solutions.
+> Thankfully I'm also a dad to a little one :girl: who keeps me busy when I'm not working :sweat_smile:
 
-Jesse Loudon currently works as a Consultant for Telstra Purple in Sydney Australia.
-
-### Certifications
-
+> Some certifications I've attained over the years;
 {% include gallery %}
 
-### Experience
+[telstrapurple]:https://www.telstra.com.au/business-enterprise/services/telstra-purple
