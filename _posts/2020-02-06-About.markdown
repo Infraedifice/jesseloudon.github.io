@@ -27,9 +27,9 @@ gallery:
     alt: "MCSA Windows Server 2012"
     title: "MCSA Windows Server 2012"
   - url: "https://www.youracclaim.com/user/jesseloudon"
-    image_path: /assets/VCP5.png
-    alt: "VMware Certified Professional 5: DCV"
-    title: "VMware Certified Professional 5: DCV"
+    image_path: "/assets/VCP5.png"
+    alt: "VMware Certified Professional"
+    title: "VMware Certified Professional"
   - url: "https://www.youracclaim.com/user/jesseloudon"
     image_path: /assets/citrix-certified-administrator_orig.png
     alt: "Citrix Certified Administrator XenApp"
