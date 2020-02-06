@@ -6,7 +6,6 @@ header:
 date:   "2020-02-06"
 toc: "true"
 toc_sticky: "true"
-toc_sticky: "true"
 categories: 
 - "Consulting"
 tags: 
@@ -82,3 +81,5 @@ In conclusion when configuring SAML authentication via AD FS 2016 (IdP) to Ident
 Cheers, Jesse
 
 [sp-guide]:https://community.sailpoint.com/docs/DOC-7131
+
+<!--more-->
