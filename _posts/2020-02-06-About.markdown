@@ -35,7 +35,7 @@ gallery:
     alt: "Citrix Certified Administrator XenApp"
     title: "Citrix Certified Administrator XenApp"
 ---
-> Hi :wave: I'm Jesse Loudon, an IT Consultant at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry with a passion :heart: for working on Microsoft Azure :cloud:
+> Hi :wave: I'm Jesse Loudon, an IT Consultant at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry & a passion :heart: for working on Microsoft Azure :cloud:
 
 > I help to envision, design, and implement solutions which solve key business problems and transform underlying manual processes with technology automation
 
