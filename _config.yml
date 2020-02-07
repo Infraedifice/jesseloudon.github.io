@@ -31,9 +31,9 @@ github                   : [metadata] #added to resolve jekyll serve error "GitH
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : "jesseloudon" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -110,7 +110,7 @@ analytics:
 author:
   name             : "Jesse Loudon"
   avatar           : "/assets/LinkedIn_1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Just Another Azure Guy"
+  bio              : "Consultant"
   location         : "AU"
   email            :
   links:
@@ -278,6 +278,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
