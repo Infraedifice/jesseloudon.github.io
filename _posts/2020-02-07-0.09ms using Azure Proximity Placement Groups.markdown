@@ -8,7 +8,7 @@ date:   "2020-02-07"
 toc: "true"
 toc_sticky: "true"
 categories: 
-- "Consulting"
+- "CONSULTING"
 tags: 
 - "AZURE"
 - "AZURECLI"
@@ -27,7 +27,7 @@ Prior to proximity groups being available the main solution to reduce VM-to-VM n
 
 However simply using Accelerated Networking does not guarantee that VMs are deployed into the same data centre. This means added latency to traffic if VM 1 was in a separate data centre to VM 2 depending on the distance and network infrastructure traversed.
 
-## Lab Setup
+# Lab Setup
 As per Microsoft’s best practice recommendation to achieve the lowest latency in my Azure subscription I deployed 4x Windows VMs (Standard_D3_v2) with Accelerated Networking into a single VNET with Frontend and Backend subnets.
 
 * Each pair of VMs are associated to an Availability Set for an SLA.
@@ -45,7 +45,7 @@ With the VM NICs also set to use Accelerated Networking this ensures that traffi
 
 ![DemoLabWithPPG](/assets/AzureIaaS-withPPG.png)
 
-## Deploying Proximity Placement Groups with AzureCLI
+# Deploying Proximity Placement Groups with AzureCLI
 The complete AzureCLI script I used is below and ready to go for a demo deployment in your own subscription. You can use VS Code and the AzureCLI extension for easy editing/deployment.
 
 * Remember to update the CLI variables (e.g. subscriptionID and VM login username/password).
@@ -62,12 +62,12 @@ When you’re finished simply delete the Resource Group with this .azcli cmd to 
 
 `az group delete --name AE-PPGdemo-RG`
 
-## Testing latency
+# Testing latency
 Using Microsoft’s tool Latte to test TCP traffic between my VMs produced some interesting results. As you can see below when testing my lab VMs that were using PPG and Accelerated Networking I achieved 88.80 usec or 0.09 ms of latency between servers. Compared to 774.51 usec or 0.77 ms of latency when NOT using Microsoft’s recommended solutions.
 
 ![PPGtests](/assets/PPGtests.png)
 
-## Conclusion
+# Conclusion
 Azure Proximity Placement Groups (co-location) are a nice inclusion from Microsoft and provides Azure IT Pros with another solution to further reduce network latency by grouping IaaS VMs in the same Azure data centre. When used along with Accelerated Networking NICs there is a noticeable improvement as shown in my test above.
 
 Consultants and Architects should weigh the pros and cons of using PPGs against Microsoft’s similar co-location solutions such as Azure Dedicated Hosts.

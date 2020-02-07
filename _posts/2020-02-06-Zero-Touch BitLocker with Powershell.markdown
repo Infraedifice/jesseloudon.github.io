@@ -8,12 +8,12 @@ date:   "2020-02-06"
 toc: "true"
 toc_sticky: "true"
 categories: 
-- "Consulting"
+- "CONSULTING"
 tags: 
-- "BitLocker"
-- "Windows"
-- "PowerShell"
-- "Automation"
+- "BITLOCKER"
+- "WINDOWS"
+- "POWERSHELL"
+- "AUTOMATION"
 ---
 The majority of IT engineers and architects traverse various forms of security on a daily basis ranging from our complex alphanumeric corporate logon passwords to the increasingly common MFA prompts on our mobiles. You could say that we have become experts in navigating modern security measures required to stay protected. But perhaps you're not familiar in planning and rolling out that same security, at scale, to your organisation's Windows laptops in the form of disk encryption.
 
@@ -23,7 +23,7 @@ So the main subject matter of this post is BitLocker because a while back (>12 m
 
 In reality I needed to automate the activation of BitLocker disk encryption on the system drives of these laptops with as little user intervention as possible.
 
-## A Zero-Touch BitLocker Deployment
+# A Zero-Touch BitLocker Deployment
 
 This is such a catchy heading I had to reuse it. If this is new to you I recommend Adam Eyob and his deep-dive post on zero-touch BitLocker which really helped me get a handle on the difficulties involved with enterprise deployments. There's a lack of quality community guidance out there on this particular subject so I appreciate the effort Adam undertook to document his solution and share it with the world.
 
@@ -58,6 +58,7 @@ I've attempted to summarise the above solution with this short description:
 * 1x PS script automates the activation of BitLocker encryption on the local system drive and any non-interactive pre-requisites required (TPM initialisation, BitLocker volume provisioning). This script will also backup any/all BitLocker Recovery Keys to the nearest AD DC for safe storage and easy retrieval if required!
 * The initial disk encryption process runs in the background invisible to the Laptop's end-user once the machine is powered on again after the PS script has successfully completed all steps.
 
+## The Script
 The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop's system shutdown. I found this reduced user impact and was as seamless as it gets.
 
 I recommend creating and testing your own script by taking elements that you require from below as some sections may not apply to your environment/needs.
@@ -67,7 +68,7 @@ I recommend creating and testing your own script by taking elements that you req
 Assuming you may want to reverse engineer and improve upon this imperfect script I've included descriptions below of the logic to smooth the journey.
 
 
-## Overall Approach
+# Overall Approach
 
 To make this easier, and depending on the scale of your environment, my recommendation is to split your BitLocker project into the following phases below and iterate on each phase where necessary.
 
@@ -88,7 +89,7 @@ select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddre
 
 select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddresses, SMS_R_System.DistinguishedName, SMS_R_System.LastLogonUserName, SMS_R_System.operatingSystem, SMS_G_System_COMPUTER_SYSTEM.Domain, SMS_G_System_COMPUTER_SYSTEM.Manufacturer, SMS_G_System_COMPUTER_SYSTEM.Model, SMS_G_System_TPM.IsEnabled_InitialValue, SMS_G_System_TPM.SpecVersion, SMS_G_System_ENCRYPTABLE_VOLUME.ProtectionStatus, SMS_G_System_PROCESSOR.Is64Bit from SMS_R_System inner join SMS_G_System_COMPUTER_SYSTEM on SMS_G_System_COMPUTER_SYSTEM.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_PROCESSOR on SMS_G_System_PROCESSOR.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_ENCRYPTABLE_VOLUME on SMS_G_System_ENCRYPTABLE_VOLUME.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId order by SMS_G_System_COMPUTER_SYSTEM.Model
 
-## Today's Challenges Are Tomorrow's Opportunities
+# Today's Challenges Are Tomorrow's Opportunities
 
 I also faced several familiar challenges throughout this project such as below. If you're just beginning the planning journey the below points are an indication of what to expect.
 
@@ -102,6 +103,7 @@ I also faced several familiar challenges throughout this project such as below. 
 * For laptops where TPM was not enabled/initialised users needed to press the F1 key upon bootup to complete the TPM initialisation from a startup prompt. Some users didn't press the right key or feared it was a system issue and tried to bypass the prompt.
 * Group Policy was not reliably applying the BitLocker computer settings to some laptops. I grabbed the registry keys the GPO would have applied and baked them into the main PS script for a 100% success rate.
 
+# Closing Remarks
 You may have also come across similar challenges in your project and have your own unique solutions to solve them, I'd love to hear your feedback in the comments below and feel free to share your own stories too! :-)
 
 Cheers,
