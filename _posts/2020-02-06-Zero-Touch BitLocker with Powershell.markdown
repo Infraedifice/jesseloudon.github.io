@@ -2,7 +2,7 @@
 title:  "Zero-Touch BitLocker with PowerShell"
 excerpt_separator: "<!--more-->"
 header:
-  image: "/assets/Keep-Going.jpg"
+  image: "/assets/images/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-06"
 toc: "true"
@@ -19,7 +19,7 @@ The majority of IT engineers and architects traverse various forms of security o
 
 So the main subject matter of this post is BitLocker because a while back (>12 mths) a customer with >1000 corporate laptops spread across 90 locations and 3 countries needed a solution. In my dreams I imagined sending an email out to those 1000 users politely asking them to enable BitLocker - with instructions of course!
 
-![Windows 10 BitLocker Management GUI](/assets/BitLocker-capture-300x105.png "Windows 10 BitLocker Management GUI")
+![Windows 10 BitLocker Management GUI](/assets/images/BitLocker-capture-300x105.png "Windows 10 BitLocker Management GUI")
 
 In reality I needed to automate the activation of BitLocker disk encryption on the system drives of these laptops with as little user intervention as possible.
 
@@ -31,7 +31,7 @@ You might be wondering what is Zero-Touch BitLocker? Basically it means the TPM 
 
 BTW, here's what a TPM chip looks like.
 
-![TPM Chip](/assets/TPM_Asus-2-300x255.jpg "Source = Wikipedia")
+![TPM Chip](/assets/images/TPM_Asus-2-300x255.jpg "Source = Wikipedia")
 
 I don't recommend opening up your laptop to discover yours as that could void the manufacturer's warranty! Instead run this cmdlet in an elevated PowerShell window:
 
@@ -45,9 +45,9 @@ If you get any output from the above cmdlet then you have a TPM chip and can rel
 
 Anyways let's begin with a simple diagram of our solution to put things into perspective. We might call this a birds eye view? :-)
 
-![Birds Eye](/assets/Birds_eye.png)
+![Birds Eye](/assets/images/Birds_eye.png)
 
-![BitLocker Enterprise Solution Diagram](/assets/BitLocker-Design-Diagram.png "BitLocker Enterprise Solution Diagram")
+![BitLocker Enterprise Solution Diagram](/assets/images/BitLocker-Design-Diagram.png "BitLocker Enterprise Solution Diagram")
 
 I've attempted to summarise the above solution with this short description:
 

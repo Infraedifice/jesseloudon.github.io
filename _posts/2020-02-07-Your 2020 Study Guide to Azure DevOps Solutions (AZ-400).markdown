@@ -2,7 +2,7 @@
 title:  "Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)"
 excerpt_separator: "<!--more-->"
 header:
-  image: "/assets/Keep-Going.jpg"
+  image: "/assets/images/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-07"
 toc: "true"
@@ -20,7 +20,7 @@ After doing a few of these exams over the years you’ll find a rhythm that work
 
 1. Go to https://docs.microsoft.com/en-us/learn/certifications/browse/
 2. Search for and go to the relevant exam page (e.g. AZ-400)
-3. Download the Exam Skills Outline ![AZ400ExamSkillsOutline](/assets/AZ400SkillsMeasured.png)
+3. Download the Exam Skills Outline ![AZ400ExamSkillsOutline](/assets/images//images/AZ400SkillsMeasured.png)
 4. Create a repository of study resources (docs, images, links, etc)
 5. Book the Exam!
 6. Absorb Content, Get Hands-On, Take Notes, Review Review Review!
@@ -57,14 +57,14 @@ With so many resources available to aid you in your journey to AZ-400 certificat
 # AZ-400 Exam Section Weighting
 You can use this image as a guide when planning your study time for AZ-400. For example if you had to choose between dedicating study time on Design a DevOps Strategy vs Implement Continuous Feedback I would choose the former as the weighting is higher and there is likely to be more test questions on that section.
 
-![AZ400overview](/assets/AZ400-overview.png)
+![AZ400overview](/assets/images/AZ400-overview.png)
 
 # AZ-400 Exam Skills Outline
 
 I’ve copied the exam skills outline from Microsoft and created simple imagery below to aid you with an overview of each section. Important to note that there is often duplication of subject areas across different exam sections so having a broad understanding of the content is important and also hands-on experience through labs.
 
 ## Design a DevOps Strategy
-![AZ400DevOps1](/assets/DevOps1.png)
+![AZ400DevOps1](/assets/images/DevOps1.png)
 
 <b>Recommend a migration and consolidation strategy for DevOps tools</b>
 * analyze existing artifact (e.g, deployment packages, NuGet, Maven, npm) and container repositories
@@ -103,7 +103,7 @@ analysis)
 * design a strategy for integrating on-premises and cloud resources
  
 ## Implement DevOps Development Processes
-![AZ400DevOps2](/assets/DevOps2.png)
+![AZ400DevOps2](/assets/images/DevOps2.png)
 
 <b>Design a version control strategy</b>
 * recommend branching models
@@ -142,7 +142,7 @@ Azure Key Vault)
 
 
 ## Implement Continuous Integration
-![AZ400DevOps3](/assets/DevOps3.png)
+![AZ400DevOps3](/assets/images/DevOps3.png)
 
 <b>Manage code quality and security policies</b>
 * monitor code quality
@@ -164,7 +164,7 @@ Azure Key Vault)
 * set up an automated build workflow
 
 ## Implement Continuous Delivery
-![AZ400DevOps4](/assets/DevOps4.png)
+![AZ400DevOps4](/assets/images/DevOps4.png)
 
 <b>Design a release strategy</b>
 * recommend release tools
@@ -189,7 +189,7 @@ Azure Key Vault)
 * scale a release pipeline to deploy to multiple endpoints (e.g., deployment groups, Azure Kubernetes Service, Service Fabric)
 
 ## Implement Dependency Management
-![AZ400DevOps5](/assets/DevOps5.png)
+![AZ400DevOps5](/assets/images/DevOps5.png)
 
 <b>Design a dependency management strategy</b>
 * recommend artifact management tools and practices (Azure Artifacts, npm, Maven, Nuget)
@@ -205,7 +205,7 @@ Azure Key Vault)
 
 
 ## Implement Application Infrastructure
-![AZ400DevOps6](/assets/DevOps6.png)
+![AZ400DevOps6](/assets/images/DevOps6.png)
 
 <b>Design an infrastructure and configuration management strategy</b>
 * analyze existing and future hosting infrastructure
@@ -235,7 +235,7 @@ Azure Key Vault)
 set up an automated pipeline to inspect security and compliance
 
 ## Implement Continuous Feedback
-![AZ400DevOps7](/assets/DevOps7.png)
+![AZ400DevOps7](/assets/images/DevOps7.png)
 
 <b>Recommend and design system feedback mechanisms</b>
 * design practices to measure end-user satisfaction (e.g., Send a Smile, app analytics)
