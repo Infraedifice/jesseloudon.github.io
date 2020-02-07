@@ -1,5 +1,5 @@
 ---
-title:  "0.09ms with Azure Proximity Placement Groups"
+title:  "0.09ms using Azure Proximity Placement Groups"
 excerpt_separator: "<!--more-->"
 header:
   image: "/assets/Keep-Going.jpg"
