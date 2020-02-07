@@ -20,7 +20,7 @@ title                    : "Just Another Azure Guy"
 title_separator          : "|"
 subtitle                 : "v1.0" # site tagline that appears below site title in masthead
 name                     : "Jesse Loudon"
-description              : "Azure, O365, AD, PowerShell, AzureCLI"
+description              : "Azure, DevOps, AzCLI, PowerShell"
 url                      : "https://jesseloudon.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "jesseloudon/jesseloudon.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
