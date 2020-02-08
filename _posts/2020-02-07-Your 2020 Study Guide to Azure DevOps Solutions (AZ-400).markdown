@@ -20,7 +20,7 @@ After doing a few of these exams over the years you’ll find a rhythm that work
 
 1. Go to https://docs.microsoft.com/en-us/learn/certifications/browse/
 2. Search for and go to the relevant exam page (e.g. AZ-400)
-3. Download the Exam Skills Outline ![AZ400ExamSkillsOutline](/assets/images//images/AZ400SkillsMeasured.png)
+3. Download the Exam Skills Outline ![AZ400ExamSkillsOutline](/assets/images/AZ400SkillsMeasured.png)
 4. Create a repository of study resources (docs, images, links, etc)
 5. Book the Exam!
 6. Absorb Content, Get Hands-On, Take Notes, Review Review Review!
