@@ -130,15 +130,15 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: https://www.linkedin.com/in/jesseloudon/
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/jesseloudon"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/jesseloudon"
+    - #label: "LinkedIn"
+      #icon: "fab fa-fw fa-linkedin"
+      #url: https://www.linkedin.com/in/jesseloudon/
+    - #label: "Twitter"
+      #icon: "fab fa-fw fa-twitter-square"
+      #url: "https://twitter.com/jesseloudon"
+    - #label: "GitHub"
+      #icon: "fab fa-fw fa-github"
+      #url: "https://github.com/jesseloudon"
 
 
 # Reading Files
