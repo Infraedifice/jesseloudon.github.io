@@ -56,7 +56,7 @@ The <b>`Backup Items`</b> page shows your Virtual Machine protection status and 
 
 ![BackupItems](/assets/images/BackupItems.png)
 
-The <b>`Jobs`</b> page shows the status of Backup Jobs for Virtual Machines added to your RSVs and you can search/filter by;
+The <b>`Jobs`</b> page shows the status of backup jobs for Virtual Machines added to your RSVs and you can search/filter by;
 - Backup Item or Resource Group
 - Operation - `Backup`, `Restore`, `ConfigureBackup`, `DeleteBackupData`
 - Status - `Completed`, `CompletedWithWarnings`, `Failed`, `Cancelled`, `InProgress`
@@ -64,7 +64,7 @@ The <b>`Jobs`</b> page shows the status of Backup Jobs for Virtual Machines adde
 
 ![BackupJobs](/assets/images/BackupJobs.png)
 
-The <b>`Alerts`</b> page shows Alerts for Virtual Machines added to your RSVs and you can search/filter by;
+The <b>`Alerts`</b> page shows alerts for Virtual Machines added to your RSVs and you can search/filter by;
 - Backup Item or Resource Group
 - Alert Type - `Backup Failure`, `Restore Failure`, `Delete Backup Data`
 - Status
