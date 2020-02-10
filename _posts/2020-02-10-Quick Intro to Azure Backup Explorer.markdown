@@ -17,7 +17,7 @@ Here's what you need to know about Azure Backup Explorer which has been released
 
 # What is Azure Backup Explorer?
 - It's currently available for use with Azure Virtual Machines
-- A <b>single pane of glass for monitoring backups</b> for Azure Virtual Machines
+- A <b>single pane of glass for monitoring backups</b> of your Azure Virtual Machines
 - Removes complexity and manpower associated with monitoring backups using Azure Log Analytics Workspaces
 
 # How do I access it?
