@@ -30,7 +30,7 @@ Here's what you need to know about Azure Backup Explorer which has been released
 
 
 # What I like about it
-- It's integrated into Azure Portal which is perfect for most managed services teams to utilise.
+- It's integrated into the Azure Portal which is perfect for most managed services teams to utilise.
 - It contains built-in Search and Query functionality.
 - The Summary dashboard allows you to quickly identify issues such as Virtual Machines not backed up.
 - Backup Explorer contains portal links to Recovery Services Vaults and Virtual Machines for seamless changes so you don't need to open new browser windows.
@@ -70,7 +70,7 @@ The <b>`Alerts`</b> page shows Alerts for Virtual Machines added to your RSVs an
 - Status
 - Severity - `Critical`, `Warning`, `Info`
 
-The <b>`Policies`</b> page shows the status of Alerts for Virtual Machines added to your RSVs and you can search/filter by;
+The <b>`Policies`</b> page shows an overview of RSV policies and you can search/filter by;
 - Vault or Policy
 - Has Protected Items? - `Yes`, `No`
 - Schedule Frequency - `Daily`, `Weekly`
