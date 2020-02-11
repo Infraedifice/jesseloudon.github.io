@@ -24,7 +24,7 @@ Following SailPoint’s guide [here][sp-guide] I setup IdentityNow as a Service 
 
 I then moved onto creating a new AD FS 2016 relying party trust using the sp-metadata.xml file downloaded directly from the customer’s IdentityNow portal. After some quick research of the claims required I created the following 2x AD FS Issuance Transform Rules within my new RPT:
 
-![Claim Issuance Rules](/assets/images/ClaimIssuanceRules.png)
+![ADFSClaimIssuanceRules](/assets/images/ClaimIssuanceRules.png)
 
 1. `Rule #1: Send LDAP Attribute (E-Mail-Addresses) as an Outgoing Claim (E-Mail Address)`
 <script src="https://gist.github.com/jesseloudon/a1770b1035e89e674427ab5a28fad99c.js"></script>
@@ -34,7 +34,7 @@ I then moved onto creating a new AD FS 2016 relying party trust using the sp-met
 
 Unfortunately during my testing I was continually returned the following web page message from the customer’s IdentityNow portal. 
 
-![SailpointError](/assets/images/SailPoint-Error.png)
+![SailpointIdentityNowWebError](/assets/images/SailPoint-Error.png)
 
 This was occurring after the initial AD FS authentication and token being issued.
 
@@ -43,7 +43,7 @@ Whilst the web page error is vague in it’s description of the error, I knew th
 # InvalidNameIDPolicy SAML Response
 Diving into the SAML response using Fiddler and a SAML decoder I could see a SAML status code of “<b>InvalidNameIDPolicy</b>". Problem discovered! The most useful and easily accessible diagnostic information was actually straight out of the AD FS server’s local event viewer logs under Applications and Services Logs > ADFS > Admin (in hindsight I should have looked here first!).
 
-![ADFSevents](/assets/images/ADFS-Events-364_321.png)
+![ADFSeventerrors](/assets/images/ADFS-Events-364_321.png)
 
 Events #364 and #321 also verified that the NameIDPolicy required from IdentityNow was not being met by the AD FS token issued.
 
@@ -62,7 +62,7 @@ The SPNameQualifier value needed to match the Entity ID specified in our Identit
 
 Because I couldn’t find SPNameQualifier property in any of the Claim rule templates I used a Custom Rule which you can create as shown below.
 
-![CustomClaimRule](/assets/images/SendClaimsUsingaCustomRule.png)
+![ADFSCustomClaimRule](/assets/images/SendClaimsUsingaCustomRule.png)
 
 The following Claim rule combines my original Rule #2 (described at the beginning of this post) with the new claim property for SPNameQualifier.
 
@@ -73,7 +73,7 @@ After updating my claim rule with the above change a quick test of authenticatin
 
 Happy days! 🙂
 
-![IDNSAMLevents](/assets/images/IdentityNow-SAML-Events.png)
+![SailpointIdentityNowSAMLevents](/assets/images/IdentityNow-SAML-Events.png)
 
 # Summary
 In conclusion when configuring SAML authentication via AD FS 2016 (IdP) to IdentityNow (SP) you may need to insert a SPNameQualifier value as an outgoing claim property from AD FS. The SPNameQualifier value should match the Entity ID value specified in your IdentityNow portal.

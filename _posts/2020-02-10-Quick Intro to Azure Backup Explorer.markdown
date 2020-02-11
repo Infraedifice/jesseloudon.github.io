@@ -26,7 +26,7 @@ Here's what you need to know about Azure Backup Explorer which has been released
 1. Login to [https://portal.azure.com][AzPortal]
 2. Open any `Recovery Services Vault` in your `Subscription`
 3. From the `Overview` page select the `Backup Explorer` link
-![BackupExplorer](/assets/images/BackupExplorer.png)
+![AzureBackupExplorer](/assets/images/BackupExplorer.png)
 
 
 # What I like about it
@@ -36,7 +36,7 @@ Here's what you need to know about Azure Backup Explorer which has been released
 - Backup Explorer contains portal links to Recovery Services Vaults and Virtual Machines for seamless changes so you don't need to open new browser windows.
 - You have the ability to Export to Excel
 
-![BackupExportToExcel](/assets/images/BackupExportToExcel.png)
+![AzureBackupExplorerExportToExcel](/assets/images/BackupExportToExcel.png)
 
 # What can you do?
 The <b>`Summary`</b> page gives you a quick overview of the status of backups across all RSVs and all Subscriptions. You can also filter by;
@@ -45,7 +45,7 @@ The <b>`Summary`</b> page gives you a quick overview of the status of backups ac
 - Vault
 - Time Range
 
-![BackupSummary](/assets/images/BackupSummary.png)
+![AzureBackupExplorerSummary](/assets/images/BackupSummary.png)
 
 The <b>`Backup Items`</b> page shows your Virtual Machine protection status and you can search/filter by;
 - Backup Item or Resource Group
@@ -54,7 +54,7 @@ The <b>`Backup Items`</b> page shows your Virtual Machine protection status and 
 - Resource State - `VM Active`, `VM Not Found`
 - Health Check Status - `Passed`, `ActionRequired`, `ActionSuggested`
 
-![BackupItems](/assets/images/BackupItems.png)
+![AzureBackupExplorerItems](/assets/images/BackupItems.png)
 
 The <b>`Jobs`</b> page shows the status of backup jobs for Virtual Machines added to your RSVs and you can search/filter by;
 - Backup Item or Resource Group
@@ -62,7 +62,7 @@ The <b>`Jobs`</b> page shows the status of backup jobs for Virtual Machines adde
 - Status - `Completed`, `CompletedWithWarnings`, `Failed`, `Cancelled`, `InProgress`
 - Error
 
-![BackupJobs](/assets/images/BackupJobs.png)
+![AzureBackupExplorerJobs](/assets/images/BackupJobs.png)
 
 The <b>`Alerts`</b> page shows alerts for Virtual Machines added to your RSVs and you can search/filter by;
 - Backup Item or Resource Group
@@ -77,13 +77,13 @@ The <b>`Policies`</b> page shows an overview of RSV policies and you can search/
 - Retention Type - `Daily`, `Weekly`, `Monthly`, `Yearly`
 - Snapshot Retention - `0-5`
 
-![BackupPolicies](/assets/images/BackupPolicies.png)
+![AzureBackupExplorerPolicies](/assets/images/BackupPolicies.png)
 
 The <b>`Backup Not Enabled`</b> page shows a list of Virtual Machines with no backup configured and you can search by;
 - Machine Name
 - Tags
 
-![BackupNotEnabled](/assets/images/BackupNotEnabled.png)
+![AzureBackupExplorerNotEnabled](/assets/images/BackupNotEnabled.png)
 
 # Improvements I'd like to see
 - Add a new page for "Backup Storage" showing GB usage across Recovery Services Vaults.
