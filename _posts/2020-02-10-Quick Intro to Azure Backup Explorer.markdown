@@ -4,8 +4,6 @@ header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-10"
-toc: "true"
-toc_sticky: "true"
 categories: 
 - "CONSULTING"
 tags: 
@@ -26,6 +24,7 @@ Here's what you need to know about Azure Backup Explorer which has been released
 1. Login to [https://portal.azure.com][AzPortal]
 2. Open any `Recovery Services Vault` in your `Subscription`
 3. From the `Overview` page select the `Backup Explorer` link
+
 ![AzureBackupExplorer](/assets/images/BackupExplorer.png)
 
 

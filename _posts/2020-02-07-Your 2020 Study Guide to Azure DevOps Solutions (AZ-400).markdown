@@ -1,12 +1,10 @@
 ---
 title:  "Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)"
-excerpt_separator: "<!--more-->"
+excerpt: "With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400)."
 header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-07"
-toc: "true"
-toc_sticky: "true"
 categories: 
 - "EXAMS"
 tags: 

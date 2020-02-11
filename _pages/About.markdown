@@ -9,6 +9,8 @@ categories:
 - "Personal"
 tags: 
 - "AboutMe"
+galleryintro: 
+  - excerpt: "Industry certifications attained over the years"
 gallery:
   - url: "https://www.youracclaim.com/user/jesseloudon"
     image_path: /assets/images/TOGAF-9.2-badges-2019.png
@@ -35,11 +37,10 @@ gallery:
     alt: "Citrix Certified Administrator XenApp"
     title: "Citrix Certified Administrator XenApp"
 ---
-> Hi :wave: I'm Jesse Loudon, a Consultant at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry & a passion for working on Microsoft Azure :cloud:
+> Hi I'm Jesse Loudon, a Consultant at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry & a passion for working on Microsoft Azure :cloud:
 I help to envision, design, and implement solutions which solve key business problems and transform underlying manual processes with technology automation :bulb:
 Thankfully I'm also a dad to a little one :girl: who keeps me busy at all times :sweat_smile:
 
-Industry certifications attained over the years;
 {% include gallery %}
 
 [telstrapurple]:https://www.telstra.com.au/business-enterprise/services/telstra-purple

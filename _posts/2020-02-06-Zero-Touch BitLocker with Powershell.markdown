@@ -1,12 +1,10 @@
 ---
 title:  "Zero-Touch BitLocker with PowerShell"
-excerpt_separator: "<!--more-->"
+excerpt: "The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop's system shutdown. I found this reduced user impact and was as seamless as it gets."
 header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-06"
-toc: "true"
-toc_sticky: "true"
 categories: 
 - "CONSULTING"
 tags: 
