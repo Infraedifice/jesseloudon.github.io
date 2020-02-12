@@ -14,7 +14,7 @@ tags:
 - "SAILPOINT IDENTITYNOW"
 - "INVALIDSPNAMEQUALIFIER"
 ---
-I recently had a <b>seemingly simple</b> task for a customer to setup a AD FS 2016 relying party trust for their SailPoint IdentityNow deployment. Sounds easy right?
+I recently had a seemingly simple task for a customer to setup a AD FS 2016 relying party trust for their SailPoint IdentityNow deployment. Sounds easy right?
 
 In this scenario AD FS 2016 was to be the Identity Provider (IdP) and IdentityNow the Service Provider (SP). Our end-goal of the solution was to allow the customer’s users to authenticate via SAML into IdentityNow using their corporate AD DS email address and password. Great outcome from a user experience perspective and for corporate governance too!
 
