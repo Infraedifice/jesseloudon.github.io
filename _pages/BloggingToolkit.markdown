@@ -1,6 +1,6 @@
 ---
 title:  "Blogging Toolkit"
-permalink: /Blogging Toolkit/
+permalink: /BloggingToolkit/
 header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
