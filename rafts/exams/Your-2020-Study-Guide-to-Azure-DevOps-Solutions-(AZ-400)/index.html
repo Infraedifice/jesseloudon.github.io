@@ -1,0 +1,920 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Your 2020 Study Guide to Azure DevOps Solutions (AZ-400) | Just Another Azure Guy</title>
+<meta name="description" content="With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400). ">
+
+
+  <meta name="author" content="Jesse Loudon">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_AU">
+<meta property="og:site_name" content="Just Another Azure Guy">
+<meta property="og:title" content="Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)">
+<meta property="og:url" content="http://localhost:4000/exams/Your-2020-Study-Guide-to-Azure-DevOps-Solutions-(AZ-400)/">
+
+
+  <meta property="og:description" content="With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400). ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/Keep-Going.jpg">
+
+
+
+  <meta name="twitter:site" content="@jesseloudon">
+  <meta name="twitter:title" content="Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)">
+  <meta name="twitter:description" content="With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400). ">
+  <meta name="twitter:url" content="http://localhost:4000/exams/Your-2020-Study-Guide-to-Azure-DevOps-Solutions-(AZ-400)/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/Keep-Going.jpg">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-02-07T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/exams/Your-2020-Study-Guide-to-Azure-DevOps-Solutions-(AZ-400)/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Jesse Loudon",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Just Another Azure Guy Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/azure-solutions-architect-expert-44x44.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Just Another Azure Guy
+          <span class="site-subtitle">v1.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/jesseloudon/jesseloudon.github.io" >GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/assets/images/Keep-Going.jpg" alt="Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption">
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/LinkedIn_1.png" alt="Jesse Loudon" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jesse Loudon</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Azure Solution Architect</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Sydney, AU</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/jesseloudon/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          
+        
+          
+            <li><a href="https://jesseloudon.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/jesseloudon" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://github.com/jesseloudon" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)">
+    <meta itemprop="description" content="With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400).">
+    <meta itemprop="datePublished" content="2020-02-07T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400). This is an advanced exam that targets professionals familiar with Azure administration and Azure development. I can see this exam providing value to engineers, consultants, and architects who are driving for increased adoption of Agile practices and Infrastructure as Code.</p>
+
+<h1 id="establish-your-rhythm">Establish your Rhythm</h1>
+<p>After doing a few of these exams over the years you’ll find a rhythm that works for you. Here’s mine.</p>
+
+<ol>
+  <li>Go to https://docs.microsoft.com/en-us/learn/certifications/browse/</li>
+  <li>Search for and go to the relevant exam page (e.g. AZ-400)</li>
+  <li>Download the Exam Skills Outline <img src="/assets/images/AZ400SkillsMeasured.png" alt="AZ400ExamSkillsOutline" /></li>
+  <li>Create a repository of study resources (docs, images, links, etc)</li>
+  <li>Book the Exam!</li>
+  <li>Absorb Content, Get Hands-On, Take Notes, Review Review Review!</li>
+  <li>Pass the Exam!</li>
+  <li>Celebrate!</li>
+</ol>
+
+<h1 id="general-thoughts-on-exams-which-may-help-you">General thoughts on exams which may help you.</h1>
+
+<ul>
+  <li>
+    <p>Book the exam early on after taking a look at the exam skills outline as you will need to estimate how much study time is needed. I generally book the exam in 1-2 months time.</p>
+  </li>
+  <li>
+    <p>Being a ‘morning person’ I book exams about 10:00am and make sure to arrive at least 20 mins early to the test centre. I have a light breakfast and a quick review of my notes on the morning of the test.</p>
+  </li>
+  <li>
+    <p>No coffee before an exam unless I’ve had a sleepless night as it can make me more nervous and jittery. BTW – nerves before exams are completely normal and I’ve learnt to embrace them as part of the experience.</p>
+  </li>
+  <li>
+    <p>During the test I use the scratch pad to take notes on questions I have trouble with. Writing something, anything, down is also a tactic to reduce stress and maintain focus rather than just staring at the test question on the screen.</p>
+  </li>
+  <li>
+    <p>Creating your own study guide helps with tracking progress as you will need to break your study time across days/weeks to suit your schedule.</p>
+  </li>
+  <li>
+    <p>I try not to tackle every subject and dedicate sufficient time and energy to my weakest areas to ensure I have a broad understanding.</p>
+  </li>
+  <li>
+    <p>After passing the exam – creating content and sharing it with the community is a great way to contribute and say “thanks” to those that helped you in your study journey.</p>
+  </li>
+</ul>
+
+<h1 id="az-400-helpful-resources">AZ-400 Helpful Resources</h1>
+<p>With so many resources available to aid you in your journey to AZ-400 certification here’s my top links you may find helpful (in order of importance!).</p>
+
+<ol>
+  <li>Sign up to <a href="https://visualstudio.microsoft.com/dev-essentials/">Visual Studio Dev Essentials</a> for free Azure credit and access to Azure DevOps.</li>
+  <li>Get hands-on with <a href="https://www.azuredevopslabs.com/">Azure DevOps Labs</a> with step-by-step guides on various scenarios and use cases.</li>
+  <li>Complete an Azure DevOps course from online content providers like <a href="https://www.pluralsight.com/search?q=DevOps">Pluralsight</a> and <a href="https://www.udemy.com/topic/microsoft-azure-devops/">Udemy</a></li>
+  <li>Your main library of Azure DevOps resources should begin at the <a href="https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops">Azure DevOps Documentation</a> site</li>
+  <li>Review the <a href="https://docs.microsoft.com/en-us/azure/architecture/checklist/dev-ops">DevOps Checklist</a> as a starting point in assessing DevOps culture and processes.</li>
+  <li>Take a look at how Microsoft do DevOps within their own organisation <a href="https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/">DevOps at Microsoft</a>. Very interesting stories relevant to their own transformation.</li>
+  <li>Subscribe to the <a href="https://devblogs.microsoft.com/devops/">Azure DevOps Blog</a> for the latest news and posts by people at the heart of DevOps at Microsoft.</li>
+</ol>
+
+<h1 id="az-400-exam-section-weighting">AZ-400 Exam Section Weighting</h1>
+<p>You can use this image as a guide when planning your study time for AZ-400. For example if you had to choose between dedicating study time on Design a DevOps Strategy vs Implement Continuous Feedback I would choose the former as the weighting is higher and there is likely to be more test questions on that section.</p>
+
+<p><img src="/assets/images/AZ400-overview.png" alt="AZ400overview" /></p>
+
+<h1 id="az-400-exam-skills-outline">AZ-400 Exam Skills Outline</h1>
+
+<p>I’ve copied the exam skills outline from Microsoft and created simple imagery below to aid you with an overview of each section. Important to note that there is often duplication of subject areas across different exam sections so having a broad understanding of the content is important and also hands-on experience through labs.</p>
+
+<h2 id="design-a-devops-strategy">Design a DevOps Strategy</h2>
+<p><img src="/assets/images/DevOps1.png" alt="AZ400DevOps1" /></p>
+
+<p><b>Recommend a migration and consolidation strategy for DevOps tools</b></p>
+<ul>
+  <li>analyze existing artifact (e.g, deployment packages, NuGet, Maven, npm) and container repositories</li>
+  <li>analyze existing test management tools</li>
+  <li>analyze existing work management tool</li>
+  <li>recommend migration and integration strategies for artifact repositories, source control, test management, and work management</li>
+</ul>
+
+<p><b>Design and implement an Agile work management approach</b></p>
+<ul>
+  <li>identify and recommend project metrics, KPIs, and DevOps measurements (e.g., cycle time, lead time, WIP limit)</li>
+  <li>implement tools and processes to support Agile work management</li>
+  <li>mentor team members on Agile techniques and practices</li>
+  <li>recommend an organization structure that supports scaling Agile practices</li>
+  <li>recommend in-team and cross-team collaboration mechanisms</li>
+</ul>
+
+<p><b>Design a quality strategy</b></p>
+<ul>
+  <li>analyze existing quality environment</li>
+  <li>identify and recommend quality metrics</li>
+  <li>recommend a strategy for feature flag lifecycle</li>
+  <li>recommend a strategy for measuring and managing technical debt</li>
+  <li>recommend changes to team structure to optimize quality</li>
+  <li>recommend performance testing strategy</li>
+</ul>
+
+<p><b>Design a secure development process</b></p>
+<ul>
+  <li>inspect and validate code base for compliance</li>
+  <li>inspect and validate infrastructure for compliance</li>
+  <li>recommend a secure development strategy</li>
+  <li>recommend tools and practices to integrate code security validation (e.g., static code
+analysis)</li>
+  <li>recommend tools and practices to integrate infrastructure security validation</li>
+</ul>
+
+<p><b>Design a tool integration strategy</b></p>
+<ul>
+  <li>design a license management strategy (e.g., VSTS users, concurrent pipelines, test environments, open source software licensing, third-party DevOps tools and services, * package management licensing)</li>
+  <li>design a strategy for end-to-end traceability from work items to working software</li>
+  <li>design a strategy for integrating monitoring and feedback to development teams</li>
+  <li>design an authentication and access strategy</li>
+  <li>design a strategy for integrating on-premises and cloud resources</li>
+</ul>
+
+<h2 id="implement-devops-development-processes">Implement DevOps Development Processes</h2>
+<p><img src="/assets/images/DevOps2.png" alt="AZ400DevOps2" /></p>
+
+<p><b>Design a version control strategy</b></p>
+<ul>
+  <li>recommend branching models</li>
+  <li>recommend version control systems</li>
+  <li>recommend code flow strategy</li>
+</ul>
+
+<p><b>Implement and integrate source control</b></p>
+<ul>
+  <li>integrate external source control</li>
+  <li>integrate source control into third-party continuous integration and continuous deployment (CI/CD) systems</li>
+</ul>
+
+<p><b>Implement and manage build infrastructure</b></p>
+<ul>
+  <li>implement private and hosted agents</li>
+  <li>integrate third party build systems</li>
+  <li>recommend strategy for concurrent pipelines</li>
+  <li>manage Azure pipeline configuration (e.g., agent queues, service endpoints, pools, webhooks)</li>
+</ul>
+
+<p><b>Implement code flow</b></p>
+<ul>
+  <li>implement pull request strategies</li>
+  <li>implement branch and fork strategies</li>
+  <li>configure branch policies</li>
+</ul>
+
+<p><b>Implement a mobile DevOps strategy</b></p>
+<ul>
+  <li>manage mobile target device sets and distribution groups</li>
+  <li>manage target UI test device sets</li>
+  <li>provision tester devices for deployment</li>
+  <li>create public and private distribution groups</li>
+</ul>
+
+<p><b>Managing application configuration and secrets</b></p>
+<ul>
+  <li>implement a secure and compliant development process</li>
+  <li>implement general (non-secret) configuration data</li>
+  <li>manage secrets, tokens, and certificates</li>
+  <li>implement applications configurations (e.g., Web App, Azure Kubernetes Service, containers)</li>
+  <li>implement secrets management (e.g., Web App, Azure Kubernetes Service, containers,
+Azure Key Vault)</li>
+  <li>implement tools for managing security and compliance in the pipeline</li>
+</ul>
+
+<h2 id="implement-continuous-integration">Implement Continuous Integration</h2>
+<p><img src="/assets/images/DevOps3.png" alt="AZ400DevOps3" /></p>
+
+<p><b>Manage code quality and security policies</b></p>
+<ul>
+  <li>monitor code quality</li>
+  <li>configure build to report on code coverage</li>
+  <li>manage automated test quality</li>
+  <li>manage test suites and categories</li>
+  <li>monitor quality of tests</li>
+  <li>integrate security analysis tools (e.g., SonarQube, White Source Bolt, Open Web Application Security Project)</li>
+</ul>
+
+<p><b>Implement a container build strategy</b></p>
+<ul>
+  <li>create deployable images (e.g., Docker, Hub, Azure Container Registry)</li>
+  <li>analyze and integrate Docker multi-stage builds</li>
+</ul>
+
+<p><b>Implement a build strategy</b></p>
+<ul>
+  <li>design build triggers, tools, integrations, and workflow</li>
+  <li>implement a hybrid build process</li>
+  <li>implement multi-agent builds</li>
+  <li>recommend build tools and configuration (e.g. Azure Pipelines, Jenkins)</li>
+  <li>set up an automated build workflow</li>
+</ul>
+
+<h2 id="implement-continuous-delivery">Implement Continuous Delivery</h2>
+<p><img src="/assets/images/DevOps4.png" alt="AZ400DevOps4" /></p>
+
+<p><b>Design a release strategy</b></p>
+<ul>
+  <li>recommend release tools</li>
+  <li>identify and recommend release approvals and gates</li>
+  <li>recommend strategy for measuring quality of release and release process</li>
+  <li>recommend strategy for release notes and documentation</li>
+  <li>select appropriate deployment pattern</li>
+</ul>
+
+<p><b>Set up a release management workflow</b></p>
+<ul>
+  <li>automate inspection of health signals for release approvals by using release gates</li>
+  <li>configure automated integration and functional test execution</li>
+  <li>create a release pipeline (e.g., Azure Kubernetes Service, Service Fabric, WebApp)</li>
+  <li>create multi-phase release pipelines</li>
+  <li>integrate secrets with release pipeline</li>
+  <li>provision and configure environments</li>
+  <li>manage and modularize tasks and templates (e.g., task and variable groups)</li>
+</ul>
+
+<p><b>Implement an appropriate deployment pattern</b></p>
+<ul>
+  <li>implement blue-green deployments</li>
+  <li>implement canary deployments</li>
+  <li>implement progressive exposure deployments</li>
+  <li>scale a release pipeline to deploy to multiple endpoints (e.g., deployment groups, Azure Kubernetes Service, Service Fabric)</li>
+</ul>
+
+<h2 id="implement-dependency-management">Implement Dependency Management</h2>
+<p><img src="/assets/images/DevOps5.png" alt="AZ400DevOps5" /></p>
+
+<p><b>Design a dependency management strategy</b></p>
+<ul>
+  <li>recommend artifact management tools and practices (Azure Artifacts, npm, Maven, Nuget)</li>
+  <li>abstract common packages to enable sharing and reuse</li>
+  <li>inspect codebase to identify code dependencies that can be converted to packages</li>
+  <li>identify and recommend standardized package types and versions across the solution</li>
+  <li>refactor existing build pipelines to implement version strategy that publishes packages</li>
+</ul>
+
+<p><b>Manage security and compliance</b></p>
+<ul>
+  <li>inspect open source software packages for security and license compliance to align with corporate standards (e.g., GPLv3)</li>
+  <li>configure build pipeline to access package security and license rating (e.g., Black Duck, White Source)</li>
+  <li>configure secure access to package feeds</li>
+</ul>
+
+<h2 id="implement-application-infrastructure">Implement Application Infrastructure</h2>
+<p><img src="/assets/images/DevOps6.png" alt="AZ400DevOps6" /></p>
+
+<p><b>Design an infrastructure and configuration management strategy</b></p>
+<ul>
+  <li>analyze existing and future hosting infrastructure</li>
+  <li>analyze existing Infrastructure as Code (IaC) technologies</li>
+  <li>design a strategy for managing technical debt on templates</li>
+  <li>design a strategy for using transient infrastructure for parts of a delivery lifecycle</li>
+  <li>design a strategy to mitigate infrastructure state drift</li>
+</ul>
+
+<p><b>Implement Infrastructure as Code (IaC)</b></p>
+<ul>
+  <li>create nested resource templates</li>
+  <li>manage secrets in resource templates</li>
+  <li>provision Azure resources</li>
+  <li>recommend an Infrastructure as Code (IaC) strategy</li>
+  <li>recommend appropriate technologies for configuration management (e.g., ARM Templates, Terraform, Chef, Puppet, Ansible)</li>
+</ul>
+
+<p><b>Manage Azure Kubernetes Service infrastructure</b></p>
+<ul>
+  <li>provision Azure Kubernetes Service (e.g., using ARM templates, CLI)</li>
+  <li>create deployment file for publishing to Azure Kubernetes Service (e.g., kubectl, Helm)</li>
+  <li>develop a scaling plan</li>
+</ul>
+
+<p><b>Implement infrastructure compliance and security</b></p>
+<ul>
+  <li>implement compliance and security scanning</li>
+  <li>prevent drift by using configuration management tools</li>
+  <li>automate configuration management by using PowerShell Desired State Configuration
+(DSC)</li>
+  <li>automate configuration management by using a VM Agent with custom script extensions
+set up an automated pipeline to inspect security and compliance</li>
+</ul>
+
+<h2 id="implement-continuous-feedback">Implement Continuous Feedback</h2>
+<p><img src="/assets/images/DevOps7.png" alt="AZ400DevOps7" /></p>
+
+<p><b>Recommend and design system feedback mechanisms</b></p>
+<ul>
+  <li>design practices to measure end-user satisfaction (e.g., Send a Smile, app analytics)</li>
+  <li>design processes to capture and analyze user feedback from external sources (e.g.,Twitter, Reddit, Help Desk)</li>
+  <li>design routing for client application crash report data</li>
+  <li>recommend monitoring tools and technologies</li>
+  <li>recommend system and feature usage tracking tools</li>
+</ul>
+
+<p><b>Implement process for routing system feedback to development teams</b></p>
+<ul>
+  <li>configure crash report integration for client applications</li>
+  <li>develop monitoring and status dashboards</li>
+  <li>implement routing for client application crash report data</li>
+  <li>implement tools to track system usage, feature usage, and flow</li>
+  <li>integrate and configure ticketing systems with development team’s work management system (e.g., IT Service Management connector, ServiceNow Cloud Management, App Insights work items)</li>
+</ul>
+
+<p><b>Optimize feedback mechanisms</b></p>
+<ul>
+  <li>analyze alerts to establish a baseline</li>
+  <li>analyze telemetry to establish a baseline</li>
+  <li>perform live site reviews and capture feedback for system outages</li>
+  <li>perform ongoing tuning to reduce meaningless or non-actionable alerts</li>
+</ul>
+
+<h2 id="closing-remarks">Closing Remarks</h2>
+<p>I hope you found this guide useful and wish you the best of luck in your exam journey 🙂
+Look out for another post after I pass the exam <code class="language-plaintext highlighter-rouge">/confidence</code></p>
+
+<p>Cheers,
+Jesse</p>
+
+<!--more-->
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#az-400" class="page__taxonomy-item" rel="tag">AZ-400</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#study-guide" class="page__taxonomy-item" rel="tag">STUDY GUIDE</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#exams" class="page__taxonomy-item" rel="tag">EXAMS</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-07T00:00:00+00:00">February 7, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=jesseloudon&text=Your+2020+Study+Guide+to+Azure+DevOps+Solutions+%28AZ-400%29%20http%3A%2F%2Flocalhost%3A4000%2Fexams%2FYour-2020-Study-Guide-to-Azure-DevOps-Solutions-%28AZ-400%29%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fexams%2FYour-2020-Study-Guide-to-Azure-DevOps-Solutions-%28AZ-400%29%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fexams%2FYour-2020-Study-Guide-to-Azure-DevOps-Solutions-%28AZ-400%29%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/consulting/0.09ms-using-Azure-Proximity-Placement-Groups/" class="pagination--pager" title="0.09ms using Azure Proximity Placement Groups
+">Previous</a>
+    
+    
+      <a href="/consulting/Quick-Intro-to-Azure-Backup-Explorer/" class="pagination--pager" title="Quick Intro to Azure Backup Explorer
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/consulting/Quick-Intro-to-Azure-Backup-Explorer/" rel="permalink">Quick Intro to Azure Backup Explorer
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Here’s what you need to know about Azure Backup Explorer which has been released in public preview as of 5th Feb 2020.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/consulting/0.09ms-using-Azure-Proximity-Placement-Groups/" rel="permalink">0.09ms using Azure Proximity Placement Groups
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Today I’ll give you a quick intro to Proximity Placement Groups demonstrating how to deploy a test environment into your Azure Subscription using one of my f...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/consulting/Zero-Touch-BitLocker-with-Powershell/" rel="permalink">Zero-Touch BitLocker with PowerShell
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/consulting/AD-FS-2016-and-InvalidNameIDPolicy-using-SAML-Authentication-to-SailPoint-IdentityNow/" rel="permalink">AD FS 2016 and InvalidNameIDPolicy using SAML Authentication to SailPoint IdentityNow
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The resolution to this problem for me was to ensure that an SPNameQualifier value was sent as a claim property from AD FS to IdentityNow.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Jesse Loudon. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

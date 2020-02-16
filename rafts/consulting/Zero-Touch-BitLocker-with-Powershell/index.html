@@ -1,0 +1,712 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Zero-Touch BitLocker with PowerShell | Just Another Azure Guy</title>
+<meta name="description" content="The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop’s system shutdown. I found this reduced user impact and was as seamless as it gets. ">
+
+
+  <meta name="author" content="Jesse Loudon">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_AU">
+<meta property="og:site_name" content="Just Another Azure Guy">
+<meta property="og:title" content="Zero-Touch BitLocker with PowerShell">
+<meta property="og:url" content="http://localhost:4000/consulting/Zero-Touch-BitLocker-with-Powershell/">
+
+
+  <meta property="og:description" content="The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop’s system shutdown. I found this reduced user impact and was as seamless as it gets. ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/Keep-Going.jpg">
+
+
+
+  <meta name="twitter:site" content="@jesseloudon">
+  <meta name="twitter:title" content="Zero-Touch BitLocker with PowerShell">
+  <meta name="twitter:description" content="The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop’s system shutdown. I found this reduced user impact and was as seamless as it gets. ">
+  <meta name="twitter:url" content="http://localhost:4000/consulting/Zero-Touch-BitLocker-with-Powershell/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/Keep-Going.jpg">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-02-06T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/consulting/Zero-Touch-BitLocker-with-Powershell/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Jesse Loudon",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Just Another Azure Guy Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/azure-solutions-architect-expert-44x44.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Just Another Azure Guy
+          <span class="site-subtitle">v1.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/jesseloudon/jesseloudon.github.io" >GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/assets/images/Keep-Going.jpg" alt="Zero-Touch BitLocker with PowerShell" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption">
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/LinkedIn_1.png" alt="Jesse Loudon" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jesse Loudon</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Azure Solution Architect</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Sydney, AU</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/jesseloudon/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          
+        
+          
+            <li><a href="https://jesseloudon.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/jesseloudon" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://github.com/jesseloudon" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Zero-Touch BitLocker with PowerShell">
+    <meta itemprop="description" content="The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop’s system shutdown. I found this reduced user impact and was as seamless as it gets.">
+    <meta itemprop="datePublished" content="2020-02-06T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Zero-Touch BitLocker with PowerShell
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>The majority of IT engineers and architects traverse various forms of security on a daily basis ranging from our complex alphanumeric corporate logon passwords to the increasingly common MFA prompts on our mobiles. You could say that we have become experts in navigating modern security measures required to stay protected. But perhaps you’re not familiar in planning and rolling out that same security, at scale, to your organisation’s Windows laptops in the form of disk encryption.</p>
+
+<p>So the main subject matter of this post is BitLocker because a while back (&gt;12 mths) a customer with &gt;1000 corporate laptops spread across 90 locations and 3 countries needed a solution. In my dreams I imagined sending an email out to those 1000 users politely asking them to enable BitLocker - with instructions of course!</p>
+
+<p><img src="/assets/images/BitLocker-capture-300x105.png" alt="Windows 10 BitLocker Management GUI" title="Windows 10 BitLocker Management GUI" /></p>
+
+<p>In reality I needed to automate the activation of BitLocker disk encryption on the system drives of these laptops with as little user intervention as possible.</p>
+
+<h1 id="a-zero-touch-bitlocker-deployment">A Zero-Touch BitLocker Deployment</h1>
+
+<p>This is such a catchy heading I had to reuse it. If this is new to you I recommend Adam Eyob and his deep-dive post on zero-touch BitLocker which really helped me get a handle on the difficulties involved with enterprise deployments. There’s a lack of quality community guidance out there on this particular subject so I appreciate the effort Adam undertook to document his solution and share it with the world.</p>
+
+<p>You might be wondering what is Zero-Touch BitLocker? Basically it means the TPM chip and BitLocker work together to unlock the drive upon system startup - without user intervention. No passwords, pin codes, or USB keys required for the user which is a win-win for everyone!</p>
+
+<p>BTW, here’s what a TPM chip looks like.</p>
+
+<p><img src="/assets/images/TPM_Asus-2-300x255.jpg" alt="TPM Chip" title="Source = Wikipedia" /></p>
+
+<p>I don’t recommend opening up your laptop to discover yours as that could void the manufacturer’s warranty! Instead run this cmdlet in an elevated PowerShell window:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-WmiObject</span><span class="w"> </span><span class="nx">win32_tpm</span><span class="w"> </span><span class="nt">-Namespace</span><span class="w"> </span><span class="nx">root\cimv2\security\microsofttpm</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you get any output from the above cmdlet then you have a TPM chip and can relax because using BitLocker on your OS/system drive can be a seamless experience :-)</p>
+
+<blockquote>
+  <p>Enabling BitLocker without a TPM chip is still possible but you’ll need to use another method to unlock the encrypted OS drive such as a password or USB Key. Activating BitLocker without TPM available is unfavourable because passwords can be forgotten and USB devices are easily lost.</p>
+</blockquote>
+
+<p>Anyways let’s begin with a simple diagram of our solution to put things into perspective. We might call this a birds eye view? :-)</p>
+
+<p><img src="/assets/images/Birds_eye.png" alt="Birds Eye" /></p>
+
+<p><img src="/assets/images/BitLocker-Design-Diagram.png" alt="BitLocker Enterprise Solution Diagram" title="BitLocker Enterprise Solution Diagram" /></p>
+
+<p>I’ve attempted to summarise the above solution with this short description:</p>
+
+<ul>
+  <li>AD-joined Laptops running Windows 8 Pro/Ent and above with a TPM 1.2 or higher will be protected by zero-touch BitLocker encryption.</li>
+  <li>AD leveraged to securely store BitLocker Recovery Keys against the AD Computer object.</li>
+  <li>1x GPO used to configure and enforce common BitLocker variables (e.g. Encryption Method and Cipher). Targeted to Laptop OUs.</li>
+  <li>1x GPO used to run a PS script upon computer shutdown. Targeted to Laptop OUs.</li>
+  <li>1x PS script automates the activation of BitLocker encryption on the local system drive and any non-interactive pre-requisites required (TPM initialisation, BitLocker volume provisioning). This script will also backup any/all BitLocker Recovery Keys to the nearest AD DC for safe storage and easy retrieval if required!</li>
+  <li>The initial disk encryption process runs in the background invisible to the Laptop’s end-user once the machine is powered on again after the PS script has successfully completed all steps.</li>
+</ul>
+
+<h2 id="the-script">The Script</h2>
+<p>The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop’s system shutdown. I found this reduced user impact and was as seamless as it gets.</p>
+
+<p>I recommend creating and testing your own script by taking elements that you require from below as some sections may not apply to your environment/needs.</p>
+
+<script src="https://gist.github.com/jesseloudon/7f7482916c2c4c993948c2157a537045.js"></script>
+
+<p>Assuming you may want to reverse engineer and improve upon this imperfect script I’ve included descriptions below of the logic to smooth the journey.</p>
+
+<h1 id="overall-approach">Overall Approach</h1>
+
+<p>To make this easier, and depending on the scale of your environment, my recommendation is to split your BitLocker project into the following phases below and iterate on each phase where necessary.</p>
+
+<ul>
+  <li>Phase 1 = BitLocker Discovery - Identity current state (# of laptops, specs, BitLocker status)</li>
+  <li>Phase 2 = BitLocker Design - Design target state and implementation approach</li>
+  <li>Phase 3 = BitLocker Pilot - Test the implementation</li>
+  <li>Phase 4 = BitLocker Rollout - Complete the implementation</li>
+</ul>
+
+<p>So for example, if your organisation has new laptops being provisioned frequently the BitLocker Discovery phase can be run multiple times using mgmt software such as System Center Configuration Manager (SCCM). This will help to maintain the current state view and results can be fed into PowerBI from SCCM for some nice visual reporting.</p>
+
+<p>For my project I used several SCCM query statements to keep track of Laptops with/without a TPM chip and the status of BitLocker.</p>
+
+<p><b>SCCM Query Name: TPM discovery</b></p>
+
+<p>select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddresses, SMS_R_System.DistinguishedName, SMS_R_System.LastLogonUserName, SMS_R_System.operatingSystem, SMS_G_System_COMPUTER_SYSTEM.Domain, SMS_G_System_COMPUTER_SYSTEM.Manufacturer, SMS_G_System_COMPUTER_SYSTEM.Model, SMS_G_System_TPM.IsEnabled_InitialValue, SMS_G_System_TPM.SpecVersion, SMS_G_System_PROCESSOR.Is64Bit from SMS_R_System inner join SMS_G_System_COMPUTER_SYSTEM on SMS_G_System_COMPUTER_SYSTEM.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_PROCESSOR on SMS_G_System_PROCESSOR.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId order by SMS_G_System_COMPUTER_SYSTEM.Model</p>
+
+<p><b>SCCM Query Name: TPM and BitLocker discovery</b></p>
+
+<p>select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddresses, SMS_R_System.DistinguishedName, SMS_R_System.LastLogonUserName, SMS_R_System.operatingSystem, SMS_G_System_COMPUTER_SYSTEM.Domain, SMS_G_System_COMPUTER_SYSTEM.Manufacturer, SMS_G_System_COMPUTER_SYSTEM.Model, SMS_G_System_TPM.IsEnabled_InitialValue, SMS_G_System_TPM.SpecVersion, SMS_G_System_ENCRYPTABLE_VOLUME.ProtectionStatus, SMS_G_System_PROCESSOR.Is64Bit from SMS_R_System inner join SMS_G_System_COMPUTER_SYSTEM on SMS_G_System_COMPUTER_SYSTEM.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_PROCESSOR on SMS_G_System_PROCESSOR.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_ENCRYPTABLE_VOLUME on SMS_G_System_ENCRYPTABLE_VOLUME.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId order by SMS_G_System_COMPUTER_SYSTEM.Model</p>
+
+<h1 id="todays-challenges-are-tomorrows-opportunities">Today’s Challenges Are Tomorrow’s Opportunities</h1>
+
+<p>I also faced several familiar challenges throughout this project such as below. If you’re just beginning the planning journey the below points are an indication of what to expect.</p>
+
+<ul>
+  <li>Laptops were deployed at times ad-hoc and have varying specs e.g Make/Model/OS/Hardware.</li>
+  <li>Laptops are in various states of compliance with BitLocker’s pre-requisites e.g. TPM enabled, BitLocker recovery partition provisioned.</li>
+  <li>Some laptops had no TPM chip meaning a different solution was required altogether.</li>
+  <li>Laptops were not always connected to a power source which prevented the disk encryption process from beginning/completing.</li>
+  <li>Access to laptops for testing the PS script was difficult given there were few spares and users had no alternate devices.</li>
+  <li>Users are not savvy IT pros and are often roaming between sites with infrequent corporate network access to an AD DC meaning Group Policy would not apply and PS scripts would not run.</li>
+  <li>Users may sleep/hibernate their machine instead of shutting it down (this prevents the BitLocker activation script from running and BitLocker also needs a few reboots before disk encryption can begin).</li>
+  <li>For laptops where TPM was not enabled/initialised users needed to press the F1 key upon bootup to complete the TPM initialisation from a startup prompt. Some users didn’t press the right key or feared it was a system issue and tried to bypass the prompt.</li>
+  <li>Group Policy was not reliably applying the BitLocker computer settings to some laptops. I grabbed the registry keys the GPO would have applied and baked them into the main PS script for a 100% success rate.</li>
+</ul>
+
+<h1 id="closing-remarks">Closing Remarks</h1>
+<p>You may have also come across similar challenges in your project and have your own unique solutions to solve them, I’d love to hear your feedback in the comments below and feel free to share your own stories too! :-)</p>
+
+<p>Cheers,
+Jesse</p>
+
+<!--more-->
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#automation" class="page__taxonomy-item" rel="tag">AUTOMATION</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bitlocker" class="page__taxonomy-item" rel="tag">BITLOCKER</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#powershell" class="page__taxonomy-item" rel="tag">POWERSHELL</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#windows" class="page__taxonomy-item" rel="tag">WINDOWS</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#consulting" class="page__taxonomy-item" rel="tag">CONSULTING</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-06T00:00:00+00:00">February 6, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=jesseloudon&text=Zero-Touch+BitLocker+with+PowerShell%20http%3A%2F%2Flocalhost%3A4000%2Fconsulting%2FZero-Touch-BitLocker-with-Powershell%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fconsulting%2FZero-Touch-BitLocker-with-Powershell%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fconsulting%2FZero-Touch-BitLocker-with-Powershell%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/consulting/AD-FS-2016-and-InvalidNameIDPolicy-using-SAML-Authentication-to-SailPoint-IdentityNow/" class="pagination--pager" title="AD FS 2016 and InvalidNameIDPolicy using SAML Authentication to SailPoint IdentityNow
+">Previous</a>
+    
+    
+      <a href="/consulting/0.09ms-using-Azure-Proximity-Placement-Groups/" class="pagination--pager" title="0.09ms using Azure Proximity Placement Groups
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/consulting/Quick-Intro-to-Azure-Backup-Explorer/" rel="permalink">Quick Intro to Azure Backup Explorer
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Here’s what you need to know about Azure Backup Explorer which has been released in public preview as of 5th Feb 2020.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/exams/Your-2020-Study-Guide-to-Azure-DevOps-Solutions-(AZ-400)/" rel="permalink">Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Az...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/consulting/0.09ms-using-Azure-Proximity-Placement-Groups/" rel="permalink">0.09ms using Azure Proximity Placement Groups
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Today I’ll give you a quick intro to Proximity Placement Groups demonstrating how to deploy a test environment into your Azure Subscription using one of my f...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/consulting/AD-FS-2016-and-InvalidNameIDPolicy-using-SAML-Authentication-to-SailPoint-IdentityNow/" rel="permalink">AD FS 2016 and InvalidNameIDPolicy using SAML Authentication to SailPoint IdentityNow
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The resolution to this problem for me was to ensure that an SPNameQualifier value was sent as a claim property from AD FS to IdentityNow.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Jesse Loudon. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-16T21:12:44+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just Another Azure Guy</title><subtitle>Azure, DevOps, AzCLI, PowerShell</subtitle><author><name>Jesse Loudon</name></author><entry><title type="html">Quick Intro to Azure Backup Explorer</title><link href="http://localhost:4000/consulting/Quick-Intro-to-Azure-Backup-Explorer/" rel="alternate" type="text/html" title="Quick Intro to Azure Backup Explorer" /><published>2020-02-10T00:00:00+00:00</published><updated>2020-02-10T00:00:00+00:00</updated><id>http://localhost:4000/consulting/Quick%20Intro%20to%20Azure%20Backup%20Explorer</id><content type="html" xml:base="http://localhost:4000/consulting/Quick-Intro-to-Azure-Backup-Explorer/">&lt;p&gt;Here’s what you need to know about Azure Backup Explorer which has been released in &lt;a href=&quot;https://azure.microsoft.com/en-gb/blog/backup-explorer-now-available-in-preview/&quot;&gt;public preview&lt;/a&gt; as of 5th Feb 2020.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-azure-backup-explorer&quot;&gt;What is Azure Backup Explorer?&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;It’s currently available for use with Azure Virtual Machines&lt;/li&gt;
+  &lt;li&gt;A &lt;b&gt;single pane of glass for monitoring backups&lt;/b&gt; of your Azure Virtual Machines&lt;/li&gt;
+  &lt;li&gt;Removes complexity and manpower associated with monitoring backups using Azure Log Analytics Workspaces&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;how-do-i-access-it&quot;&gt;How do I access it?&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TLDR&lt;/code&gt; = Azure Portal &amp;gt; any RSV &amp;gt; Overview &amp;gt; Backup Explorer&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Login to &lt;a href=&quot;https://portal.azure.com&quot;&gt;https://portal.azure.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Open any &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Recovery Services Vault&lt;/code&gt; in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Subscription&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;From the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Overview&lt;/code&gt; page select the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Backup Explorer&lt;/code&gt; link&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BackupExplorer.png&quot; alt=&quot;AzureBackupExplorer&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-i-like-about-it&quot;&gt;What I like about it&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;It’s integrated into the Azure Portal which is perfect for most managed services teams to utilise.&lt;/li&gt;
+  &lt;li&gt;It contains built-in Search and Query functionality.&lt;/li&gt;
+  &lt;li&gt;The Summary dashboard allows you to quickly identify issues such as Virtual Machines not backed up.&lt;/li&gt;
+  &lt;li&gt;Backup Explorer contains portal links to Recovery Services Vaults and Virtual Machines for seamless changes so you don’t need to open new browser windows.&lt;/li&gt;
+  &lt;li&gt;You have the ability to Export to Excel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BackupExportToExcel.png&quot; alt=&quot;AzureBackupExplorerExportToExcel&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-can-you-do&quot;&gt;What can you do?&lt;/h1&gt;
+&lt;p&gt;The &lt;b&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Summary&lt;/code&gt;&lt;/b&gt; page gives you a quick overview of the status of backups across all RSVs and all Subscriptions. You can also filter by;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Subscriptions&lt;/li&gt;
+  &lt;li&gt;Vault Location&lt;/li&gt;
+  &lt;li&gt;Vault&lt;/li&gt;
+  &lt;li&gt;Time Range&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BackupSummary.png&quot; alt=&quot;AzureBackupExplorerSummary&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;b&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Backup Items&lt;/code&gt;&lt;/b&gt; page shows your Virtual Machine protection status and you can search/filter by;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Backup Item or Resource Group&lt;/li&gt;
+  &lt;li&gt;Vault&lt;/li&gt;
+  &lt;li&gt;Protection State - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actively Protected&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Protection Stopped&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Initial Backup Pending&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Resource State - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VM Active&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VM Not Found&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Health Check Status - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Passed&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActionRequired&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActionSuggested&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BackupItems.png&quot; alt=&quot;AzureBackupExplorerItems&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;b&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jobs&lt;/code&gt;&lt;/b&gt; page shows the status of backup jobs for Virtual Machines added to your RSVs and you can search/filter by;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Backup Item or Resource Group&lt;/li&gt;
+  &lt;li&gt;Operation - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Backup&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Restore&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ConfigureBackup&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DeleteBackupData&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Status - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Completed&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CompletedWithWarnings&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Failed&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cancelled&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InProgress&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BackupJobs.png&quot; alt=&quot;AzureBackupExplorerJobs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;b&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alerts&lt;/code&gt;&lt;/b&gt; page shows alerts for Virtual Machines added to your RSVs and you can search/filter by;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Backup Item or Resource Group&lt;/li&gt;
+  &lt;li&gt;Alert Type - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Backup Failure&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Restore Failure&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Delete Backup Data&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Status&lt;/li&gt;
+  &lt;li&gt;Severity - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Critical&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Warning&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Info&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;b&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Policies&lt;/code&gt;&lt;/b&gt; page shows an overview of RSV policies and you can search/filter by;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Vault or Policy&lt;/li&gt;
+  &lt;li&gt;Has Protected Items? - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yes&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;No&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Schedule Frequency - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Daily&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Weekly&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Retention Type - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Daily&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Weekly&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Monthly&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yearly&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Snapshot Retention - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0-5&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BackupPolicies.png&quot; alt=&quot;AzureBackupExplorerPolicies&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;b&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Backup Not Enabled&lt;/code&gt;&lt;/b&gt; page shows a list of Virtual Machines with no backup configured and you can search by;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Machine Name&lt;/li&gt;
+  &lt;li&gt;Tags&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BackupNotEnabled.png&quot; alt=&quot;AzureBackupExplorerNotEnabled&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;improvements-id-like-to-see&quot;&gt;Improvements I’d like to see&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Add a new page for “Backup Storage” showing GB usage across Recovery Services Vaults.&lt;/li&gt;
+  &lt;li&gt;Integration with Azure PowerBI for;
+    &lt;ul&gt;
+      &lt;li&gt;Reporting templates such as:
+        &lt;ul&gt;
+          &lt;li&gt;Successful/Failed Backups for Week/Month/Year&lt;/li&gt;
+          &lt;li&gt;Latest Recovery Point per VM&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Ability to subscribe to Critical Alerts &amp;amp; Events&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;closing-remarks&quot;&gt;Closing Remarks&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-gb/azure/backup/monitor-azure-backup-with-backup-explorer&quot;&gt;Azure Backup Explorer&lt;/a&gt; makes it easier to monitor backups across multiple Azure Subscriptions from the Azure Portal and quickly identify gaps/issues.&lt;/p&gt;
+
+&lt;p&gt;Cheers,
+Jesse&lt;/p&gt;
+
+&lt;!--more--&gt;</content><author><name>Jesse Loudon</name></author><category term="AZURE" /><category term="BACKUP EXPLORER" /><category term="MONITORING" /><summary type="html">Here’s what you need to know about Azure Backup Explorer which has been released in public preview as of 5th Feb 2020.</summary></entry><entry><title type="html">Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)</title><link href="http://localhost:4000/exams/Your-2020-Study-Guide-to-Azure-DevOps-Solutions-(AZ-400)/" rel="alternate" type="text/html" title="Your 2020 Study Guide to Azure DevOps Solutions (AZ-400)" /><published>2020-02-07T00:00:00+00:00</published><updated>2020-02-07T00:00:00+00:00</updated><id>http://localhost:4000/exams/Your%202020%20Study%20Guide%20to%20Azure%20DevOps%20Solutions%20(AZ-400)</id><content type="html" xml:base="http://localhost:4000/exams/Your-2020-Study-Guide-to-Azure-DevOps-Solutions-(AZ-400)/">&lt;p&gt;With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400). This is an advanced exam that targets professionals familiar with Azure administration and Azure development. I can see this exam providing value to engineers, consultants, and architects who are driving for increased adoption of Agile practices and Infrastructure as Code.&lt;/p&gt;
+
+&lt;h1 id=&quot;establish-your-rhythm&quot;&gt;Establish your Rhythm&lt;/h1&gt;
+&lt;p&gt;After doing a few of these exams over the years you’ll find a rhythm that works for you. Here’s mine.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to https://docs.microsoft.com/en-us/learn/certifications/browse/&lt;/li&gt;
+  &lt;li&gt;Search for and go to the relevant exam page (e.g. AZ-400)&lt;/li&gt;
+  &lt;li&gt;Download the Exam Skills Outline &lt;img src=&quot;/assets/images/AZ400SkillsMeasured.png&quot; alt=&quot;AZ400ExamSkillsOutline&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Create a repository of study resources (docs, images, links, etc)&lt;/li&gt;
+  &lt;li&gt;Book the Exam!&lt;/li&gt;
+  &lt;li&gt;Absorb Content, Get Hands-On, Take Notes, Review Review Review!&lt;/li&gt;
+  &lt;li&gt;Pass the Exam!&lt;/li&gt;
+  &lt;li&gt;Celebrate!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;general-thoughts-on-exams-which-may-help-you&quot;&gt;General thoughts on exams which may help you.&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Book the exam early on after taking a look at the exam skills outline as you will need to estimate how much study time is needed. I generally book the exam in 1-2 months time.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Being a ‘morning person’ I book exams about 10:00am and make sure to arrive at least 20 mins early to the test centre. I have a light breakfast and a quick review of my notes on the morning of the test.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;No coffee before an exam unless I’ve had a sleepless night as it can make me more nervous and jittery. BTW – nerves before exams are completely normal and I’ve learnt to embrace them as part of the experience.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;During the test I use the scratch pad to take notes on questions I have trouble with. Writing something, anything, down is also a tactic to reduce stress and maintain focus rather than just staring at the test question on the screen.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Creating your own study guide helps with tracking progress as you will need to break your study time across days/weeks to suit your schedule.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I try not to tackle every subject and dedicate sufficient time and energy to my weakest areas to ensure I have a broad understanding.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After passing the exam – creating content and sharing it with the community is a great way to contribute and say “thanks” to those that helped you in your study journey.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;az-400-helpful-resources&quot;&gt;AZ-400 Helpful Resources&lt;/h1&gt;
+&lt;p&gt;With so many resources available to aid you in your journey to AZ-400 certification here’s my top links you may find helpful (in order of importance!).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sign up to &lt;a href=&quot;https://visualstudio.microsoft.com/dev-essentials/&quot;&gt;Visual Studio Dev Essentials&lt;/a&gt; for free Azure credit and access to Azure DevOps.&lt;/li&gt;
+  &lt;li&gt;Get hands-on with &lt;a href=&quot;https://www.azuredevopslabs.com/&quot;&gt;Azure DevOps Labs&lt;/a&gt; with step-by-step guides on various scenarios and use cases.&lt;/li&gt;
+  &lt;li&gt;Complete an Azure DevOps course from online content providers like &lt;a href=&quot;https://www.pluralsight.com/search?q=DevOps&quot;&gt;Pluralsight&lt;/a&gt; and &lt;a href=&quot;https://www.udemy.com/topic/microsoft-azure-devops/&quot;&gt;Udemy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Your main library of Azure DevOps resources should begin at the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops&quot;&gt;Azure DevOps Documentation&lt;/a&gt; site&lt;/li&gt;
+  &lt;li&gt;Review the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/architecture/checklist/dev-ops&quot;&gt;DevOps Checklist&lt;/a&gt; as a starting point in assessing DevOps culture and processes.&lt;/li&gt;
+  &lt;li&gt;Take a look at how Microsoft do DevOps within their own organisation &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/&quot;&gt;DevOps at Microsoft&lt;/a&gt;. Very interesting stories relevant to their own transformation.&lt;/li&gt;
+  &lt;li&gt;Subscribe to the &lt;a href=&quot;https://devblogs.microsoft.com/devops/&quot;&gt;Azure DevOps Blog&lt;/a&gt; for the latest news and posts by people at the heart of DevOps at Microsoft.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;az-400-exam-section-weighting&quot;&gt;AZ-400 Exam Section Weighting&lt;/h1&gt;
+&lt;p&gt;You can use this image as a guide when planning your study time for AZ-400. For example if you had to choose between dedicating study time on Design a DevOps Strategy vs Implement Continuous Feedback I would choose the former as the weighting is higher and there is likely to be more test questions on that section.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/AZ400-overview.png&quot; alt=&quot;AZ400overview&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;az-400-exam-skills-outline&quot;&gt;AZ-400 Exam Skills Outline&lt;/h1&gt;
+
+&lt;p&gt;I’ve copied the exam skills outline from Microsoft and created simple imagery below to aid you with an overview of each section. Important to note that there is often duplication of subject areas across different exam sections so having a broad understanding of the content is important and also hands-on experience through labs.&lt;/p&gt;
+
+&lt;h2 id=&quot;design-a-devops-strategy&quot;&gt;Design a DevOps Strategy&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/DevOps1.png&quot; alt=&quot;AZ400DevOps1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Recommend a migration and consolidation strategy for DevOps tools&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;analyze existing artifact (e.g, deployment packages, NuGet, Maven, npm) and container repositories&lt;/li&gt;
+  &lt;li&gt;analyze existing test management tools&lt;/li&gt;
+  &lt;li&gt;analyze existing work management tool&lt;/li&gt;
+  &lt;li&gt;recommend migration and integration strategies for artifact repositories, source control, test management, and work management&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Design and implement an Agile work management approach&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;identify and recommend project metrics, KPIs, and DevOps measurements (e.g., cycle time, lead time, WIP limit)&lt;/li&gt;
+  &lt;li&gt;implement tools and processes to support Agile work management&lt;/li&gt;
+  &lt;li&gt;mentor team members on Agile techniques and practices&lt;/li&gt;
+  &lt;li&gt;recommend an organization structure that supports scaling Agile practices&lt;/li&gt;
+  &lt;li&gt;recommend in-team and cross-team collaboration mechanisms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Design a quality strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;analyze existing quality environment&lt;/li&gt;
+  &lt;li&gt;identify and recommend quality metrics&lt;/li&gt;
+  &lt;li&gt;recommend a strategy for feature flag lifecycle&lt;/li&gt;
+  &lt;li&gt;recommend a strategy for measuring and managing technical debt&lt;/li&gt;
+  &lt;li&gt;recommend changes to team structure to optimize quality&lt;/li&gt;
+  &lt;li&gt;recommend performance testing strategy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Design a secure development process&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;inspect and validate code base for compliance&lt;/li&gt;
+  &lt;li&gt;inspect and validate infrastructure for compliance&lt;/li&gt;
+  &lt;li&gt;recommend a secure development strategy&lt;/li&gt;
+  &lt;li&gt;recommend tools and practices to integrate code security validation (e.g., static code
+analysis)&lt;/li&gt;
+  &lt;li&gt;recommend tools and practices to integrate infrastructure security validation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Design a tool integration strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;design a license management strategy (e.g., VSTS users, concurrent pipelines, test environments, open source software licensing, third-party DevOps tools and services, * package management licensing)&lt;/li&gt;
+  &lt;li&gt;design a strategy for end-to-end traceability from work items to working software&lt;/li&gt;
+  &lt;li&gt;design a strategy for integrating monitoring and feedback to development teams&lt;/li&gt;
+  &lt;li&gt;design an authentication and access strategy&lt;/li&gt;
+  &lt;li&gt;design a strategy for integrating on-premises and cloud resources&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implement-devops-development-processes&quot;&gt;Implement DevOps Development Processes&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/DevOps2.png&quot; alt=&quot;AZ400DevOps2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Design a version control strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;recommend branching models&lt;/li&gt;
+  &lt;li&gt;recommend version control systems&lt;/li&gt;
+  &lt;li&gt;recommend code flow strategy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement and integrate source control&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;integrate external source control&lt;/li&gt;
+  &lt;li&gt;integrate source control into third-party continuous integration and continuous deployment (CI/CD) systems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement and manage build infrastructure&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;implement private and hosted agents&lt;/li&gt;
+  &lt;li&gt;integrate third party build systems&lt;/li&gt;
+  &lt;li&gt;recommend strategy for concurrent pipelines&lt;/li&gt;
+  &lt;li&gt;manage Azure pipeline configuration (e.g., agent queues, service endpoints, pools, webhooks)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement code flow&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;implement pull request strategies&lt;/li&gt;
+  &lt;li&gt;implement branch and fork strategies&lt;/li&gt;
+  &lt;li&gt;configure branch policies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement a mobile DevOps strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;manage mobile target device sets and distribution groups&lt;/li&gt;
+  &lt;li&gt;manage target UI test device sets&lt;/li&gt;
+  &lt;li&gt;provision tester devices for deployment&lt;/li&gt;
+  &lt;li&gt;create public and private distribution groups&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Managing application configuration and secrets&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;implement a secure and compliant development process&lt;/li&gt;
+  &lt;li&gt;implement general (non-secret) configuration data&lt;/li&gt;
+  &lt;li&gt;manage secrets, tokens, and certificates&lt;/li&gt;
+  &lt;li&gt;implement applications configurations (e.g., Web App, Azure Kubernetes Service, containers)&lt;/li&gt;
+  &lt;li&gt;implement secrets management (e.g., Web App, Azure Kubernetes Service, containers,
+Azure Key Vault)&lt;/li&gt;
+  &lt;li&gt;implement tools for managing security and compliance in the pipeline&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implement-continuous-integration&quot;&gt;Implement Continuous Integration&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/DevOps3.png&quot; alt=&quot;AZ400DevOps3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Manage code quality and security policies&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;monitor code quality&lt;/li&gt;
+  &lt;li&gt;configure build to report on code coverage&lt;/li&gt;
+  &lt;li&gt;manage automated test quality&lt;/li&gt;
+  &lt;li&gt;manage test suites and categories&lt;/li&gt;
+  &lt;li&gt;monitor quality of tests&lt;/li&gt;
+  &lt;li&gt;integrate security analysis tools (e.g., SonarQube, White Source Bolt, Open Web Application Security Project)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement a container build strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;create deployable images (e.g., Docker, Hub, Azure Container Registry)&lt;/li&gt;
+  &lt;li&gt;analyze and integrate Docker multi-stage builds&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement a build strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;design build triggers, tools, integrations, and workflow&lt;/li&gt;
+  &lt;li&gt;implement a hybrid build process&lt;/li&gt;
+  &lt;li&gt;implement multi-agent builds&lt;/li&gt;
+  &lt;li&gt;recommend build tools and configuration (e.g. Azure Pipelines, Jenkins)&lt;/li&gt;
+  &lt;li&gt;set up an automated build workflow&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implement-continuous-delivery&quot;&gt;Implement Continuous Delivery&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/DevOps4.png&quot; alt=&quot;AZ400DevOps4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Design a release strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;recommend release tools&lt;/li&gt;
+  &lt;li&gt;identify and recommend release approvals and gates&lt;/li&gt;
+  &lt;li&gt;recommend strategy for measuring quality of release and release process&lt;/li&gt;
+  &lt;li&gt;recommend strategy for release notes and documentation&lt;/li&gt;
+  &lt;li&gt;select appropriate deployment pattern&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Set up a release management workflow&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;automate inspection of health signals for release approvals by using release gates&lt;/li&gt;
+  &lt;li&gt;configure automated integration and functional test execution&lt;/li&gt;
+  &lt;li&gt;create a release pipeline (e.g., Azure Kubernetes Service, Service Fabric, WebApp)&lt;/li&gt;
+  &lt;li&gt;create multi-phase release pipelines&lt;/li&gt;
+  &lt;li&gt;integrate secrets with release pipeline&lt;/li&gt;
+  &lt;li&gt;provision and configure environments&lt;/li&gt;
+  &lt;li&gt;manage and modularize tasks and templates (e.g., task and variable groups)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement an appropriate deployment pattern&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;implement blue-green deployments&lt;/li&gt;
+  &lt;li&gt;implement canary deployments&lt;/li&gt;
+  &lt;li&gt;implement progressive exposure deployments&lt;/li&gt;
+  &lt;li&gt;scale a release pipeline to deploy to multiple endpoints (e.g., deployment groups, Azure Kubernetes Service, Service Fabric)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implement-dependency-management&quot;&gt;Implement Dependency Management&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/DevOps5.png&quot; alt=&quot;AZ400DevOps5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Design a dependency management strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;recommend artifact management tools and practices (Azure Artifacts, npm, Maven, Nuget)&lt;/li&gt;
+  &lt;li&gt;abstract common packages to enable sharing and reuse&lt;/li&gt;
+  &lt;li&gt;inspect codebase to identify code dependencies that can be converted to packages&lt;/li&gt;
+  &lt;li&gt;identify and recommend standardized package types and versions across the solution&lt;/li&gt;
+  &lt;li&gt;refactor existing build pipelines to implement version strategy that publishes packages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Manage security and compliance&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;inspect open source software packages for security and license compliance to align with corporate standards (e.g., GPLv3)&lt;/li&gt;
+  &lt;li&gt;configure build pipeline to access package security and license rating (e.g., Black Duck, White Source)&lt;/li&gt;
+  &lt;li&gt;configure secure access to package feeds&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implement-application-infrastructure&quot;&gt;Implement Application Infrastructure&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/DevOps6.png&quot; alt=&quot;AZ400DevOps6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Design an infrastructure and configuration management strategy&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;analyze existing and future hosting infrastructure&lt;/li&gt;
+  &lt;li&gt;analyze existing Infrastructure as Code (IaC) technologies&lt;/li&gt;
+  &lt;li&gt;design a strategy for managing technical debt on templates&lt;/li&gt;
+  &lt;li&gt;design a strategy for using transient infrastructure for parts of a delivery lifecycle&lt;/li&gt;
+  &lt;li&gt;design a strategy to mitigate infrastructure state drift&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement Infrastructure as Code (IaC)&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;create nested resource templates&lt;/li&gt;
+  &lt;li&gt;manage secrets in resource templates&lt;/li&gt;
+  &lt;li&gt;provision Azure resources&lt;/li&gt;
+  &lt;li&gt;recommend an Infrastructure as Code (IaC) strategy&lt;/li&gt;
+  &lt;li&gt;recommend appropriate technologies for configuration management (e.g., ARM Templates, Terraform, Chef, Puppet, Ansible)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Manage Azure Kubernetes Service infrastructure&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;provision Azure Kubernetes Service (e.g., using ARM templates, CLI)&lt;/li&gt;
+  &lt;li&gt;create deployment file for publishing to Azure Kubernetes Service (e.g., kubectl, Helm)&lt;/li&gt;
+  &lt;li&gt;develop a scaling plan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement infrastructure compliance and security&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;implement compliance and security scanning&lt;/li&gt;
+  &lt;li&gt;prevent drift by using configuration management tools&lt;/li&gt;
+  &lt;li&gt;automate configuration management by using PowerShell Desired State Configuration
+(DSC)&lt;/li&gt;
+  &lt;li&gt;automate configuration management by using a VM Agent with custom script extensions
+set up an automated pipeline to inspect security and compliance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implement-continuous-feedback&quot;&gt;Implement Continuous Feedback&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/DevOps7.png&quot; alt=&quot;AZ400DevOps7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Recommend and design system feedback mechanisms&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;design practices to measure end-user satisfaction (e.g., Send a Smile, app analytics)&lt;/li&gt;
+  &lt;li&gt;design processes to capture and analyze user feedback from external sources (e.g.,Twitter, Reddit, Help Desk)&lt;/li&gt;
+  &lt;li&gt;design routing for client application crash report data&lt;/li&gt;
+  &lt;li&gt;recommend monitoring tools and technologies&lt;/li&gt;
+  &lt;li&gt;recommend system and feature usage tracking tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Implement process for routing system feedback to development teams&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;configure crash report integration for client applications&lt;/li&gt;
+  &lt;li&gt;develop monitoring and status dashboards&lt;/li&gt;
+  &lt;li&gt;implement routing for client application crash report data&lt;/li&gt;
+  &lt;li&gt;implement tools to track system usage, feature usage, and flow&lt;/li&gt;
+  &lt;li&gt;integrate and configure ticketing systems with development team’s work management system (e.g., IT Service Management connector, ServiceNow Cloud Management, App Insights work items)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;Optimize feedback mechanisms&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;analyze alerts to establish a baseline&lt;/li&gt;
+  &lt;li&gt;analyze telemetry to establish a baseline&lt;/li&gt;
+  &lt;li&gt;perform live site reviews and capture feedback for system outages&lt;/li&gt;
+  &lt;li&gt;perform ongoing tuning to reduce meaningless or non-actionable alerts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;closing-remarks&quot;&gt;Closing Remarks&lt;/h2&gt;
+&lt;p&gt;I hope you found this guide useful and wish you the best of luck in your exam journey 🙂
+Look out for another post after I pass the exam &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/confidence&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers,
+Jesse&lt;/p&gt;
+
+&lt;!--more--&gt;</content><author><name>Jesse Loudon</name></author><category term="AZ-400" /><category term="STUDY GUIDE" /><summary type="html">With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400).</summary></entry><entry><title type="html">0.09ms using Azure Proximity Placement Groups</title><link href="http://localhost:4000/consulting/0.09ms-using-Azure-Proximity-Placement-Groups/" rel="alternate" type="text/html" title="0.09ms using Azure Proximity Placement Groups" /><published>2020-02-07T00:00:00+00:00</published><updated>2020-02-07T00:00:00+00:00</updated><id>http://localhost:4000/consulting/0.09ms%20using%20Azure%20Proximity%20Placement%20Groups</id><content type="html" xml:base="http://localhost:4000/consulting/0.09ms-using-Azure-Proximity-Placement-Groups/">&lt;p&gt;Reducing network latency for critical apps running on Azure IaaS has become easier since Microsoft’s announcement of General Availability for Proximity Placement Groups (PPG) on Dec 2019.&lt;/p&gt;
+
+&lt;p&gt;Today I’ll give you a quick intro to Proximity Placement Groups demonstrating how to deploy a test environment into your Azure Subscription using one of my favourite tools AzureCLI. I’ll also test network latency with a PPG and without to show you the difference.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you’re undecided about using AzureCLI or ARM templates for your Azure deployments have a look @ Pascal Naber’s post https://pascalnaber.wordpress.com/2018/11/11/stop-using-arm-templates-use-the-azure-cli-instead/&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Prior to proximity groups being available the main solution to reduce VM-to-VM network latency was to use Accelerated Networking aka Single Root IO Virtualisation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/accelerated-networking.png&quot; alt=&quot;AzureAcceleratedNetworking&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However simply using Accelerated Networking does not guarantee that VMs are deployed into the same data centre. This means added latency to traffic if VM 1 was in a separate data centre to VM 2 depending on the distance and network infrastructure traversed.&lt;/p&gt;
+
+&lt;h1 id=&quot;lab-setup&quot;&gt;Lab Setup&lt;/h1&gt;
+&lt;p&gt;As per Microsoft’s best practice recommendation to achieve the lowest latency in my Azure subscription I deployed 4x Windows VMs (Standard_D3_v2) with Accelerated Networking into a single VNET with Frontend and Backend subnets.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each pair of VMs are associated to an Availability Set for an SLA.&lt;/li&gt;
+  &lt;li&gt;This lab deployment is a simplified version of an N-tier architecture style common with critical applications running on Azure IaaS.&lt;/li&gt;
+  &lt;li&gt;In production environments you will likely see additional components such as NVAs, caching, and load balancing.&lt;/li&gt;
+  &lt;li&gt;You can also deploy this with VMSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Without using a proximity placement group for the availability sets my lab VMs could be automatically deployed to separate Azure region data centres depending on Microsoft’s physical resource availability at the time. Here’s a diagram which illustrates this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/AzureIaaS-NoPPG.png&quot; alt=&quot;AzureDemoLabNoPPG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So in order to guarantee that my lab VMs are co-located in the same data centre I’m going to associate the availability sets to a single proximity placement group as shown in the following diagram.&lt;/p&gt;
+
+&lt;p&gt;With the VM NICs also set to use Accelerated Networking this ensures that traffic between VMs is optimised for minimal network latency.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/AzureIaaS-withPPG.png&quot; alt=&quot;AzureDemoLabWithPPG&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;deploying-proximity-placement-groups-with-azurecli&quot;&gt;Deploying Proximity Placement Groups with AzureCLI&lt;/h1&gt;
+&lt;p&gt;The complete AzureCLI script I used is below and ready to go for a demo deployment in your own subscription. You can use VS Code and the AzureCLI extension for easy editing/deployment.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remember to update the CLI variables (e.g. subscriptionID and VM login username/password).
+Create the VM dependencies first such as RG, PPG, AVset, VNETs, SA, NICs.&lt;/li&gt;
+  &lt;li&gt;You need to use a VM SKU that is compatible with Accelerated Networking. You can mix and match VM SKUs in your deployment.&lt;/li&gt;
+  &lt;li&gt;If you receive an allocation error OverconstrainedAllocationRequest when running your script try changing the sequence of VMs deployed (e.g. create larger SKUs first).&lt;/li&gt;
+  &lt;li&gt;If you’re not a fan of scripting and prefer the GUI method check out the doco here https://docs.microsoft.com/en-us/azure/virtual-machines/windows/proximity-placement-groups-portal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://gist.github.com/jesseloudon/93927c791a682672655123b3afb700c2.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The entire deployment of my lab took less than 6 minutes which was awesome as I needed to rapidly tear down and recreate the lab multiple times in Azure for this blog.&lt;/p&gt;
+
+&lt;p&gt;When you’re finished simply delete the Resource Group with this .azcli cmd to cleanup and save on costs:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;az group delete --name AE-PPGdemo-RG&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;testing-latency&quot;&gt;Testing latency&lt;/h1&gt;
+&lt;p&gt;Using Microsoft’s tool Latte to test TCP traffic between my VMs produced some interesting results. As you can see below when testing my lab VMs that were using PPG and Accelerated Networking I achieved 88.80 usec or 0.09 ms of latency between servers. Compared to 774.51 usec or 0.77 ms of latency when NOT using Microsoft’s recommended solutions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/PPGtests.png&quot; alt=&quot;AzurePPGtests&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;Azure Proximity Placement Groups (co-location) are a nice inclusion from Microsoft and provides Azure IT Pros with another solution to further reduce network latency by grouping IaaS VMs in the same Azure data centre. When used along with Accelerated Networking NICs there is a noticeable improvement as shown in my test above.&lt;/p&gt;
+
+&lt;p&gt;Consultants and Architects should weigh the pros and cons of using PPGs against Microsoft’s similar co-location solutions such as Azure Dedicated Hosts.&lt;/p&gt;
+
+&lt;p&gt;Cheers,
+Jesse&lt;/p&gt;
+
+&lt;!--more--&gt;</content><author><name>Jesse Loudon</name></author><category term="AZURE" /><category term="AZURECLI" /><category term="HOW-TO" /><category term="PROXMITY PLACEMENT GROUP" /><summary type="html">Today I’ll give you a quick intro to Proximity Placement Groups demonstrating how to deploy a test environment into your Azure Subscription using one of my favourite tools AzureCLI. I’ll also test network latency with a PPG and without to show you the difference.</summary></entry><entry><title type="html">AD FS 2016 and InvalidNameIDPolicy using SAML Authentication to SailPoint IdentityNow</title><link href="http://localhost:4000/consulting/AD-FS-2016-and-InvalidNameIDPolicy-using-SAML-Authentication-to-SailPoint-IdentityNow/" rel="alternate" type="text/html" title="AD FS 2016 and InvalidNameIDPolicy using SAML Authentication to SailPoint IdentityNow" /><published>2020-02-06T00:00:00+00:00</published><updated>2020-02-06T00:00:00+00:00</updated><id>http://localhost:4000/consulting/AD%20FS%202016%20and%20InvalidNameIDPolicy%20using%20SAML%20Authentication%20to%20SailPoint%20IdentityNow</id><content type="html" xml:base="http://localhost:4000/consulting/AD-FS-2016-and-InvalidNameIDPolicy-using-SAML-Authentication-to-SailPoint-IdentityNow/">&lt;p&gt;I recently had a seemingly simple task for a customer to setup a AD FS 2016 relying party trust for their SailPoint IdentityNow deployment. Sounds easy right?&lt;/p&gt;
+
+&lt;p&gt;In this scenario AD FS 2016 was to be the Identity Provider (IdP) and IdentityNow the Service Provider (SP). Our end-goal of the solution was to allow the customer’s users to authenticate via SAML into IdentityNow using their corporate AD DS email address and password. Great outcome from a user experience perspective and for corporate governance too!&lt;/p&gt;
+
+&lt;h1 id=&quot;configuration-setup-and-problem-encountered&quot;&gt;Configuration Setup and Problem Encountered&lt;/h1&gt;
+&lt;p&gt;Following SailPoint’s guide &lt;a href=&quot;https://community.sailpoint.com/docs/DOC-7131&quot;&gt;here&lt;/a&gt; I setup IdentityNow as a Service Provider using the Email attribute as the SAML NameID.&lt;/p&gt;
+
+&lt;p&gt;I then moved onto creating a new AD FS 2016 relying party trust using the sp-metadata.xml file downloaded directly from the customer’s IdentityNow portal. After some quick research of the claims required I created the following 2x AD FS Issuance Transform Rules within my new RPT:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ClaimIssuanceRules.png&quot; alt=&quot;ADFSClaimIssuanceRules&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rule #1: Send LDAP Attribute (E-Mail-Addresses) as an Outgoing Claim (E-Mail Address)&lt;/code&gt;
+&lt;script src=&quot;https://gist.github.com/jesseloudon/a1770b1035e89e674427ab5a28fad99c.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rule #2 Transform an Incoming Claim (E-Mail Address) to an Outgoing Claim (Name ID) with the Outgoing name ID format (Email)&lt;/code&gt;
+&lt;script src=&quot;https://gist.github.com/jesseloudon/5abc590e4d11be89c8629fca6a816f9f.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Unfortunately during my testing I was continually returned the following web page message from the customer’s IdentityNow portal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/SailPoint-Error.png&quot; alt=&quot;SailpointIdentityNowWebError&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was occurring after the initial AD FS authentication and token being issued.&lt;/p&gt;
+
+&lt;p&gt;Whilst the web page error is vague in it’s description of the error, I knew that because the initial AD FS authentication had succeeded that I was dealing with a claims issue between the IdP and SP.&lt;/p&gt;
+
+&lt;h1 id=&quot;invalidnameidpolicy-saml-response&quot;&gt;InvalidNameIDPolicy SAML Response&lt;/h1&gt;
+&lt;p&gt;Diving into the SAML response using Fiddler and a SAML decoder I could see a SAML status code of “&lt;b&gt;InvalidNameIDPolicy&lt;/b&gt;”. Problem discovered! The most useful and easily accessible diagnostic information was actually straight out of the AD FS server’s local event viewer logs under Applications and Services Logs &amp;gt; ADFS &amp;gt; Admin (in hindsight I should have looked here first!).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ADFS-Events-364_321.png&quot; alt=&quot;ADFSeventerrors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Events #364 and #321 also verified that the NameIDPolicy required from IdentityNow was not being met by the AD FS token issued.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Event ID #364: Encountered error during federation passive request. The SAML request contained a NameIDPolicy that was not satisfied by the issued token.&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Event ID #321: The SAML authentication request had a NameID Policy that could not be satisfied.&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Tip: If you encounter the same problem I had, have a look at the detail of these two events and compare the Requested NameIDPolicy versus the Actual NameIDPolicy to discover what exactly is missing from the AD FS token.&lt;/p&gt;
+
+&lt;h1 id=&quot;sending-spnamequalifier-as-a-claim&quot;&gt;Sending SPNameQualifier as a Claim&lt;/h1&gt;
+&lt;p&gt;The resolution to this problem for me was to ensure that an SPNameQualifier value was sent as a claim property from AD FS to IdentityNow.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As far as I know, this is an undocumented requirement to have SAML authentication tokens from AD FS 2016 accepted by SailPoint IdentityNow.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The SPNameQualifier value needed to match the Entity ID specified in our IdentityNow portal under Admin &amp;gt; Global &amp;gt; Security Settings &amp;gt; Service Provider.&lt;/p&gt;
+
+&lt;p&gt;Because I couldn’t find SPNameQualifier property in any of the Claim rule templates I used a Custom Rule which you can create as shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/SendClaimsUsingaCustomRule.png&quot; alt=&quot;ADFSCustomClaimRule&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The following Claim rule combines my original Rule #2 (described at the beginning of this post) with the new claim property for SPNameQualifier.&lt;/p&gt;
+
+&lt;p&gt;Note: If using the below claim code remember to replace “insertValueHere” with your Entity ID specified in IdentityNow.
+&lt;script src=&quot;https://gist.github.com/jesseloudon/6b905c273466e1730f18d310be327f3c.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;After updating my claim rule with the above change a quick test of authenticating to IdentityNow via AD FS SAML was successful and I could also finally see SAML authentication events from the IdentityNow Activity Tab.&lt;/p&gt;
+
+&lt;p&gt;Happy days! 🙂&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/IdentityNow-SAML-Events.png&quot; alt=&quot;SailpointIdentityNowSAMLevents&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;In conclusion when configuring SAML authentication via AD FS 2016 (IdP) to IdentityNow (SP) you may need to insert a SPNameQualifier value as an outgoing claim property from AD FS. The SPNameQualifier value should match the Entity ID value specified in your IdentityNow portal.&lt;/p&gt;
+
+&lt;p&gt;Cheers, 
+Jesse&lt;/p&gt;
+
+&lt;!--more--&gt;</content><author><name>Jesse Loudon</name></author><category term="ADFS" /><category term="SAML" /><category term="CLAIMS" /><category term="SAILPOINT IDENTITYNOW" /><category term="INVALIDSPNAMEQUALIFIER" /><summary type="html">The resolution to this problem for me was to ensure that an SPNameQualifier value was sent as a claim property from AD FS to IdentityNow.</summary></entry><entry><title type="html">Zero-Touch BitLocker with PowerShell</title><link href="http://localhost:4000/consulting/Zero-Touch-BitLocker-with-Powershell/" rel="alternate" type="text/html" title="Zero-Touch BitLocker with PowerShell" /><published>2020-02-06T00:00:00+00:00</published><updated>2020-02-06T00:00:00+00:00</updated><id>http://localhost:4000/consulting/Zero-Touch%20BitLocker%20with%20Powershell</id><content type="html" xml:base="http://localhost:4000/consulting/Zero-Touch-BitLocker-with-Powershell/">&lt;p&gt;The majority of IT engineers and architects traverse various forms of security on a daily basis ranging from our complex alphanumeric corporate logon passwords to the increasingly common MFA prompts on our mobiles. You could say that we have become experts in navigating modern security measures required to stay protected. But perhaps you’re not familiar in planning and rolling out that same security, at scale, to your organisation’s Windows laptops in the form of disk encryption.&lt;/p&gt;
+
+&lt;p&gt;So the main subject matter of this post is BitLocker because a while back (&amp;gt;12 mths) a customer with &amp;gt;1000 corporate laptops spread across 90 locations and 3 countries needed a solution. In my dreams I imagined sending an email out to those 1000 users politely asking them to enable BitLocker - with instructions of course!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BitLocker-capture-300x105.png&quot; alt=&quot;Windows 10 BitLocker Management GUI&quot; title=&quot;Windows 10 BitLocker Management GUI&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In reality I needed to automate the activation of BitLocker disk encryption on the system drives of these laptops with as little user intervention as possible.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-zero-touch-bitlocker-deployment&quot;&gt;A Zero-Touch BitLocker Deployment&lt;/h1&gt;
+
+&lt;p&gt;This is such a catchy heading I had to reuse it. If this is new to you I recommend Adam Eyob and his deep-dive post on zero-touch BitLocker which really helped me get a handle on the difficulties involved with enterprise deployments. There’s a lack of quality community guidance out there on this particular subject so I appreciate the effort Adam undertook to document his solution and share it with the world.&lt;/p&gt;
+
+&lt;p&gt;You might be wondering what is Zero-Touch BitLocker? Basically it means the TPM chip and BitLocker work together to unlock the drive upon system startup - without user intervention. No passwords, pin codes, or USB keys required for the user which is a win-win for everyone!&lt;/p&gt;
+
+&lt;p&gt;BTW, here’s what a TPM chip looks like.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/TPM_Asus-2-300x255.jpg&quot; alt=&quot;TPM Chip&quot; title=&quot;Source = Wikipedia&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I don’t recommend opening up your laptop to discover yours as that could void the manufacturer’s warranty! Instead run this cmdlet in an elevated PowerShell window:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Get-WmiObject&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;win32_tpm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Namespace&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;root\cimv2\security\microsofttpm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you get any output from the above cmdlet then you have a TPM chip and can relax because using BitLocker on your OS/system drive can be a seamless experience :-)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Enabling BitLocker without a TPM chip is still possible but you’ll need to use another method to unlock the encrypted OS drive such as a password or USB Key. Activating BitLocker without TPM available is unfavourable because passwords can be forgotten and USB devices are easily lost.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Anyways let’s begin with a simple diagram of our solution to put things into perspective. We might call this a birds eye view? :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Birds_eye.png&quot; alt=&quot;Birds Eye&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/BitLocker-Design-Diagram.png&quot; alt=&quot;BitLocker Enterprise Solution Diagram&quot; title=&quot;BitLocker Enterprise Solution Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve attempted to summarise the above solution with this short description:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AD-joined Laptops running Windows 8 Pro/Ent and above with a TPM 1.2 or higher will be protected by zero-touch BitLocker encryption.&lt;/li&gt;
+  &lt;li&gt;AD leveraged to securely store BitLocker Recovery Keys against the AD Computer object.&lt;/li&gt;
+  &lt;li&gt;1x GPO used to configure and enforce common BitLocker variables (e.g. Encryption Method and Cipher). Targeted to Laptop OUs.&lt;/li&gt;
+  &lt;li&gt;1x GPO used to run a PS script upon computer shutdown. Targeted to Laptop OUs.&lt;/li&gt;
+  &lt;li&gt;1x PS script automates the activation of BitLocker encryption on the local system drive and any non-interactive pre-requisites required (TPM initialisation, BitLocker volume provisioning). This script will also backup any/all BitLocker Recovery Keys to the nearest AD DC for safe storage and easy retrieval if required!&lt;/li&gt;
+  &lt;li&gt;The initial disk encryption process runs in the background invisible to the Laptop’s end-user once the machine is powered on again after the PS script has successfully completed all steps.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-script&quot;&gt;The Script&lt;/h2&gt;
+&lt;p&gt;The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop’s system shutdown. I found this reduced user impact and was as seamless as it gets.&lt;/p&gt;
+
+&lt;p&gt;I recommend creating and testing your own script by taking elements that you require from below as some sections may not apply to your environment/needs.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jesseloudon/7f7482916c2c4c993948c2157a537045.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Assuming you may want to reverse engineer and improve upon this imperfect script I’ve included descriptions below of the logic to smooth the journey.&lt;/p&gt;
+
+&lt;h1 id=&quot;overall-approach&quot;&gt;Overall Approach&lt;/h1&gt;
+
+&lt;p&gt;To make this easier, and depending on the scale of your environment, my recommendation is to split your BitLocker project into the following phases below and iterate on each phase where necessary.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Phase 1 = BitLocker Discovery - Identity current state (# of laptops, specs, BitLocker status)&lt;/li&gt;
+  &lt;li&gt;Phase 2 = BitLocker Design - Design target state and implementation approach&lt;/li&gt;
+  &lt;li&gt;Phase 3 = BitLocker Pilot - Test the implementation&lt;/li&gt;
+  &lt;li&gt;Phase 4 = BitLocker Rollout - Complete the implementation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So for example, if your organisation has new laptops being provisioned frequently the BitLocker Discovery phase can be run multiple times using mgmt software such as System Center Configuration Manager (SCCM). This will help to maintain the current state view and results can be fed into PowerBI from SCCM for some nice visual reporting.&lt;/p&gt;
+
+&lt;p&gt;For my project I used several SCCM query statements to keep track of Laptops with/without a TPM chip and the status of BitLocker.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;SCCM Query Name: TPM discovery&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddresses, SMS_R_System.DistinguishedName, SMS_R_System.LastLogonUserName, SMS_R_System.operatingSystem, SMS_G_System_COMPUTER_SYSTEM.Domain, SMS_G_System_COMPUTER_SYSTEM.Manufacturer, SMS_G_System_COMPUTER_SYSTEM.Model, SMS_G_System_TPM.IsEnabled_InitialValue, SMS_G_System_TPM.SpecVersion, SMS_G_System_PROCESSOR.Is64Bit from SMS_R_System inner join SMS_G_System_COMPUTER_SYSTEM on SMS_G_System_COMPUTER_SYSTEM.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_PROCESSOR on SMS_G_System_PROCESSOR.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId order by SMS_G_System_COMPUTER_SYSTEM.Model&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;SCCM Query Name: TPM and BitLocker discovery&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;select distinct SMS_R_System.Name, SMS_R_System.ADSiteName, SMS_R_System.IPAddresses, SMS_R_System.DistinguishedName, SMS_R_System.LastLogonUserName, SMS_R_System.operatingSystem, SMS_G_System_COMPUTER_SYSTEM.Domain, SMS_G_System_COMPUTER_SYSTEM.Manufacturer, SMS_G_System_COMPUTER_SYSTEM.Model, SMS_G_System_TPM.IsEnabled_InitialValue, SMS_G_System_TPM.SpecVersion, SMS_G_System_ENCRYPTABLE_VOLUME.ProtectionStatus, SMS_G_System_PROCESSOR.Is64Bit from SMS_R_System inner join SMS_G_System_COMPUTER_SYSTEM on SMS_G_System_COMPUTER_SYSTEM.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_PROCESSOR on SMS_G_System_PROCESSOR.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_ENCRYPTABLE_VOLUME on SMS_G_System_ENCRYPTABLE_VOLUME.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId order by SMS_G_System_COMPUTER_SYSTEM.Model&lt;/p&gt;
+
+&lt;h1 id=&quot;todays-challenges-are-tomorrows-opportunities&quot;&gt;Today’s Challenges Are Tomorrow’s Opportunities&lt;/h1&gt;
+
+&lt;p&gt;I also faced several familiar challenges throughout this project such as below. If you’re just beginning the planning journey the below points are an indication of what to expect.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Laptops were deployed at times ad-hoc and have varying specs e.g Make/Model/OS/Hardware.&lt;/li&gt;
+  &lt;li&gt;Laptops are in various states of compliance with BitLocker’s pre-requisites e.g. TPM enabled, BitLocker recovery partition provisioned.&lt;/li&gt;
+  &lt;li&gt;Some laptops had no TPM chip meaning a different solution was required altogether.&lt;/li&gt;
+  &lt;li&gt;Laptops were not always connected to a power source which prevented the disk encryption process from beginning/completing.&lt;/li&gt;
+  &lt;li&gt;Access to laptops for testing the PS script was difficult given there were few spares and users had no alternate devices.&lt;/li&gt;
+  &lt;li&gt;Users are not savvy IT pros and are often roaming between sites with infrequent corporate network access to an AD DC meaning Group Policy would not apply and PS scripts would not run.&lt;/li&gt;
+  &lt;li&gt;Users may sleep/hibernate their machine instead of shutting it down (this prevents the BitLocker activation script from running and BitLocker also needs a few reboots before disk encryption can begin).&lt;/li&gt;
+  &lt;li&gt;For laptops where TPM was not enabled/initialised users needed to press the F1 key upon bootup to complete the TPM initialisation from a startup prompt. Some users didn’t press the right key or feared it was a system issue and tried to bypass the prompt.&lt;/li&gt;
+  &lt;li&gt;Group Policy was not reliably applying the BitLocker computer settings to some laptops. I grabbed the registry keys the GPO would have applied and baked them into the main PS script for a 100% success rate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;closing-remarks&quot;&gt;Closing Remarks&lt;/h1&gt;
+&lt;p&gt;You may have also come across similar challenges in your project and have your own unique solutions to solve them, I’d love to hear your feedback in the comments below and feel free to share your own stories too! :-)&lt;/p&gt;
+
+&lt;p&gt;Cheers,
+Jesse&lt;/p&gt;
+
+&lt;!--more--&gt;</content><author><name>Jesse Loudon</name></author><category term="BITLOCKER" /><category term="WINDOWS" /><category term="POWERSHELL" /><category term="AUTOMATION" /><summary type="html">The heart and soul of all this is a single PowerShell script which is designed to check several pre-requisites are met before enabling BitLocker on the local system drive and backing up the recovery key to Active Directory. As per my diagram above I am applying this PS script from a GPO to run during a corporate Laptop's system shutdown. I found this reduced user impact and was as seamless as it gets.</summary></entry></feed>

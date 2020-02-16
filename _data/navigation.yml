@@ -4,8 +4,8 @@ main:
   url: /about/
 - title: "GitHub"
   url: "https://github.com/jesseloudon/jesseloudon.github.io"
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+- title: "Blogging Toolkit"
+  url: /Blogging Toolkit/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
