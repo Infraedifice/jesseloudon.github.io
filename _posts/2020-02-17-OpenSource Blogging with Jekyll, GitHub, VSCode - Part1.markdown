@@ -45,7 +45,7 @@ As part of my 9-5 job I'm already using open source tools such as [Visual Studio
 ## The Birds Eye View
 ![OpenSourceBlogOverview](/assets/images/OpenSourceBlogDiagram.png)
 
-I create content using Visual Studio Code before Jekyll/Ruby builds &serves the entire site for me to preview locally at http://127.0.0.1:4000. 
+I create content using Visual Studio Code before Jekyll/Ruby builds & serves the entire site for me to preview locally at http://127.0.0.1:4000. 
 
 > Note: You can also use GitHub in a web browser to create content via their GUI however you cannot preview the entire site without publishing it. This is the main reason I use my Surface Book 2 as a local dev environment.
 
@@ -67,15 +67,14 @@ git commit -am "commit message"
 git push
 ```
 
+GitHub Pages automatically picks up the recent commit changes to the Repo's Master branch and with Jekyll integration auto-builds the site and publishes it live to [https://jesseloudon.github.io][JesseLoudonSite]
+
+[JesseLoudonSite]:https://jesseloudon.github.io
 [Part1]:"https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll,-GitHub,-VSCode-Part1/"
 [Jekyll]:https://jekyllrb.com/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
 [GitHubPages]:https://pages.github.com/
 [GitHub]:https://github.com/
 [GitHubGuides]:https://guides.github.com/
-[RubyInstaller]:https://github.com/oneclick/rubyinstaller2/releases
-[MinimalMistakes]:https://mmistakes.github.io/minimal-mistakes/
-[MinimalMistakesQuickStart]:https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-[GitHubHostedRunnersAzure]:https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners
 [VisualStudioCode]:https://code.visualstudio.com/download
 [BloggingToolkit]:https://jesseloudon.github.io/BloggingToolkit/
