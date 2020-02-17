@@ -39,28 +39,38 @@ When creating a new blog site with almost nil content and `zero traffic` my inst
 Being in a technical role I tend to deep-dive into solutions and explore the possibilities, things may break but I'll learn the what and why in the process. For this to happen I needed `maximum control` over content and delivery which led me to consider static websites as a good fit. Because static websites are the most basic type of website it's also perfect for new tech bloggers which means overall `minimal effort` to maintain long term.
 
 ### Familiar Tooling
-As part of my 9-5 job I'm already using open source tools such as [Visual Studio Code][VisualStudioCode] to write/test my .ps1 and .azcli scripts and [GitHub][GitHub] to store/share my code in the cloud and apply version control. So it made sense to continue using `familiar tooling` and this greatly helped to reduce the time needed to deploy and maintain my blog. Maximum appreciation goes to VSCode's built-in support for markdown editing and the preview window (more on this later).
-
+As part of my 9-5 job I'm already using open source tools such as [Visual Studio Code][VisualStudioCode] to write/test my .ps1 and .azcli scripts and [GitHub][GitHub] to store/share my code in the cloud and apply version control. So it made sense to continue using `familiar tooling` and this greatly helped to reduce the time needed to deploy and maintain my blog. 
 
 ## Overview of Blog Setup
 ![OpenSourceBlogOverview](/assets/images/OpenSourceBlogDiagram.png)
 
-Firstly I create content using VSCode before Jekyll auto-builds & serves the entire site for me to preview locally at [http://127.0.0.1:4000][LocalSite]. 
-
-> Note: You can also use GitHub in a web browser to create content via their GUI however you cannot preview the entire site without publishing it. This is the main reason I use my Surface Book 2 as a local dev environment.
-
+### Local Dependencies
 On my laptop I have the following clients installed:
 - Ruby - `2.6.5`
 - Jekyll - `4.0.0`
 - Visual Studio Code - `1.42.0`
 - Git - `2.18.0`
 
+### Creating content
+I create and modify content using the Visual Studio Code client. It has native support for markdown editing and integration with Git. Maximum appreciation goes to VSCode's preview window which allows you to see the blog post as if it was live in a web browser.
+
+> Note: You can also use GitHub from a web browser to create content via their GUI however you cannot preview the entire site without publishing it. This is the main reason I use my Surface Book 2 as a local dev environment.
+
+### Previewing the site
+If I want to preview the entire site locally on my laptop I use:
+```
+bundle exec jekyll serve
+```
+This auto-builds & publishes the site at [http://127.0.0.1:4000][LocalSite]
+
+### Publishing the Blog Online
 My GitHub account has a single Repository and Master branch for the blog.
 
 > Note: In order for GitHub Pages to automatically build and serve your blog content your GitHub Repository name needs be a certain format: `username.github.io`
 
-When I'm happy with the local preview of the blog site I use Git from the VSCode Terminal to commit my local changes and push them to my GitHub Repo in the cloud. Your typical flow of commands will look like this:
+When I'm happy with the local preview of the blog site I use Git from the VSCode Terminal to commit my local changes and push them to my GitHub Repo in the cloud. 
 
+Your typical flow of commands will look like this:
 ```
 git pull
 git commit -am "commit message"
