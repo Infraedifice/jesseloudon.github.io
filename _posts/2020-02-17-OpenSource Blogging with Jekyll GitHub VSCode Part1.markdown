@@ -33,7 +33,7 @@ To start off here's an overview of my blogging toolkit:
 Firstly let's talk about why I'm using open source, some of which may be relevant to your own goals and requirements.
 
 ### Zero Traffic, Zero Cost
-When creating a new blog site with almost nil content and `zero traffic` my instict was to keep my costs minimal. For a new site that generates no income I simply cannot justify spending even $1.00 per month on hosting costs or software licensing. Currently my blog is `zero cost` to my hip pocket which makes me happy.
+When creating a new blog site with almost nil content and `zero traffic` my instinct was to keep costs minimal. For a new site that generates zero income I cannot justify spending even $1.00 per month on hosting costs or software licensing. Currently my blog is `zero cost` to my hip pocket which makes me happy :)
 
 ### Maximum Control, Minimal Effort
 Being in a technical role I tend to deep-dive into solutions and explore the possibilities, things may break but I'll learn the what and why in the process. For this to happen I needed `maximum control` over content and delivery which led me to consider static websites as a good fit. Because static websites are the most basic type of website it's also perfect for new tech bloggers which means overall `minimal effort` to maintain long term.
