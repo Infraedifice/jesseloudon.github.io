@@ -23,7 +23,9 @@ Kicking off the new year brought forward a renewed motiviation to join the commu
 * Part 3 - Tips & tricks with Jekyll and Markdown editing
 * Part 4 - Securing your content
 
+
 To start off here's an overview of my blogging toolkit:
+
 ![OpenSourceBlogDependencies](/assets/images/OpenSourceBlogDependencies.png) 
 > A collection of helpful links can be found [here][BloggingToolkit].
 
@@ -43,18 +45,27 @@ As part of my 9-5 job I'm already using open source tools such as [Visual Studio
 ## The Birds Eye View
 ![OpenSourceBlogOverview](/assets/images/OpenSourceBlogDiagram.png)
 
-My Surface Book 2 is my local development environment where I create content and view my local blog at http://127.0.0.1:4000 before pushing commited changes to my GitHub Repository.
+I create content using Visual Studio Code before Jekyll/Ruby builds &serves the entire site for me to preview locally at http://127.0.0.1:4000. 
 
-I have the following clients installed:
+> Note: You can also use GitHub in a web browser to create content via their GUI however you cannot preview the entire site without publishing it. This is the main reason I use my Surface Book 2 as a local dev environment.
+
+On my laptop I have the following clients installed:
 - Ruby - 2.6.5
 - Jekyll - 4.0.0
 - Visual Studio Code - 1.42.0
 - Git - 2.18.0
 
-My GitHub account has a single Repository and Master branch for the blog. In order for GitHub Pages to automatically build and serve the blog content my GitHub Repository name needs be a certain format:
+My GitHub account has a single Repository and Master branch for the blog.
 
-`username.github.io`
+> Note: In order for GitHub Pages to automatically build and serve your blog content your GitHub Repository name needs be a certain format: `username.github.io`
 
+When I'm happy with the local preview of the blog site and content I use Git to commit my changes and push them to the GitHub Repo.
+
+```
+git pull
+git commit -am "commit message"
+git push
+```
 
 [Part1]:"https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll,-GitHub,-VSCode-Part1/"
 [Jekyll]:https://jekyllrb.com/
