@@ -56,14 +56,14 @@ I create and modify content using the Visual Studio Code client. It has native s
 
 > Note: You can also use GitHub from a web browser to create content via their GUI however you cannot preview the entire site without publishing it. This is the main reason I use my Surface Book 2 as a local dev environment.
 
-### Previewing the site
+### Previewing the Site
 If I want to preview the entire site locally on my laptop I use:
 ```
 bundle exec jekyll serve
 ```
 This auto-builds & publishes the site at [http://127.0.0.1:4000][LocalSite]
 
-### Publishing the Blog Online
+### Online Publishing
 My GitHub account has a single Repository and Master branch for the blog.
 
 > Note: In order for GitHub Pages to automatically build and serve your blog content your GitHub Repository name needs be a certain format: `username.github.io`
