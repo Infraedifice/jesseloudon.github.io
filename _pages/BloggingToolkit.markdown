@@ -47,6 +47,12 @@ Ruby is an open source Programming Language.
 
 * [https://rubyinstaller.org/downloads/][RubyInstaller]
 
+## CloudSkew
+CloudSkew is a free tool to create diagrams from a web browser.
+
+* [https://github.com/cloudskew/cloudskew][CloudSkew]
+
+[CloudSkew]:https://github.com/cloudskew/cloudskew
 [Jekyll]:https://jekyllrb.com/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
 [GitHubPages]:https://pages.github.com/
