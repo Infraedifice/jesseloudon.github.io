@@ -46,13 +46,13 @@ As part of my 9-5 job I'm already using open source tools such as [Visual Studio
 
 ### Local Dependencies
 On my laptop I have the following clients installed:
-- Ruby - `2.6.5`
-- Jekyll - `4.0.0`
-- Visual Studio Code - `1.42.0`
-- Git - `2.18.0`
+- [Ruby][RubyInstaller] - `2.6.5`
+- [Jekyll][JekyllWindowsInstall] - `4.0.0`
+- [Visual Studio Code][VisualStudioCode] - `1.42.0`
+- [Git][Git] - `2.18.0`
 
 ### Creating content
-I create and modify content using the Visual Studio Code client. It has native support for markdown editing and integration with Git. Maximum appreciation goes to VSCode's preview window which allows you to see the blog post as if it was live in a web browser.
+I create and modify content using the Visual Studio Code client. It has native support for markdown editing and integration with [Git][Git]. Maximum appreciation goes to VSCode's preview window which allows you to see the blog post as if it was live in a web browser.
 
 > Note: You can also use GitHub from a web browser to create content via their GUI however you cannot preview the entire site without publishing it. This is the main reason I use my Surface Book 2 as a local dev environment.
 
@@ -84,11 +84,15 @@ In this blog I've provided you with a toolkit to get you started with open sourc
 
 I've also given you a birds eye view of the blog setup and end-to-end flow of events starting from content creation to the blog post going live online.
 
+In the next post I'll walkthrough how you can get started with your own blog on [GitHub Pages][GitHubPages] step-by-step.
+
 [LocalSite]:http://127.0.0.1:4000
+[RubyInstaller]:https://rubyinstaller.org/downloads/
+[JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
 [JesseLoudonSite]:https://jesseloudon.github.io
 [Part1]:"https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part1/
-[JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
 [GitHubPages]:https://pages.github.com/
 [GitHub]:https://github.com/
+[Git]:https://git-scm.com/downloads
 [VisualStudioCode]:https://code.visualstudio.com/download
 [BloggingToolkit]:https://jesseloudon.github.io/BloggingToolkit/
