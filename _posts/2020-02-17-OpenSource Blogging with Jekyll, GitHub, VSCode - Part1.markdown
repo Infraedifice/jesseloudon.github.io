@@ -4,15 +4,17 @@ excerpt: "Kicking off the new year brought forward a renewed motiviation to join
 header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
-date:   "2020-02-12"
+date:   "2020-02-17"
 categories: 
 - "BLOGGING"
 tags: 
 - "OPEN SOURCE"
 - "GITHUB PAGES"
 - "GITHUB"
+- "GIT"
 - "JEKYLL"
 - "VSCODE"
+- "MARKDOWN"
 ---
 Kicking off the new year brought forward a renewed motiviation to join the community of tech bloggers. In this blog series I'll share everything you need to know to get you setup with your own blog site, for free, using open source tooling such as Jekyll, GitHub, and Visual Studio Code.
 
@@ -38,7 +40,9 @@ Being in a technical role I tend to deep-dive into solutions and explore the pos
 As part of my 9-5 job I'm already using open source tools such as [Visual Studio Code][VisualStudioCode] to write/test my .ps1 and .azcli scripts and [GitHub][GitHub] to store/share my code in the cloud and apply version control. So it made sense to continue using `familiar tooling` and this greatly helped to reduce the time needed to deploy and maintain my blog. Maximum appreciation goes to VSCode's built-in support for markdown editing and the preview window (more on this later).
 
 
+## The Birds Eye View
 ![OpenSourceBlogOverview](/assets/images/OpenSourceBlogDiagram.png)
+
 My Surface Book 2 is my local development environment where I create content and view my local blog at http://127.0.0.1:4000 before pushing commited changes to my GitHub Repository.
 
 I have the following clients installed:
@@ -52,6 +56,7 @@ My GitHub account has a single Repository and Master branch for the blog. In ord
 `username.github.io`
 
 
+
 [Part1]:"https://jesseloudon.github.io/OpenSource-Blogging-with-Jekyll,-GitHub,-VSCode-Part1/"
 [Jekyll]:https://jekyllrb.com/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
@@ -63,4 +68,4 @@ My GitHub account has a single Repository and Master branch for the blog. In ord
 [MinimalMistakesQuickStart]:https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 [GitHubHostedRunnersAzure]:https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners
 [VisualStudioCode]:https://code.visualstudio.com/download
-[BloggingToolkit]:https://jesseloudon.github.io/bloggingtoolkit
+[BloggingToolkit]:https://jesseloudon.github.io/bloggingtoolkit/
