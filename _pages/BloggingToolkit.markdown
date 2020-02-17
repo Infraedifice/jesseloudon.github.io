@@ -47,6 +47,12 @@ Ruby is an open source Programming Language.
 
 * [https://rubyinstaller.org/downloads/][RubyInstaller]
 
+## Minimal Mistakes - Jekyll Theme
+Minimal Mistakes by Michael Rose is the Jekyll theme I use for this site.
+
+* [https://mmistakes.github.io/minimal-mistakes/][MinimalMistakes]
+* [https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/][MinimalMistakesQuickStart]
+
 ## CloudSkew
 CloudSkew is a free tool to create diagrams from a web browser.
 
