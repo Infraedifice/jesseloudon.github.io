@@ -4,6 +4,7 @@ excerpt: "Kicking off the new year brought forward a renewed motiviation to join
 header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
+permalink: /OpenSource Blogging with Jekyll, GitHub, VSCode - Part1/
 date:   "2020-02-17"
 categories: 
 - "BLOGGING"
@@ -70,7 +71,7 @@ git push
 GitHub Pages automatically picks up the recent commit changes to the Repo's Master branch and with Jekyll integration auto-builds the site and publishes it live to [https://jesseloudon.github.io][JesseLoudonSite]
 
 [JesseLoudonSite]:https://jesseloudon.github.io
-[Part1]:"https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll,-GitHub,-VSCode-Part1/"
+[Part1]:"https://jesseloudon.github.io/blogging/OpenSource Blogging with Jekyll, GitHub, VSCode Part1/"
 [Jekyll]:https://jekyllrb.com/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
 [GitHubPages]:https://pages.github.com/
