@@ -56,8 +56,7 @@ My GitHub account has a single Repository and Master branch for the blog. In ord
 `username.github.io`
 
 
-
-[Part1]:"https://jesseloudon.github.io/OpenSource-Blogging-with-Jekyll,-GitHub,-VSCode-Part1/"
+[Part1]:"https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll,-GitHub,-VSCode-Part1/"
 [Jekyll]:https://jekyllrb.com/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
 [GitHubPages]:https://pages.github.com/
@@ -68,4 +67,4 @@ My GitHub account has a single Repository and Master branch for the blog. In ord
 [MinimalMistakesQuickStart]:https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 [GitHubHostedRunnersAzure]:https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners
 [VisualStudioCode]:https://code.visualstudio.com/download
-[BloggingToolkit]:https://jesseloudon.github.io/bloggingtoolkit/
+[BloggingToolkit]:https://jesseloudon.github.io/BloggingToolkit/
