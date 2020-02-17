@@ -16,7 +16,7 @@ tags:
 - "VSCODE"
 - "MARKDOWN"
 ---
-Kicking off the new year brought forward a renewed motiviation to join the community of tech bloggers. In this blog series I'll share everything you need to know to get you setup with your own blog site, for free, using open source tooling such as Jekyll, GitHub, and Visual Studio Code.
+Kicking off the new year brought forward a renewed motivation to join the community of tech bloggers. In this blog series I'll share everything you need to know to get you setup with your own blog site, for free, using open source tooling such as Jekyll, GitHub, and Visual Studio Code.
 
 * Part 1 - Why I'm using open source and an overview of my blog setup - `you are here`
 * Part 2 - Getting started with a step-by-step guide
