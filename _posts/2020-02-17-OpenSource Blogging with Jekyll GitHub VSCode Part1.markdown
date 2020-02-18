@@ -29,7 +29,7 @@ To start off here's an overview of my blogging toolkit:
 ![OpenSourceBlogDependencies](/assets/images/OpenSourceBlogDependencies.png) 
 > A collection of helpful links can be found [here][BloggingToolkit].
 
-## Why OS?
+## Why Open Source?
 Firstly let's talk about why I'm using open source, some of which may be relevant to your own goals and requirements.
 
 ### Zero Traffic, Zero Cost
@@ -46,46 +46,54 @@ As part of my 9-5 job I'm already using open source tools such as [Visual Studio
 
 ### Local Dependencies
 On my laptop I have the following clients installed:
-- [Ruby][RubyInstaller] - `2.6.5`
+- [Ruby + DevKit][RubyInstaller] - `2.6.5`
 - [Jekyll][JekyllWindowsInstall] - `4.0.0`
 - [Visual Studio Code][VisualStudioCode] - `1.42.0`
 - [Git][Git] - `2.18.0`
 
 ### Creating content
-I create and modify content using the Visual Studio Code client. It has native support for markdown editing and integration with [Git][Git]. Maximum appreciation goes to VSCode's preview window which allows you to see the blog post as if it was live in a web browser.
+I create and modify content using the Visual Studio Code client. It has native support for markdown editing and integration with [Git][Git]. Maximum appreciation goes to VSCode's `preview window` which allows you to see your markdown content in it's published form.
+
+![VSCodePreview](/assets/images/VSCode-Preview.png)
 
 > Note: You can also use GitHub from a web browser to create content via their GUI however you cannot preview the entire site without publishing it. This is the main reason I use my Surface Book 2 as a local dev environment.
 
 ### Previewing the Site
-If I want to preview the entire site locally on my laptop I use:
+After creating new content locally when I want to preview the entire site I'll run this cmdlet from VSCode's Terminal:
 ```
 bundle exec jekyll serve
 ```
-This auto-builds & publishes the site at [http://127.0.0.1:4000][LocalSite]
+This will auto-build from my local Git repository & publish the site at [http://127.0.0.1:4000][LocalSite]
 
 ### Online Publishing
-My GitHub account has a single Repository and Master branch for the blog.
+My GitHub account has a `single repository` and `master branch` setup for the blog. You can get a bit fancy with branches but I prefer to keep things simple for now.
 
 > Note: In order for GitHub Pages to automatically build and serve your blog content your GitHub Repository name needs be a certain format: `username.github.io`
 
-When I'm happy with the local preview of the blog site I use Git from the VSCode Terminal to commit my local changes and push them to my GitHub Repo in the cloud. 
+When I'm happy with the local preview of the blog site I use Git from the VSCode Terminal to commit my local changes and push them to my GitHub repo in the cloud. 
 
 Your typical flow of commands will look like this:
 ```
 git pull
-git commit -am "commit message"
+git commit -am "your commit message"
 git push
 ```
 
-The cool thing is GitHub Pages automatically detects changes to GitHub Repo's Master branch and using Jekyll integration auto-builds the site and publishes it live to [https://jesseloudon.github.io][JesseLoudonSite]
+The cool thing here is GitHub Pages automatically detects changes to my repo's master branch and using Jekyll integration auto-builds the site and publishes it live to [https://jesseloudon.github.io][JesseLoudonSite]
+
+As you can expect there are some [usage limits][GitHubPagesUsageLimits] associated with the GitHub Pages service such as a soft limit of 10 builds per hour. Being a new user to this service I've not run into these limits or felt the impacts as yet :)
 
 ## Recap
-In this blog I've provided you with a toolkit to get you started with open source blogging and summarised my reasons for going down this path. 
+In this blog I've provided you with a toolkit to get you started with open source blogging and summarised my reasons for going down this wonderful path. 
 
-I've also given you a birds eye view of the blog setup and end-to-end flow of events starting from content creation to the blog post going live online.
+I've also given you a bird's eye view of my blog setup and an end-to-end flow of events starting from content creation on my local laptop to my blog posts going live online.
 
-In the next post I'll walkthrough how you can get started with your own blog on [GitHub Pages][GitHubPages] step-by-step.
+In the next post `Part 2` I'll walkthrough how you can get started with your own blog on [GitHub Pages][GitHubPages] step-by-step.
 
+Cheers,
+Jesse
+
+[GitHubPagesUsageLimits]:https://help.github.com/en/github/working-with-github-pages/about-github-pages
 [LocalSite]:http://127.0.0.1:4000
 [RubyInstaller]:https://rubyinstaller.org/downloads/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
