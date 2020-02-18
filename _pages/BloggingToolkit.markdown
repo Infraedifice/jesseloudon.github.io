@@ -26,6 +26,7 @@ A collection of links to help you get setup with <b>Open Source</b> blogging.
 GitHub Pages is a static site hosting service & uses Jekyll as the default generator to build websites from a GitHub repository.
 
 * [https://pages.github.com/][GitHubPages]
+* [https://help.github.com/en/github/][GitHubPagesUsageLimits]
 
 ### GitHub
 GitHub provides repository hosting for software development version control using Git.
@@ -61,11 +62,11 @@ Minimal Mistakes by Michael Rose is the Jekyll theme I use for this site.
 * [https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/][MinimalMistakesQuickStart]
 
 ### CloudSkew
-CloudSkew is a free tool to create diagrams from a web browser.
+CloudSkew is a tool to create diagrams via a web browser. Free for individual users.
 
 * [https://github.com/cloudskew/cloudskew][CloudSkew]
 
-
+[GitHubPagesUsageLimits]:https://help.github.com/en/github/
 [Part1]:https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part1/
 [CloudSkew]:https://github.com/cloudskew/cloudskew
 [Jekyll]:https://jekyllrb.com/
