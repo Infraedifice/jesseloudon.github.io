@@ -84,7 +84,7 @@ The cool thing here is GitHub Pages automatically detects changes to my repo's m
 As you can expect there are some [usage limits][GitHubPagesUsageLimits] associated with the GitHub Pages service such as a soft limit of 10 builds per hour. Being a new user to this service I've not run into these limits or felt the impacts as yet :smiley:
 
 ## Recap
-In this blog I've provided you with a toolkit to get you started with open source blogging and summarised my reasons for going down this wonderful path. 
+In this blog I've provided you with a [toolkit][BloggingToolkit] to get you started with open source blogging and summarised my reasons for going down this wonderful path. 
 
 I've also given you a bird's eye view of my blog setup and an end-to-end flow of events starting from content creation on my local laptop to my blog posts going live online.
 
