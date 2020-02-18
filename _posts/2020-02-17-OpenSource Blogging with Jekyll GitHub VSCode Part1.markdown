@@ -81,7 +81,7 @@ git push
 
 The cool thing here is GitHub Pages automatically detects changes to my repo's master branch and using Jekyll integration auto-builds the site and publishes it live to [https://jesseloudon.github.io][JesseLoudonSite]
 
-As you can expect there are some [usage limits][GitHubPagesUsageLimits] associated with the GitHub Pages service such as a soft limit of 10 builds per hour. Being a new user to this service I've not run into these limits or felt the impacts as yet :)
+As you can expect there are some [usage limits][GitHubPagesUsageLimits] associated with the GitHub Pages service such as a soft limit of 10 builds per hour. Being a new user to this service I've not run into these limits or felt the impacts as yet :smiley:
 
 ## Recap
 In this blog I've provided you with a toolkit to get you started with open source blogging and summarised my reasons for going down this wonderful path. 
