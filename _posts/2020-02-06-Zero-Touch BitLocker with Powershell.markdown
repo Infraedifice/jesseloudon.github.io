@@ -63,8 +63,6 @@ I recommend creating and testing your own script by taking elements that you req
 
 <script src="https://gist.github.com/jesseloudon/7f7482916c2c4c993948c2157a537045.js"></script>
 
-Assuming you may want to reverse engineer and improve upon this imperfect script I've included descriptions below of the logic to smooth the journey.
-
 
 # Overall Approach
 
