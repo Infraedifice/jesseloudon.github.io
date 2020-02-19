@@ -20,7 +20,7 @@ title                    : "Just Another Azure Guy"
 title_separator          : "|"
 subtitle                 : "v1.0" # site tagline that appears below site title in masthead
 name                     : "Jesse Loudon"
-description              : "Azure, DevOps, AzCLI, PowerShell"
+description              : "Just Another Azure Guy"
 url                      : "https://jesseloudon.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "jesseloudon/jesseloudon.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -29,7 +29,7 @@ logo                     : "/assets/images/azure-solutions-architect-expert-44x4
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 github                   : [metadata] #added to resolve jekyll serve error "GitHub Metadata: No GitHub API authentication could be found."
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 170
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -111,7 +111,7 @@ author:
   name             : "Jesse Loudon"
   avatar           : "/assets/images/LinkedIn_1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Azure Solution Architect"
-  location         : "Sydney, AU"
+  location         : "AU"
   email            :
   links:
     - label: "LinkedIn"
