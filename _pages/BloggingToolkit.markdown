@@ -17,9 +17,9 @@ A collection of links to help you get setup with <b>Open Source</b> blogging.
 
 ## How-To Series
 * [Part 1][Part1] - Why I’m using open source and an overview of my blog setup
-* Part 2 - Getting started with a step-by-step guide
-* Part 3 - Tips & tricks with Jekyll and Markdown editing
-* Part 4 - Securing your content
+* [Part 2][Part2] - Getting started with a step-by-step guide
+* Part 3 - Securing your Content and Going Live with GitHub Pages
+* Part 4 - Tips & Tricks with Jekyll and Markdown editing
 
 ## Toolkit
 ### GitHub Pages
@@ -69,6 +69,7 @@ CloudSkew is a tool I currently use to create diagrams via a web browser. Free f
 
 [GitHubPagesUsageLimits]:https://help.github.com/en/github/
 [Part1]:https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part1/
+[Part2]:https://jesseloudon.github.io/blogging/OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part2/
 [CloudSkew]:https://github.com/cloudskew/cloudskew
 [Jekyll]:https://jekyllrb.com/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
