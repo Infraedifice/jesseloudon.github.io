@@ -49,6 +49,7 @@ Jekyll is an open source static site generator built as a Ruby Gem and integrate
 
 * [https://jekyllrb.com/][Jekyll]
 * [https://jekyllrb.com/docs/installation/windows/][JekyllWindowsInstall]
+* [https://jekyllrb.com/resources/][JekyllResources]
 
 ### Ruby 
 Ruby is an open source Programming Language.
@@ -56,13 +57,13 @@ Ruby is an open source Programming Language.
 * [https://rubyinstaller.org/downloads/][RubyInstaller]
 
 ### Minimal Mistakes - Jekyll Theme
-Minimal Mistakes by Michael Rose is the Jekyll theme I use for this site.
+Minimal Mistakes by Michael Rose is the Jekyll theme I currently use for this site.
 
 * [https://mmistakes.github.io/minimal-mistakes/][MinimalMistakes]
 * [https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/][MinimalMistakesQuickStart]
 
 ### CloudSkew
-CloudSkew is a tool to create diagrams via a web browser. Free for individual users.
+CloudSkew is a tool I currently use to create diagrams via a web browser. Free for individual users.
 
 * [https://github.com/cloudskew/cloudskew][CloudSkew]
 
@@ -71,6 +72,7 @@ CloudSkew is a tool to create diagrams via a web browser. Free for individual us
 [CloudSkew]:https://github.com/cloudskew/cloudskew
 [Jekyll]:https://jekyllrb.com/
 [JekyllWindowsInstall]:https://jekyllrb.com/docs/installation/windows/
+[JekyllResources]:https://jekyllrb.com/resources/
 [GitHubPages]:https://pages.github.com/
 [GitHub]:https://github.com/
 [Git]:https://git-scm.com/downloads
