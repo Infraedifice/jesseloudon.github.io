@@ -127,7 +127,7 @@ $ bundle exec jekyll serve
 
 After a successful serve - browsing to http://localhost:4000 will display a home page like this.
 
-![Jekylltheme1](/assets/images/jekylltheme1.png)
+![Jekylltheme1](/assets/images/Jekylltheme1.png)
 
 Open the newly created folder `C:\mm-github-pages-starter` from VSCode to access the following site structure.
 
