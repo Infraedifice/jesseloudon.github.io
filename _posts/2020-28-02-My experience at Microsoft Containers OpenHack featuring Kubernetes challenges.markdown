@@ -19,7 +19,7 @@ Azure consultants are constantly looking to expand our scope of expertise and al
 
 ![OpenHackLogo](/assets/images/OpenHackLogo1.png)
 
-> Microsoft OpenHack is a developer-focused engagement where a wide variety of participants (Open) learn through hands-on experimentation (Hack) using challenges based on real-world customer scenarios designed to mimic the developer journey. Source: Microsoft
+> Microsoft OpenHack is a developer-focused engagement where a wide variety of participants (Open) learn through hands-on experimentation (Hack) using challenges based on real-world customer scenarios designed to mimic the developer journey - Source: Microsoft
 
 ## My experience at OpenHack
 About 80 attendees were split up between the 20 tables in the room. My team had 2 international attendees and 3 locals (myself included). Everyone was joining the OpenHack with varying levels of real experience with K8s/AKS so things were destined to be kept interesting. The underlying theme of OpenHack is that there's no clear path forward through the challenges and the 'unknown' factor is ever present.
