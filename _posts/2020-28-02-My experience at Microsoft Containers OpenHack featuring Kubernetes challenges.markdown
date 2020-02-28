@@ -97,6 +97,7 @@ We configured a <b>dedicated VNET/Subnet</b> for the <b>AKS cluster</b> and setu
 ### Challenge 4 / Day 2
 We configured Kubernetes <b>Namespaces</b> and <b>RBAC bindings</b> to assign access to different application teams. We used <b>Key Vault FlexVolume</b> and <b>Azure KeyVault</b> to secure our environment secrets. We also created Kubernetes <b>Ingress Controllers</b> for inbound Layer 7 traffic forwarding to our services.
 
+- https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 - https://github.com/Azure/kubernetes-keyvault-flexvol
 - https://docs.microsoft.com/en-us/azure/aks/concepts-network#ingress-controllers
 - https://docs.microsoft.com/en-us/azure/aks/ingress-basic
@@ -132,7 +133,7 @@ We looked into enhancing <b>cluster security</b> by applying restrictions to tra
 - https://docs.microsoft.com/en-us/cli/azure/sql/server/firewall-rule?view=azure-cli-latest
 
 ### Challenge 7 / Day 3
-We deployed an <b>AKS Windows cluster</b> and <b>Windows Nodepools</b>. We also configured <b>Taints</b> on the Nodepools and </b>Tolerations</b> on <b>Pods</b> to allow deployment of Linux and Windows containers to the same AKS cluster.
+We deployed an <b>AKS Windows cluster</b> and <b>Windows Nodepools</b>. We also configured <b>Taints</b> on the Nodepools and <b>Tolerations</b> on <b>Pods</b> to allow deployment of Linux and Windows containers to the same AKS cluster.
 
 - https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/
 - https://docs.microsoft.com/en-us/azure/aks/use-multiple-node-pools
