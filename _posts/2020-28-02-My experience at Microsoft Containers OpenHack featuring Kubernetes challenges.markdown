@@ -51,7 +51,7 @@ Due to limited time of the OpenHack (3 days) the focus was on completing challen
 
 ![EscapeRoom](/assets/images/the-cipher-room.jpg)
 
-Personally I believe the structure of the OpenHack works because, similar to an Escape Room, it seemed as if Microsoft had locked you into the room and to get out you needed to build a working Kubernetes environment on Azure. Hackathons where teams have limited time and resources to design and present their submission are also similiar concepts to OpenHack.
+Personally I believe the structure of OpenHack works because, similar to an Escape Room, it seemed as if Microsoft had locked you into the room and to get out you needed to build a working Kubernetes environment on Azure. Hackathons, where teams have limited time and resources to design and present their submission, are also a similiar concept to how an OpenHack operates.
 
 ## Challenges and Key Concepts
 The Containers OpenHack consisted of 8 challenges to complete over 3 days. Unfortunately our Super-Awesome-Hacker-Team ran out of time to do them all, but it was a great learning experience anyways. 
