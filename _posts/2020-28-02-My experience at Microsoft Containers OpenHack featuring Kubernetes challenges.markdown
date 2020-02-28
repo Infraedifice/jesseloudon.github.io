@@ -151,7 +151,7 @@ We looked into deploying a <b>service mesh</b> into the AKS cluster using either
 
 ## Closing Remarks
 
-![ChallengeComplete](/assets/images/OpenHackContainersChallenge.png)
+![ChallengeComplete](/assets/images/openhack-containers.png)
 
 My first Microsoft OpenHack was a great experience. I went in with low expectations and came away with more hands-on experience with Kubernetes and Azure Kubernetes Service than I would've hoped to achieve in 3 days.
 
