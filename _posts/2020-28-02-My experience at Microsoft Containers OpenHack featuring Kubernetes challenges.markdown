@@ -106,7 +106,7 @@ We configured Kubernetes <b>Namespaces</b> and <b>RBAC bindings</b> to assign ac
 - https://docs.microsoft.com/en-us/azure/aks/azure-ad-rbac
 
 ### Challenge 5 / Day 3
-We setup monitoring, logging, and alerts for the AKS cluster using <b>Azure Monitor Insights</b> and implemented <b>Resource Limits</b> via <b>YAML</b> on a newly deployed application which was resource-hungry.
+We setup monitoring, logging, and alerts for the AKS cluster using <b>Azure Monitor Insights</b>, implemented <b>Resource Limits</b> via <b>YAML</b> on a newly deployed application (which was resource-hungry), and tested the <b>Kubernetes Dashboard</b>.
 
 - https://docs.microsoft.com/en-us/azure/architecture/microservices/logging-monitoring
 - https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview
@@ -114,11 +114,8 @@ We setup monitoring, logging, and alerts for the AKS cluster using <b>Azure Moni
 - https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-log-search#search-logs-to-analyze-data
 - https://docs.microsoft.com/en-us/azure/kusto/
 - https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-alerts
-- https://prometheus.io/docs/introduction/overview/
-- https://github.com/helm/charts/tree/master/stable/nginx-ingress#prometheus-metrics
-- https://prometheus.io/docs/instrumenting/exporters/
-- https://prometheus.io/docs/prometheus/latest/querying/examples/#using-functions-operators-etc
-- https://prometheus.io/docs/visualization/grafana/
+- https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+
 
 ### Challenge 6 / Day 3
 We looked into enhancing <b>cluster security</b> by applying restrictions to traffic and application access. Ultimately the team decided not to pursue this challenge due to time constraints.
