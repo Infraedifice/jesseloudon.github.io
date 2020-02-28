@@ -2,10 +2,10 @@
 title: "Key Concepts from Microsoft Containers OpenHack with Kubernetes and AKS"
 excerpt: "Azure consultants are constantly looking to expand our scope of expertise and aligning to this I've recently attended a Microsoft Containers OpenHack in Sydney. This event was a huge success for me. It was a rude introduction to K8s and AKS - but in a good way."
 header:
-  image: "/assets/images/Keep-Going.png"
+  image: "/assets/images/Keep-Going.jpg"
   caption: ""
 date:   "2020-02-28"
-categories: 
+categories:
 - "EVENTS"
 tags: 
 - "OPENHACK"
