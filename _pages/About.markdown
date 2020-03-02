@@ -1,6 +1,7 @@
 ---
 title:  "About me..."
 permalink: /about/
+excerpt: "Hi I'm Jesse Loudon, an Azure consultant and architect at Telstra Purple with over 10 years in the Australian industry."
 header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
@@ -10,8 +11,12 @@ categories:
 tags: 
 - "AboutMe"
 galleryintro: 
-  - excerpt: "Industry certifications attained over the years"
+  - excerpt: "Industry Accreditation"
 gallery:
+  - url: "https://www.youracclaim.com/user/jesseloudon"
+    image_path: /assets/images/openhack-containers.png
+    alt: "OpenHack Containers"
+    title: "OpenHack Containers"
   - url: "https://www.youracclaim.com/user/jesseloudon"
     image_path: /assets/images/TOGAF-9.2-badges-2019.png
     alt: "TOGAF 9.2"
@@ -37,9 +42,10 @@ gallery:
     alt: "Citrix Certified Administrator XenApp"
     title: "Citrix Certified Administrator XenApp"
 ---
-> Hi I'm Jesse Loudon, a Consultant at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry & a passion for working on Microsoft Azure :cloud:
-I help to envision, design, and implement solutions which solve key business problems and transform underlying manual processes with technology automation :bulb:
-Thankfully I'm also a dad to a little one :girl: who keeps me busy at all times :sweat_smile:
+> Hi I'm Jesse Loudon, an Azure Consultant and Architect at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry. I have a passion for working with customers to envision, design, and implement solutions which solve key business problems and transform underlying processes with technology.
+I enjoy pursing hands-on technical experience with bleeding edge concepts and love architecting and deploying complex multi-vendor/multi-cloud solutions.
+Thankfully I'm also a dad to a little one who keeps me busy at all times.
+
 
 {% include gallery %}
 

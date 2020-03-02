@@ -110,14 +110,14 @@ analytics:
 author:
   name             : "Jesse Loudon"
   avatar           : "/assets/images/LinkedIn_1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Azure Solution Architect"
+  bio              : ""
   location         : "AU"
-  email            :
+  email            : 
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: https://www.linkedin.com/in/jesseloudon/
-    - label: "Website"
+    - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://jesseloudon.github.io"
     - label: "Twitter"
