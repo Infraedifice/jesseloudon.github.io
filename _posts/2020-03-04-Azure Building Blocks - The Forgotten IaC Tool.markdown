@@ -240,7 +240,7 @@ az network vnet peering create -g "VNET-AZCLI-RG" -n "msft-spoke1-vnet-to-msft-h
 ```
 ## Conclusion
 
-Azure Building Blocks showed potential as an alternative to ARM templates but I've been disappointed by a lack of further development and some ongoing issues with deploying VMs using the tool. The best-practice defaults that are applied as part of the pre-defined ARM templates are a neccessary inclusion but we all know Azure is moving faster than the speed at which these best-practice defaults are updated in the templates - which leads you to situations where you'll need to override these defaults and that's where things can get painful.
+Azure Building Blocks showed potential as an alternative to ARM templates but I've been disappointed by a lack of further development and some ongoing issues with deploying VMs using the tool. The best-practice defaults that are applied as part of the pre-defined ARM templates are a necessary inclusion but we all know Azure is moving faster than the speed at which these best-practice defaults are updated in the templates - which leads you to situations where you'll need to override these defaults and that's where things can get painful.
 
 For now I'm sticking with AzureCLI as my IaC tool for deployments. 
 
