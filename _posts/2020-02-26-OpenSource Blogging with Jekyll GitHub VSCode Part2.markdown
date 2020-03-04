@@ -35,9 +35,9 @@ First we need to setup our local development environment for the blog site by in
 ![DevDeploymentPlan](/assets/images/Part2deploymentplan.png)
 
 >Coming Up...
-1. We will install VSCode client
-2. We will install Git client
-3. We will install Ruby and Jekyll dependencies
+1. We will install VSCode
+2. We will install Git
+3. We will install Ruby and Jekyll
 4. We will clone a Jekyll Theme to a local folder and preview the site
 
 <i> Already have Visual Studio Code or Git installed? --> Update to the latest release prior to continuing with this guide.
