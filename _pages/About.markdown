@@ -1,7 +1,7 @@
 ---
 title:  "About me..."
 permalink: /about/
-excerpt: "Hi I'm Jesse Loudon, an Azure consultant and architect at Telstra Purple with over 10 years in the Australian industry."
+excerpt: "Hi I'm Jesse Loudon, an Azure Consultant / Architect at Telstra Purple and blogger at jloudon.com"
 header:
   image: "/assets/images/Keep-Going.jpg"
   caption: ""
@@ -42,10 +42,10 @@ gallery:
     alt: "Citrix Certified Administrator XenApp"
     title: "Citrix Certified Administrator XenApp"
 ---
-> Hi I'm Jesse Loudon, an Azure Consultant and Architect at [Telstra Purple][telstrapurple] with over 10 years in the Australian industry. I have a passion for working with customers to envision, design, and implement solutions which solve key business problems and transform underlying processes with technology.
-I enjoy pursing hands-on technical experience with bleeding edge concepts and love architecting and deploying complex multi-vendor/multi-cloud solutions.
-Thankfully I'm also a dad to a little one who keeps me busy at all times.
-
+> Hi I'm Jesse Loudon, an Azure Consultant / Architect at [Telstra Purple][telstrapurple] and blogger at jloudon.com
+My passion is working with customers to envision, design, and implement solutions which solve key business problems & transform underlying processes with technology.
+I also enjoy pursing hands-on technical experience with bleeding edge concepts and love architecting and deploying complex multi-vendor/multi-cloud solutions.
+Thankfully I’m also a dad to a little one who keeps me busy at all times.
 
 {% include gallery %}
 
