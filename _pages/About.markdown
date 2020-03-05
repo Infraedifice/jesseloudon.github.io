@@ -42,9 +42,12 @@ gallery:
     alt: "Citrix Certified Administrator XenApp"
     title: "Citrix Certified Administrator XenApp"
 ---
-> Hi I'm Jesse Loudon, an Azure Consultant / Architect at [Telstra Purple][telstrapurple] and blogger at jloudon.com
+Hi I'm Jesse Loudon, an Azure Consultant / Architect at [Telstra Purple][telstrapurple] and blogger at jloudon.com.
+
 My passion is working with customers to envision, design, and implement solutions which solve key business problems & transform underlying processes with technology.
+
 I also enjoy pursing hands-on technical experience with bleeding edge concepts and love architecting and deploying complex multi-vendor/multi-cloud solutions.
+
 Thankfully I’m also a dad to a little one who keeps me busy at all times.
 
 {% include gallery %}
