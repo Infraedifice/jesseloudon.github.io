@@ -12,4 +12,4 @@ jobs:
       - name: Azure Login
         uses: Azure/Login@v1
         with:
-         credentials: ${{ secrets.AZURE_CREDENTIALS }}
+         creds: ${{ secrets.AZURE_CREDENTIALS }}
