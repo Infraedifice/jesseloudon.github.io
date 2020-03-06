@@ -1,0 +1,15 @@
+name: Azure Login
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+  azlogin:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Azure/login@v1
+    - name: Azure Login
+      with:
+        credentials: ${{ secrets.AZURE_CREDENTIALS }}
