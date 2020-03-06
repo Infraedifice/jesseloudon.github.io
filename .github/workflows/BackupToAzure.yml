@@ -6,8 +6,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
         with:
-          source_dir: "src/github.com/jesseloudon/jesseloudon.github.io/_dist/"
+          source_dir: "_pages"
           container_name: "${{ secrets.container_name }}"
           connection_string: "${{ secrets.connection_string }}"
