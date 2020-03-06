@@ -1,0 +1,13 @@
+name: Backup to Azure on Push
+on:
+  push:
+    branches: [ master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
+        with:
+          source_dir: "./"
+          container_name: "${{ secrets.container_name }}"
+          connection_string: "${{ secrets.connection_string }}"
