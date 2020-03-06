@@ -3,17 +3,17 @@ on:
   push:
     branches: [ master ]
 jobs:
-  firewall:
+  firewallAllow:
     runs-on: ubuntu-latest
     steps:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - run: | 
-          az storage account update --resource-group github-rg --name aeblogstorage --default-action Allow  
-  deploy:
+          az storage account update --resource-group ${{ secrets.AZURE_STORAGE_RG }} --name ${{ secrets.AZURE_STORAGE_NAME }} --default-action Allow  
+  uploadToAzure:
     runs-on: ubuntu-latest
-    needs: firewall
+    needs: firewallAllow
     steps:
       - uses: actions/checkout@v2
       - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
@@ -21,3 +21,12 @@ jobs:
           source_dir: "./"
           container_name: "${{ secrets.container_name }}"
           connection_string: "${{ secrets.connection_string }}"
+  firewallDeny:
+    runs-on: ubuntu-latest
+    needs: uploadToAzure
+    steps:
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - run: | 
+          az storage account update --resource-group ${{ secrets.AZURE_STORAGE_RG }} --name ${{ secrets.AZURE_STORAGE_NAME }} --default-action Deny
