@@ -3,6 +3,17 @@ on:
   push:
     branches: [ master ]
 jobs:
+  firewall:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - uses: jesseloudon/azure-storage-firewall-default-action@v0.1
+        with:
+          resourcegroup_name: "github-rg"
+          storageaccount_name: "aeblogstorage"
+          configure_firewall_default_action: "Allow"
   deploy:
     runs-on: ubuntu-latest
     steps:
