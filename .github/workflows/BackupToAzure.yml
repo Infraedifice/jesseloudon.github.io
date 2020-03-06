@@ -9,13 +9,11 @@ jobs:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - uses: jesseloudon/azure-storage-firewall-default-action@0.1
-        with:
-          resourcegroup_name: "github-rg"
-          storageaccount_name: "aeblogstorage"
-          configure_firewall_default_action: "Allow"
+      - run: | 
+          az storage account update --resource-group github-rg --name aeblogstorage --default-action Allow  
   deploy:
     runs-on: ubuntu-latest
+    needs: firewall
     steps:
       - uses: actions/checkout@v2
       - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
