@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
         with:
-          source_dir: "_posts"
+          source_dir: "https://github.com/jesseloudon/jesseloudon.github.io/tree/master/_pages"
           container_name: "${{ secrets.container_name }}"
           connection_string: "${{ secrets.connection_string }}"
