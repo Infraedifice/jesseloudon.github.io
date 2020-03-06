@@ -9,7 +9,7 @@ jobs:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - uses: jesseloudon/azure-storage-firewall-default-action
+      - uses: jesseloudon/azure-storage-firewall-default-action@0.1
         with:
           resourcegroup_name: "github-rg"
           storageaccount_name: "aeblogstorage"
