@@ -1,9 +1,6 @@
 ---
 title: "My experience at Microsoft Containers OpenHack featuring Kubernetes challenges"
 excerpt: "About 80 attendees were split up between the 20 tables in the room. My team had 2 international attendees and 3 locals (myself included). Everyone was joining the OpenHack with varying levels of real experience with K8s/AKS so things were destined to be kept interesting. The underlying theme of OpenHack is that there's no clear path forward through the challenges and the 'unknown' factor is ever present."
-header:
-  image: "/assets/images/Keep-Going.jpg"
-  caption: ""
 date:   "2020-02-28"
 categories:
 - "EVENTS"

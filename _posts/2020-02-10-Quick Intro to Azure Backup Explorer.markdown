@@ -1,8 +1,5 @@
 ---
 title:  "Quick Intro to Azure Backup Explorer"
-header:
-  image: "/assets/images/Keep-Going.jpg"
-  caption: ""
 date:   "2020-02-10"
 categories: 
 - "CONSULTING"

@@ -1,9 +1,6 @@
 ---
 title:  "0.09ms using Azure Proximity Placement Groups"
 excerpt: "Today I’ll give you a quick intro to Proximity Placement Groups demonstrating how to deploy a test environment into your Azure Subscription using one of my favourite tools AzureCLI. I’ll also test network latency with a PPG and without to show you the difference."
-header:
-  image: "/assets/images/Keep-Going.jpg"
-  caption: ""
 date:   "2020-02-07"
 categories: 
 - "CONSULTING"

@@ -2,9 +2,6 @@
 title:  "About me..."
 permalink: /about/
 excerpt: "Hi I'm Jesse Loudon, an Azure Consultant / Architect at Telstra Purple and blogger at jloudon.com"
-header:
-  image: "/assets/images/Keep-Going.jpg"
-  caption: ""
 date:   "2020-02-06"
 categories: 
 - "Personal"
