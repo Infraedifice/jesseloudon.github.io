@@ -1,9 +1,6 @@
 ---
 title:  "Azure Building Blocks - The Forgotten IaC Tool"
 excerpt: "Because I'm not keen on authoring large JSON files for IaC (aka ARM templates) I'm going to put Azure Building Blocks to the test with a simple Hub & Spoke VNET deployment. Later on I'll also demonstrate the same deployment using an AzureCLI script - my current preferred alternative to ARM Templates - so you'll see the differences."
-header:
-  image: "/assets/images/Keep-Going.jpg"
-  caption: ""
 date:   "2020-03-04"
 categories: 
 - "CONSULTING"
