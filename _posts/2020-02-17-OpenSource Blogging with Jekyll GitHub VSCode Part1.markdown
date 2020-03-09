@@ -1,6 +1,5 @@
 ---
 title: "OpenSource Blogging with Jekyll GitHub VSCode Part1"
-permalink: /OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part1/
 excerpt: "Kicking off the new year brought forward a renewed motiviation to join the community of tech bloggers. In this blog series I'll share everything you need to know to get you setup with your own blog site, for free, using open source tooling such as Jekyll, GitHub, and Visual Studio Code."
 date:   "2020-02-17"
 categories: 
@@ -18,8 +17,8 @@ Kicking off the new year brought forward a renewed motivation to join the commun
 
 In this blog series I'll share everything you need to know to get you setup with your own blog site, for free, using open source tooling such as Jekyll, GitHub, and Visual Studio Code.
 
-* [Part 1][Part1] - Why I'm using open source and an overview of my blog setup - `you are here`
-* [Part 2][Part2] - Getting started with a step-by-step guide
+* Part 1 - Why I'm using open source and an overview of my blog setup - `you are here`
+* Part 2 - Getting started with a step-by-step guide
 * Part 3 - Securing your Content and Going Live with GitHub Pages
 * Part 4 - Tips & Tricks with Jekyll and Markdown editing
 
@@ -88,7 +87,7 @@ In this blog I've provided you with a [toolkit][BloggingToolkit] to get you star
 
 I've also given you a bird's eye view of my blog setup and an end-to-end flow of events starting from content creation on my local laptop to my blog posts going live online.
 
-Join me for [Part 2][Part2] of this series where I'll walkthrough how you can get started with your own blog on [GitHub Pages][GitHubPages] step-by-step.
+Join me for `Part 2` of this series where I'll walkthrough how you can get started with your own blog on [GitHub Pages][GitHubPages] step-by-step.
 
 Cheers,
 Jesse

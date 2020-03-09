@@ -1,6 +1,5 @@
 ---
 title: "OpenSource Blogging with Jekyll GitHub VSCode Part2"
-permalink: /OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part2/
 excerpt: "During Part 1 of this series I introduced you to open source blogging using some awesome tools and platforms available today. Shortly I'll provide a detailed walkthrough of everything you need to get started with your own blog site."
 date:   "2020-02-26"
 categories: 
@@ -15,12 +14,12 @@ tags:
 - "MARKDOWN"
 - "MMISTAKES-THEME"
 ---
-During [Part 1][Part1] of this series I introduced you to open source blogging using some awesome tools and platforms available today. I also shared my own setup so you can see what's involved end-to-end.
+During Part 1 of this series I introduced you to open source blogging using some awesome tools and platforms available today. I also shared my own setup so you can see what's involved end-to-end.
 
 Shortly I'll provide a detailed walkthrough of everything you need to get started with your own blog site.
 
-* [Part 1][Part1] - Why I'm using open source and an overview of my blog setup
-* [Part 2][Part2] - Getting started with a step-by-step guide - `you are here`
+* Part 1 - Why I'm using open source and an overview of my blog setup
+* Part 2 - Getting started with a step-by-step guide - `you are here`
 * Part 3 - Securing your Content and Going Live with GitHub Pages
 * Part 4 - Tips & Tricks with Jekyll and Markdown editing
 
@@ -188,5 +187,3 @@ Jesse
 [JekyllThemeLink3]:https://jamstackthemes.dev/ssg/jekyll/
 [GitHubPages]:https://pages.github.com/
 [GitHub]:https://github.com/
-[Part1]:"https://jesseloudon.github.io/OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part1/
-[Part2]:"https://jesseloudon.github.io/OpenSource-Blogging-with-Jekyll-GitHub-VSCode-Part2/
