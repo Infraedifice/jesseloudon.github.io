@@ -1,22 +1,22 @@
 # main links
-#main:
-#- title: "About"
-#  url: /about/
-#- title: "GitHub"
-#  url: "https://github.com/jesseloudon/jesseloudon.github.io"
-#- title: "Blogging Toolkit"
-#  url: /BloggingToolkit/
+main:
+- title: "About"
+  url: /about/
+- title: "GitHub"
+  url: "https://github.com/jesseloudon/"
+- title: "Blogging Toolkit"
+  url: /BloggingToolkit/
 
-customsidenav:
-  - title: Links
-    children:
-      - title: "Home"
-        url: /
-      - title: "About Me"
-        url: /about/
-      - title: "Blogging Toolkit"
-        url: /BloggingToolkit/
-      - title: "My GitHub"
-        url: https://github.com/jesseloudon
-      - title: "My GitHub Scripts"
-        url: https://gist.github.com/jesseloudon
+#customsidenav:
+#  - title: Links
+#    children:
+#      - title: "Home"
+#        url: /
+#      - title: "About Me"
+#        url: /about/
+#     - title: "Blogging Toolkit"
+#        url: /BloggingToolkit/
+#      - title: "My GitHub"
+#        url: https://github.com/jesseloudon
+#      - title: "My GitHub Scripts"
+#        url: https://gist.github.com/jesseloudon
