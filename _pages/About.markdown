@@ -1,8 +1,8 @@
 ---
-title:  "About"
+title: "About"
 permalink: /about/
-excerpt: "Hi I'm Jesse Loudon, an Azure Consultant / Architect at Telstra Purple and blogger at jloudon.com"
-date:   "2020-02-06"
+excerpt: "Hi I'm Jesse Loudon, an Azure Consultant / Architect at Telstra Purple and blogger at jloudon.com and blog.kloud.com.au"
+date: "2020-02-06"
 categories: 
 - "Personal"
 tags: 
@@ -41,7 +41,7 @@ gallery:
 ---
 ![Pic](/assets/images/LinkedIn_1.png)
 
-Hi I'm Jesse Loudon, an Azure Consultant / Architect at [Telstra Purple][telstrapurple] and blogger at jloudon.com.
+Hi I'm Jesse Loudon, an Azure Consultant / Architect at [Telstra Purple][telstrapurple] and blogger at [jloudon.com][jloudon] and [kloud.com.au][kloud]
 
 My passion is working with customers to envision, design, and implement solutions which solve key business problems & transform underlying processes with technology.
 
@@ -52,3 +52,5 @@ Thankfully I’m also a dad to a little one who keeps me busy at all times.
 {% include gallery %}
 
 [telstrapurple]:https://www.telstra.com.au/business-enterprise/services/telstra-purple
+[jloudon]:https://jloudon.com
+[kloud]:https://blog.kloud.com.au/
