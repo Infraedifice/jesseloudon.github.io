@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-AU"
 title                    : "Just Another Azure Guy"
 title_separator          : "|"
-subtitle                 : "v1.0" # site tagline that appears below site title in masthead
+subtitle                 : "Jesse Loudon" # site tagline that appears below site title in masthead
 name                     : "Jesse Loudon"
 description              : "Jesse Loudon - Just Another Azure Guy"
 url                      : "https://jloudon.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -114,12 +114,12 @@ author:
   location         : "AU"
   email            : 
   links:
+    - label: "Home"
+      icon: "fas fa-fw fa-link"
+      url: "https://jloudon.com"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: https://www.linkedin.com/in/jesseloudon/
-    - label: "Blog"
-      icon: "fas fa-fw fa-link"
-      url: "https://jloudon.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jesseloudon"
@@ -130,15 +130,18 @@ author:
 # Site Footer
 footer:
   links:
-    - #label: "LinkedIn"
-      #icon: "fab fa-fw fa-linkedin"
-      #url: https://www.linkedin.com/in/jesseloudon/
-    - #label: "Twitter"
-      #icon: "fab fa-fw fa-twitter-square"
-      #url: "https://twitter.com/jesseloudon"
-    - #label: "GitHub"
-      #icon: "fab fa-fw fa-github"
-      #url: "https://github.com/jesseloudon"
+    - label: "Home"
+      icon: "fas fa-fw fa-link"
+      url: "https://jloudon.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: https://www.linkedin.com/in/jesseloudon/
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/jesseloudon"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jesseloudon"
 
 
 # Reading Files
@@ -275,7 +278,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
@@ -288,6 +291,6 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       sidebar:
         nav: "customsidenav"

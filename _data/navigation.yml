@@ -8,15 +8,15 @@
 #  url: /BloggingToolkit/
 
 customsidenav:
-- title: Links
+- title: Navigation
   children:
     - title: "Home"
       url: /
-    - title: "About Me"
+    - title: "About Jesse"
       url: /about/
-    - title: "Blogging Toolkit"
+    - title: "My Blogging Toolkit"
       url: /BloggingToolkit/
-    - title: "My GitHub"
+    - title: "My GitHub (ext)"
       url: https://github.com/jesseloudon
-    - title: "My GitHub Scripts"
+    - title: "My GitHub Scripts (ext)"
       url: https://gist.github.com/jesseloudon

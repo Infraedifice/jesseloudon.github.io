@@ -1,5 +1,5 @@
 ---
-title:  "About me..."
+title:  "About"
 permalink: /about/
 excerpt: "Hi I'm Jesse Loudon, an Azure Consultant / Architect at Telstra Purple and blogger at jloudon.com"
 date:   "2020-02-06"
@@ -39,6 +39,8 @@ gallery:
     alt: "Citrix Certified Administrator XenApp"
     title: "Citrix Certified Administrator XenApp"
 ---
+![Pic](/assets/images/LinkedIn_1.png)
+
 Hi I'm Jesse Loudon, an Azure Consultant / Architect at [Telstra Purple][telstrapurple] and blogger at jloudon.com.
 
 My passion is working with customers to envision, design, and implement solutions which solve key business problems & transform underlying processes with technology.
