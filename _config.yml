@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-AU"
-title                    : "Just Another Azure Guy"
+title                    : "Jesse Loudon"
 title_separator          : "|"
-subtitle                 : "Jesse Loudon" # site tagline that appears below site title in masthead
+subtitle                 : "Just Another Azure Guy" # site tagline that appears below site title in masthead
 name                     : "Jesse Loudon"
 description              : "Jesse Loudon - Just Another Azure Guy"
 url                      : "https://jloudon.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
