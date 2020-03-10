@@ -8,15 +8,23 @@
 #  url: /BloggingToolkit/
 
 customsidenav:
-- title: Navigation
+- title: Internal Links
   children:
     - title: "Home"
       url: /
-    - title: "About Jesse"
+    - title: "About"
       url: /about/
-    - title: "My Blogging Toolkit"
+    - title: "Blogging Toolkit"
       url: /BloggingToolkit/
-    - title: "My GitHub (ext)"
+- title: External Links
+  children:
+    - title: "Azure Portal"
+      url: https://portal.azure.com/
+    - title: "My GitHub"
       url: https://github.com/jesseloudon
-    - title: "My GitHub Scripts (ext)"
+    - title: "My GitHub Scripts"
       url: https://gist.github.com/jesseloudon
+    - title: "Kloud Blog"
+      url: https://blog.kloud.com.au/
+    - title: "Telstra Purple"
+      url: https://www.telstra.com.au/business-enterprise/services/telstra-purple
