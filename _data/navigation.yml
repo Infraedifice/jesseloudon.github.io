@@ -8,7 +8,7 @@
 #  url: /BloggingToolkit/
 
 customsidenav:
-- title: Internal Links
+- title: Internal
   children:
     - title: "Home"
       url: /
@@ -16,15 +16,13 @@ customsidenav:
       url: /about/
     - title: "Blogging Toolkit"
       url: /BloggingToolkit/
-- title: External Links
+- title: External
   children:
-    - title: "Azure Portal"
-      url: https://portal.azure.com/
-    - title: "My GitHub"
+    - title: "GitHub"
       url: https://github.com/jesseloudon
-    - title: "My GitHub Scripts"
+    - title: "GitHub Scripts"
       url: https://gist.github.com/jesseloudon
-    - title: "Kloud Blog"
+    - title: "Kloud"
       url: https://blog.kloud.com.au/
-    - title: "Telstra Purple"
-      url: https://www.telstra.com.au/business-enterprise/services/telstra-purple
+    - title: "Readify"
+      url: https://readify.net/blog/
