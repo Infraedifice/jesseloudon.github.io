@@ -1,6 +1,6 @@
-![Backup Entire Site to Azure on Master Push](https://github.com/jesseloudon/jesseloudon.github.io/workflows/Backup%20Entire%20Site%20to%20Azure%20on%20Master%20Push/badge.svg)
-
 ![CanvaLogo](https://jloudon.com/assets/images/CanvaLogo.png)
+
+![Backup Entire Site to Azure on Master Push](https://github.com/jesseloudon/jesseloudon.github.io/workflows/Backup%20Entire%20Site%20to%20Azure%20on%20Master%20Push/badge.svg)
 
 # Personal Blog Project based on Jekyll themes and hosted by GitHub Pages
 
