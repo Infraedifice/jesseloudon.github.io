@@ -13,7 +13,7 @@ tags:
 A collection of links to help you get setup with <b>Open Source</b> blogging.
 
 ## How-To Series
-* [Part 1][Part1] - Why I’m using open source and an overview of my blog setup
+* [Part 1][Part1] - Why I'm using open source and an overview of my blog setup
 * [Part 2][Part2] - Getting started with a step-by-step guide
 * Part 3 - Securing your Content and Going Live with GitHub Pages
 * Part 4 - Tips & Tricks with Jekyll and Markdown editing
@@ -35,6 +35,7 @@ GitHub provides repository hosting for software development version control usin
 Git is a distributed version-control system for tracking changes in source code during software development.
 
 * [https://git-scm.com/downloads][Git]
+* <https://github.github.com/training-kit/>
 
 ### Visual Studio Code
 Visual Studio Code is a source-code editor developed by Microsoft with support for Git and Markdown editing.

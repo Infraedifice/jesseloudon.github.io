@@ -14,7 +14,7 @@ tags:
 - "MARKDOWN"
 - "MMISTAKES-THEME"
 ---
-During Part 1 of this series I introduced you to open source blogging using some awesome tools and platforms available today. I also shared my own setup so you can see what's involved end-to-end.
+In Part 1 of this series I introduced you to open source blogging using some awesome tools and platforms available today. I also shared my own setup so you can see what's involved end-to-end.
 
 Shortly I'll provide a detailed walkthrough of everything you need to get started with your own blog site.
 
@@ -31,25 +31,25 @@ First we need to setup our local development environment for the blog site by in
 
 ![DevDeploymentPlan](/assets/images/Part2deploymentplan.png)
 
->Coming Up...
-1. We will install VSCode
-2. We will install Git
-3. We will install Ruby and Jekyll
-4. We will clone a Jekyll Theme to a local folder and preview the site
+## Coming Up...
+>
+1. We'll install VSCode
+2. We'll install Git
+3. We'll install Ruby and Jekyll
+4. We'll clone a Jekyll Theme to a local folder and preview the site
 
 <i> Already have Visual Studio Code or Git installed? --> Update to the latest release prior to continuing with this guide.
 
 * VSCode - Go to `Help > Check for Updates` from your VSCode client to update to the latest release.
 * Git - Use `git update` or `git update-git-for-windows` from your Git client to update to the latest release. 
 
-
-### (1) Install Visual Studio Code
+### Install Visual Studio Code
 
 1. Go to [https://code.visualstudio.com/download][VSCodeDownload]
 2. Download & run the Windows (x64) installer ~ 57MB.
 3. Accept all defaults during the installation wizard. Nothing exciting here!
 
-### (2) Install Git
+### Install Git
 
 1. Make your way to [https://git-scm.com/downloads][GitDownload]
 2. Download & run the Windows (x64) installer ~ 44MB.
@@ -58,7 +58,7 @@ First we need to setup our local development environment for the blog site by in
 
 ![GitInstall](/assets/images/GitInstall1.png)
 
-### (3) Install Jekyll / Ruby
+### Install Jekyll / Ruby
 
 1. Head over to [https://rubyinstaller.org/downloads/][RubyInstaller]
 2. Download & run the Ruby+Devkit 2.6.X (x64) installer ~ 132MB.
@@ -89,9 +89,9 @@ $ gem install jekyll bundler
 
 ![Jekyllinstall2](/assets/images/Jekyll_install2.png)
 
-### (4) Using a community theme - Minimal Mistakes
+### Cloning a Jekyll Theme
 
-We want to be blogging today-ish, not next week or a month later. So let's `clone/fork` an existing Jekyll theme to our local dev environment. We can then modify it to suit our needs without reinventing the wheel!
+We want to be blogging today-ish, not next week or a month later. So let's `clone` an existing Jekyll theme to our local dev environment. We can then modify it to suit our needs without reinventing the wheel!
 
 > By the way! The default Jekyll theme is [Minima][Minima] and seems fine for a quick proof of concept. I don't recommend going live with it because of what it lacks when compared to other themes out there.
 You can check it out by executing the following cmdlets from a VSCode Terminal:
@@ -100,18 +100,17 @@ $ jekyll new my-awesome-site
 $ cd my-awesome-site
 $ bundle exec jekyll serve
 ```
-After a successful serve - browsing to http://localhost:4000 will display a home page like this.
-
+After a successful serve - browsing to http://localhost:4000 will display a home page like this:
 ![Minimatheme](/assets/images/Minima-theme.png)
 
 Currently I'm using [Minimal Mistakes][MmistakesGH] by Michael Rose because it suits my needs & because of Michael's helpful documentation available - for example check out [https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/][Mmistakes]
 
-The quickest way to get started with the Minimal Mistakes theme is to `git clone` or `git fork` one of the following GitHub repositories. 
+The quickest way to get started with the Minimal Mistakes theme is to `git clone` one of the following GitHub repositories.
 
 * [Minimal Mistakes Remote Theme Starter][MmistakesRemote]
 * [Minimal Mistakes][MmistakesGH]
 
-Let's look at how this works with the <b>Remote Theme</b>. 
+Let's look at how this works with the <b>Remote Theme</b>.
 
 Try executing the following cmdlets from a VSCode Terminal:
 
@@ -122,7 +121,7 @@ $ cd mm-github-pages-starter/
 $ bundle exec jekyll serve
 ```
 
-After a successful serve - browsing to http://localhost:4000 will display a home page like this.
+After a successful serve - browsing to http://localhost:4000 will display a home page like this:
 
 ![Jekylltheme1](/assets/images/Jekylltheme1.png)
 
