@@ -3,10 +3,10 @@ title: "Azure Policy as Code with Terraform Part 2"
 excerpt: "Discover patterns for usage of Azure Policy as Code with Terraform and examine deployment methodologies, module structures, Azure policy best-practices, and Terraform best-practices."
 date:   "2020-06-30"
 categories: 
-- "Cloud"
+- "CLOUD"
 tags: 
-- "azure policy"
-- "terraform"
+- "AZURE POLICY"
+- "TERRAFORM"
 ---
 This is Part 2 of the Azure Policy as Code with Terraform series. During Part 1 I introduced you to various patterns for adopting an Azure Policy as Code workflow and illustrated an example multi-environment architecture using Azure, Terraform Cloud, and GitHub.
 
