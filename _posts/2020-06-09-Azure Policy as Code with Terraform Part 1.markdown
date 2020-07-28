@@ -43,7 +43,7 @@ After defining your Azure policies as JSON files you need to decide which of the
 
 For example, the below three cmdlets all create a single policy definition named "Audit Storage Accounts Open to Public Networks".
 
-**PowerShell***
+**PowerShell**
 ```PowerShell
 New-AzPolicyDefinition -Name 'AuditStorageAccounts' -DisplayName 'Audit Storage Accounts Open to Public Networks' -Policy 'AuditStorageAccounts.json'
 ```
@@ -188,9 +188,9 @@ For more advanced usage of Terraform with Azure Policy I recommend using Terrafo
 
 Through the utilisation of Terraform workspaces you can create a 1-to-many mapping for your modules stored in a single repository to many Azure environments, for example:
 
-Repo -> Dev TF Workspace -> Dev AZ Subscription
-Repo -> Test TF Workspace -> Test AZ Management Group
-Repo -> Prod TF Workspace -> Prod AZ Management Group
+* Repo -> Dev TF Workspace -> Dev AZ Subscription
+* Repo -> Test TF Workspace -> Test AZ Management Group
+* Repo -> Prod TF Workspace -> Prod AZ Management Group
 
 ![Terraform Azure Multi-environment Pattern](/assets/images/terraform1.png)
 
