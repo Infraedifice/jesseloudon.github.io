@@ -4,7 +4,7 @@ excerpt: "Because I'm not keen on authoring large JSON files for IaC (aka ARM te
 date:   "2020-03-04"
 categories: 
 - "CLOUD"
-tags: "
+tags:
 - "INFRASTRUCTURE AS CODE"
 ---
 Whilst researching Infrastructure as Code alternatives to Azure Resource Manager templates I stumbled across the [Azure Building Blocks][AZBB] (AZBB) tool. It's not widely adopted and you'll see why later on this in blog.
