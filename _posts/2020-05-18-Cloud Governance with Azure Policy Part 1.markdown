@@ -1,5 +1,5 @@
 ---
-title: "Cloud Governance with Azure Policy"
+title: "Cloud Governance with Azure Policy Part 1"
 excerpt: "Introduction to the audit vs deny debate, native tooling, and governance at scale."
 date:   "2020-05-18"
 categories: 
