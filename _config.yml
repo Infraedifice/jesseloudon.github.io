@@ -109,8 +109,8 @@ analytics:
 # Site Author
 author:
   name             : "Jesse"
-  avatar           : "" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : ""
+  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : 
   location         : "Australia"
   email            : 
   links:
