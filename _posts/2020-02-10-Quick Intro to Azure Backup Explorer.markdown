@@ -2,11 +2,9 @@
 title:  "Quick Intro to Azure Backup Explorer"
 date:   "2020-02-10"
 categories: 
-- "CONSULTING"
+- "CLOUD"
 tags: 
 - "AZURE"
-- "BACKUP EXPLORER"
-- "MONITORING"
 ---
 Here's what you need to know about Azure Backup Explorer which has been released in [public preview][BackupExplorerPreview] as of 5th Feb 2020.
 

@@ -5,14 +5,8 @@ date:   "2020-02-26"
 categories: 
 - "BLOGGING"
 tags: 
-- "OPEN SOURCE"
 - "GITHUB PAGES"
-- "GITHUB"
-- "GIT"
 - "JEKYLL"
-- "VSCODE"
-- "MARKDOWN"
-- "MMISTAKES-THEME"
 ---
 In Part 1 of this series I introduced you to open source blogging using some awesome tools and platforms available today. I also shared my own setup so you can see what's involved end-to-end.
 

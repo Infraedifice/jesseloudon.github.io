@@ -3,12 +3,8 @@ title:  "Azure Building Blocks - The Forgotten IaC Tool"
 excerpt: "Because I'm not keen on authoring large JSON files for IaC (aka ARM templates) I'm going to put Azure Building Blocks to the test with a simple Hub & Spoke VNET deployment. Later on I'll also demonstrate the same deployment using an AzureCLI script - my current preferred alternative to ARM Templates - so you'll see the differences."
 date:   "2020-03-04"
 categories: 
-- "CONSULTING"
-tags: 
-- "AZBB"
-- "AZURE BUILDING BLOCKS"
-- "AZCLI"
-- "IAC"
+- "CLOUD"
+tags: "
 - "INFRASTRUCTURE AS CODE"
 ---
 Whilst researching Infrastructure as Code alternatives to Azure Resource Manager templates I stumbled across the [Azure Building Blocks][AZBB] (AZBB) tool. It's not widely adopted and you'll see why later on this in blog.

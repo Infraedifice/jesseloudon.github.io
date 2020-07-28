@@ -3,9 +3,9 @@ title: "Cloud Governance with Azure Policy Part 2"
 excerpt: "Intro to the Azure Policy extension for VSCode and authoring custom policy definitions by finding property aliases."
 date:   "2020-05-18"
 categories: 
-- "Cloud"
+- "CLOUD"
 tags: 
-- "azure policy"
+- "AZURE POLICY"
 ---
 
 This is Part 2 of a blog series on Azure Policy. In Part 1 I introduced you to the audit vs deny debate, using the native tooling for Cloud governance, and governance at scale through policy as code workflows.
@@ -52,17 +52,17 @@ Here’s a quick overview of the trees currently available in the Azure Policy e
 
 ![azure policy extension tree](/assets/images/azurepolicy6.png)
 
-### Resources
-* Subscription
-    * **Resource Providers** (resources are divided by resource provider such as 'Microsoft.Compute' or 'Microsoft.Network' that are registered to the selected subscription)
-    * **Resource Groups** (tracked resources e.g. resources that are members of a resource group are shown here)
+* Resources
+  * Subscription
+      * **Resource Providers** (resources are divided by resource provider such as 'Microsoft.Compute' or 'Microsoft.Network' that are registered to the selected subscription)
+      * **Resource Groups** (tracked resources e.g. resources that are members of a resource group are shown here)
 
-### Policies
-* Subscription
-    * Assignments
-    * **Built-In Definitions**
-    * Custom Definitions
-    * Initiatives
+* Policies
+  * Subscription
+      * Assignments
+      * **Built-In Definitions**
+      * Custom Definitions
+      * Initiatives
 
 Above, I've highlighted Resources/Resource Providers and Resources/Resource Groups because this is where you can navigate the Azure ecosystem and discover property aliases that can be used as fields in your custom policy definitions. Super important and a powerful enabler!
 

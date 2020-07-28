@@ -6,7 +6,6 @@ categories:
 - "EXAMS"
 tags: 
 - "AZ-400"
-- "STUDY GUIDE"
 ---
 With Microsoft announcing sweeping changes to a few Azure exams later in March 2020 the time is ripe to blog about an exam I’ve had my eye on for a while: Azure DevOps Solutions (AZ-400). This is an advanced exam that targets professionals familiar with Azure administration and Azure development. I can see this exam providing value to engineers, consultants, and architects who are driving for increased adoption of Agile practices and Infrastructure as Code.
 

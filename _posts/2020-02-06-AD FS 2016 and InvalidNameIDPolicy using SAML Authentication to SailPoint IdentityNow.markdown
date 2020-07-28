@@ -3,13 +3,9 @@ title:  "AD FS 2016 and InvalidNameIDPolicy using SAML Authentication to SailPoi
 excerpt: "The resolution to this problem for me was to ensure that an SPNameQualifier value was sent as a claim property from AD FS to IdentityNow."
 date:   "2020-02-06"
 categories: 
-- "CONSULTING"
+- "IDENTITY"
 tags: 
 - "ADFS"
-- "SAML"
-- "CLAIMS"
-- "SAILPOINT IDENTITYNOW"
-- "INVALIDSPNAMEQUALIFIER"
 ---
 I recently had a seemingly simple task for a customer to setup a AD FS 2016 relying party trust for their SailPoint IdentityNow deployment. Sounds easy right?
 

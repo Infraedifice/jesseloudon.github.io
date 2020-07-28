@@ -6,11 +6,6 @@ categories:
 - "EVENTS"
 tags: 
 - "OPENHACK"
-- "CONTAINERS"
-- "DOCKER"
-- "KUBERNETES"
-- "AKS"
-- "AZURE"
 ---
 Azure consultants are constantly looking to expand our scope of expertise and aligning to this I've recently attended a Microsoft Containers OpenHack in Sydney. This event was a huge success for me and a rapid introduction to Kubernetes (K8s) and Azure Kubernetes Service (AKS) through a series of challenges over 3 days.
 
