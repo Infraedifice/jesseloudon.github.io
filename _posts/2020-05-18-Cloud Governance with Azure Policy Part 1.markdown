@@ -15,9 +15,10 @@ Tricky navigation of priorities can often be seen in larger Azure customers wher
 
 For example when we begin to think about how to apply governance in Azure there's often multiple teams of stakeholders with competing priorities:
 
-App Dev need to rapidly deploy, test, and ship their code securely
-Ops need to manage service requests, alerts, backups, and network security
-Managers need to control costs and budget, manage risk, and ensure SLAs are met
+* App Dev need to rapidly deploy, test, and ship their code securely
+* Ops need to manage service requests, alerts, backups, and network security
+* Managers need to control costs and budget, manage risk, and ensure SLAs are met
+
 Every stakeholder above has valid underlying reasons for their priorities and so there's an essential need to strike a balance between an audit vs deny effect when it comes to how you apply governance in the Azure ecosystem.
 
 Some examples of audit vs deny decisions you may face:
