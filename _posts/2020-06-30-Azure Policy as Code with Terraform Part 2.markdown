@@ -74,7 +74,6 @@ Next, running terraform init from the root module automatically downloads the mo
 
 Then, using terraform plan and terraform apply from the root module I see a message showing 24 resources to add.  And because I'm happy to proceed with the changes I've entered the word yes.
 
-![terraform plan apply result](/assets/images/terraform9.png)
 ![terraform apply job result](/assets/images/terraform10.png)
 
 After the apply job has completed we get a nice green summary. Green is usually a good sign :)
