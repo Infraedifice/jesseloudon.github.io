@@ -12,13 +12,13 @@
 
 #theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-AU"
 title                    : "Jesse Loudon"
 title_separator          : "|"
-subtitle                 : "Azure Consultant @ Telstra Purple | blogger at jloudon.com & purple.telstra.com.au | aka 'Just Another Azure Guy'"
+subtitle                 : "Azure Consultant @ Telstra Purple aka 'Just Another Azure Guy'"
 name                     : "Jesse Loudon"
 description              : "Jesse Loudon | Azure Consultant @ Telstra Purple | blogger at jloudon.com & purple.telstra.com.au | aka 'Just Another Azure Guy'"
 url                      : "https://jloudon.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -283,7 +283,7 @@ defaults:
       toc: "true"
       toc_sticky: "true"
       author_profile: false
-      read_time: "true"
+      read_time: "false"
       comments: "true"
       share: "true"
       related: "true"
@@ -295,6 +295,6 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: false
+      author_profile: "true"
       sidebar:
         nav: "customsidenav"

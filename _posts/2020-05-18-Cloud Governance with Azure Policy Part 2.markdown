@@ -7,7 +7,6 @@ categories:
 tags: 
 - "AZURE POLICY"
 ---
-
 This is Part 2 of a blog series on Azure Policy. In Part 1 I introduced you to the audit vs deny debate, using the native tooling for Cloud governance, and governance at scale through policy as code workflows.
 
 # Using the Azure Policy extension for VSCode
