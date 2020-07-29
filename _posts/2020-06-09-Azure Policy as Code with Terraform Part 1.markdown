@@ -233,4 +233,5 @@ Terraform brings some additional elements to a policy as code workflow to make i
 In Part 2 of this series I'll walk through how my example [AzureRM policy modules repo](https://github.com/globalbao/terraform-azurerm-policy) works under the hood, demo the code, show you how to resolve an issue that may arise when recreating a policy which is a member of a policyset, and we'll explore some Terraform coding patterns which can be reused for your own Terraform modules saving you time during the module authoring process.
 
 Happy coding,
+
 Jesse

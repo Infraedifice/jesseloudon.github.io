@@ -383,12 +383,13 @@ variable "security_policyset_definitions" {
     "Enable Azure Security Center on your subscription"
   ]
 }
-view rawAzurePolicySetVariables.tf hosted with ❤ by GitHub
+```
+
 Next, define a data source to azurerm_policy_definition and use count = length(var.variableName) to iterate the data source lookup based on the number of values in your variable list.
 
 Then, use display_name = var.variableName[count.index] to lookup policy definitions based on the display names definined in your variable list.
 
-
+``` terraform
 data "azurerm_policy_definition" "security_policyset_definitions" {
   count        = length(var.security_policyset_definitions)
   display_name = var.security_policyset_definitions[count.index]
@@ -473,5 +474,6 @@ A month ago, when I was testing Azure Policy deployments with Terraform, there w
 
 Today there are 22 Azure-related modules publicly available and we've just scratched the surface of what's possible with Azure Policy as Code with Terraform so watch this space for future developments as the HashiCorp/Microsoft partnership ramps up!
 
-Happy coding,
+Happy coding
+
 Jesse

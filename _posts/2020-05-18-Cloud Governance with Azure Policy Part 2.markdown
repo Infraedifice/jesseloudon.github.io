@@ -260,4 +260,5 @@ If you have any ideas, feature requests, or find any bugs with the Azure Policy 
 In Part 3 of this series I’ll walkthrough managing the Azure Policy Lifecycle.
 
 Cheers,
+
 Jesse
