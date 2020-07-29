@@ -1,6 +1,6 @@
 ---
 title: "Removing Unknown Azure RBAC Role Assignments with PowerShell"
-excerpt: ""
+excerpt: "How to programmatically find and remove 'Unknown' type Azure RBAC role assignments with PowerShell"
 date:   "2020-05-20"
 categories: 
 - "CLOUD"
