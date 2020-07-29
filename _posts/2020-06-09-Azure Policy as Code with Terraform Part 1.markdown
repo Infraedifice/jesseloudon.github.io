@@ -79,7 +79,7 @@ Three key elements of the above proof of concept are:
 * A single Azure subscription/environment is targeted.
 * This is a low-code, low-effort proof of concept to demonstrate a basic Terraform deployment of a custom Azure policy.
 
-## Example procedure:
+## Example Procedure
 
 1. Download/Install [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) and [VSCode](https://code.visualstudio.com/download)
 2. Create your Terraform files (a single main.tf) will suffice, or use the below example TF file.
@@ -99,7 +99,7 @@ Terraform apply
 Terraform destroy
 ```
 
-## Example Terraform file:
+## Example Terraform file
 
 The below file defines 1 variable, deploys 1 resource (a custom policy definition), and outputs 1 resource ID.
 
