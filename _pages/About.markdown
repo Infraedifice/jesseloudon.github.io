@@ -51,9 +51,7 @@ I'm an Azure Consultant at [Telstra Purple][telstrapurple] and blogger at [jloud
 
 My passion is working with customers to envision, design, and implement solutions which solve key business problems & transform underlying processes with technology.
 
-I also enjoy pursing hands-on technical experience with bleeding edge concepts and love architecting and deploying complex multi-vendor/multi-cloud solutions.
-
-Thankfully I’m also a dad to a little one who keeps me busy at all times.
+I also enjoy pursing hands-on technical experience with bleeding edge concepts and love architecting and deploying cloud-native solutions.
 
 {% include gallery %}
 
